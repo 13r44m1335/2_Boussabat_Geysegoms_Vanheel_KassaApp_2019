@@ -1,28 +1,57 @@
 package database;
 
-import javax.lang.model.type.ArrayType;
+import model.Artikel;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public abstract class TekstLoadSaveTemplate {
 
-    private HashMap<String id, Artikel artikel> db = new HashMap<>();
+    private static HashMap<String, Artikel> db = new HashMap<>();
 
-    public void loadSave(String filepath) {
-
+    public static void loadAndSave(String filepath) {
+        ArrayList<Artikel> artikels = load(filepath);
+        save(artikels);
     }
 
-    public ArrayList<Artikel> load(String filepath) {
+    protected static ArrayList<model.Artikel> load(String filepath) {
         ArrayList<Artikel> artikels = new ArrayList<>();
+
+        File file = new File(filepath);
+
+        Scanner fileScanner = null;
         try {
-            Scanner fileScanner = new Scanner(filepath);
-            
-        } catch ()
+            fileScanner = new Scanner(file);
+            while (fileScanner.hasNext()) {
+                Scanner lineScanner = new Scanner(fileScanner.nextLine());
+                lineScanner.useDelimiter(",");
+
+                String code = lineScanner.next();
+                String omschrijving = lineScanner.next();
+                String artikelGroep = lineScanner.next();
+                String prijsRaw = lineScanner.next();
+                double prijs = Double.parseDouble(prijsRaw);
+                String actueleVoorraadRaw = lineScanner.next();
+                int actueleVoorraad = Integer.parseInt(actueleVoorraadRaw);
+
+                Artikel artikel = new Artikel(code, omschrijving, artikelGroep, prijs, actueleVoorraad);
+
+                artikels.add(artikel);
+
+            }
+            return artikels;
+        } catch (FileNotFoundException e) {
+            return null;
+        }
 
     }
 
-    public void save(ArrayList<Artikel>) {
-
+    protected static void save(ArrayList<Artikel> artikels) {
+        for (Artikel artikel : artikels) {
+            db.put(artikel.getCode(), artikel);
+        }
     }
 }
