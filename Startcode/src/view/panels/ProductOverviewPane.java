@@ -13,7 +13,7 @@ import javafx.scene.layout.GridPane;
 
 
 public class ProductOverviewPane extends GridPane {
-	//private TableView<Product> table;
+	//private TableView<Artikel> table;
 	
 	
 	public ProductOverviewPane() {
@@ -25,7 +25,6 @@ public class ProductOverviewPane extends GridPane {
 		
 		
 	}
-	
-	
+
 
 }

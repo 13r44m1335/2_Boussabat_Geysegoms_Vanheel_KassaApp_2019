@@ -4,37 +4,28 @@ import model.Artikel;
 import java.util.ArrayList;
 
 /**
- * Deze klasse is een template klasse om artikels in te lezen uit een file en op te slaan.
+ * Deze interface dient als strategy om eenvoudig een andere type database te kiezen.
  * @author Andreas Geysegoms
  * @version 1.0
  */
-public abstract class TekstLoadSaveTemplate implements DbBehaviour {
-
+public interface DbBehaviour {
     /**
      * Deze methode leest data uit de input file en slaat ze op.
      * @param filepath pad naar de input file.
      * @author Andreas Geysegoms
      */
-    @Override
-    public void loadAndSave(String filepath) {
-        ArrayList<Artikel> artikels = load(filepath);
-        save(artikels);
-    }
-
+    void loadAndSave(String filepath);
     /**
      * Deze methode leest artikels in via een input file.
      * @param filepath pad naar de input file.
      * @return Arraylist van Artikels.
      * @author Andreas Geysegoms
      */
-    @Override
-    public abstract ArrayList<Artikel> load(String filepath);
-
+    ArrayList<Artikel> load(String filepath);
     /**
      * Deze methode slaat artikels op.
      * @param artikels de ArrayList van artikels om op te slaan.
      * @author Andreas Geysegoms
      */
-    @Override
-    public abstract void save(ArrayList<Artikel> artikels);
+    void save(ArrayList<Artikel> artikels);
 }

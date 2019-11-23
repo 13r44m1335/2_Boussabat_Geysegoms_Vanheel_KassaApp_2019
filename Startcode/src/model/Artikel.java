@@ -1,56 +1,117 @@
 package model;
 
+/**
+ * Deze klasse beschrijft een artikel.
+ * @author Reda Boussabat
+ * @version 1.0
+ */
 public class Artikel {
 
     private String code, omschrijving, artikelGroep;
     private double verkoopprijs;
     private int actueleVoorraad;
 
+    /**
+     * Deze methode toont de code van een artikel.
+     * @return de code van een artikel.
+     * @author Andreas Geysegoms
+     */
     public String getCode() {
         return code;
     }
 
+    /**
+     * Deze methode zet de code van een artikel.
+     * @param code de code van een artikel.
+     * @author Andreas Geysegoms
+     */
     public void setCode(String code) {
         this.code = code;
     }
 
+    /**
+     * Deze methode toont de beschrijving van een artikel.
+     * @return de beschrijving van een artikel.
+     * @author Andreas Geysegoms
+     */
     public String getOmschrijving() {
         return omschrijving;
     }
 
+    /**
+     * Deze methode zet de beschrijving van een artikel.
+     * @param omschrijving de beschrijving van een artikel.
+     * @author Andreas Geysegoms
+     */
     public void setOmschrijving(String omschrijving) {
         this.omschrijving = omschrijving;
     }
 
+    /**
+     * Deze methode toont de artikel groep van een artikel.
+     * @return de artikel groep van een artikel.
+     * @author Andreas Geysegoms
+     */
     public String getArtikelGroep() {
         return artikelGroep;
     }
 
+    /**
+     * Deze methode zet de artikel groep van een artikel.
+     * @param artikelGroep de artikelgroep van een artikel.
+     * @author Andreas Geysegoms
+     */
     public void setArtikelGroep(String artikelGroep) {
         this.artikelGroep = artikelGroep;
     }
 
+    /**
+     * Deze methode toont de verkoopprijs van een artikel.
+     * @return de verkoopprijs van een artikel.
+     * @author Andreas Geysegoms
+     */
     public double getVerkoopprijs() {
         return verkoopprijs;
     }
 
+    /**
+     * Deze methode zet de verkoopprijs van een artikel.
+     * @param verkoopprijs de verkoopprijs van een artikel.
+     * @author Andreas Geysegoms
+     */
     public void setVerkoopprijs(double verkoopprijs) {
-        if (verkoopprijs <= 0); throw new ModelException("Prijs moet meer dan € 0.00");
+        if (verkoopprijs <= 0) throw new IllegalArgumentException("Prijs moet meer dan € 0.00");
         else this.verkoopprijs = verkoopprijs;
     }
 
+    /**
+     * Deze methode toont de actuele voorraad van een artikel.
+     * @return de actuele voorraad van een artikel.
+     * @author Andreas Geysegoms
+     */
     public int getActueleVoorraad() {
         return actueleVoorraad;
     }
 
+    /**
+     * Deze methode zet de actuele voorraad van een artikel.
+     * @param actueleVoorraad de actuele voorraad van een artikel.
+     * @author Andreas Geysegoms
+     */
     public void setActueleVoorraad(int actueleVoorraad) {
-        if (actueleVoorraad < 0); throw new ModelException("Voorraad moet een positief geheel getal zijn.");
-        this.actueleVoorraad = actueleVoorraad;
+        if (actueleVoorraad < 0) throw new IllegalArgumentException("Voorraad moet een positief geheel getal zijn.");
+        else this.actueleVoorraad = actueleVoorraad;
     }
 
-    public Artikel() {
-    }
-
+    /**
+     * Deze methode maakt een artikel aan ahv volgende parameters.
+     * @param code de code van een artikel.
+     * @param omschrijving de beschrijving van een artikel.
+     * @param artikelGroep de artikel groep van een artikel.
+     * @param verkoopprijs de verkoopprijs van een artikel.
+     * @param actueleVoorraad de actuele voorraad van een artikel.
+     * @author Reda Boussabat
+     */
     public Artikel(String code, String omschrijving, String artikelGroep, double verkoopprijs, int actueleVoorraad) {
         setCode(code);
         setOmschrijving(omschrijving);

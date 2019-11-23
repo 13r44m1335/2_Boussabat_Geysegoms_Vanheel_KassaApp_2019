@@ -1,6 +1,6 @@
 package application;
 	
-import database.TekstLoadSaveTemplate;
+import database.ArtikelTekstLoadSave;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import view.KassaView;
@@ -15,6 +15,7 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		//launch(args);
-		TekstLoadSaveTemplate.loadAndSave("src/bestanden/artikel.txt");
+		ArtikelTekstLoadSave a = new ArtikelTekstLoadSave();
+		a.loadAndSave("src/bestanden/artikel.txt");
 	}
 }
