@@ -8,33 +8,20 @@ import java.util.ArrayList;
  * @author Andreas Geysegoms
  * @version 1.0
  */
-public abstract class TekstLoadSaveTemplate implements DbBehaviour {
-
-    /**
-     * Deze methode leest data uit de input file en slaat ze op.
-     * @param filepath pad naar de input file.
-     * @author Andreas Geysegoms
-     */
-    @Override
-    public void loadAndSave(String filepath) {
-        ArrayList<Artikel> artikels = load(filepath);
-        save(artikels);
-    }
-
+public abstract class TekstLoadSaveTemplate {
     /**
      * Deze methode leest artikels in via een input file.
      * @param filepath pad naar de input file.
      * @return Arraylist van Artikels.
      * @author Andreas Geysegoms
      */
-    @Override
     public abstract ArrayList<Artikel> load(String filepath);
 
     /**
      * Deze methode slaat artikels op.
      * @param artikels de ArrayList van artikels om op te slaan.
+     * @param filepath pad naar de output file.
      * @author Andreas Geysegoms
      */
-    @Override
-    public abstract void save(ArrayList<Artikel> artikels);
+    public abstract void save(ArrayList<Artikel> artikels, String filepath);
 }

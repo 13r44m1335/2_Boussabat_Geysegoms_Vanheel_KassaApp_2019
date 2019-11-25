@@ -10,18 +10,11 @@ import java.util.ArrayList;
  */
 public interface DbBehaviour {
     /**
-     * Deze methode leest data uit de input file en slaat ze op.
-     * @param filepath pad naar de input file.
-     * @author Andreas Geysegoms
-     */
-    void loadAndSave(String filepath);
-    /**
-     * Deze methode leest artikels in via een input file.
-     * @param filepath pad naar de input file.
+     * Deze methode leest artikels in van de database.
      * @return Arraylist van Artikels.
      * @author Andreas Geysegoms
      */
-    ArrayList<Artikel> load(String filepath);
+    ArrayList<Artikel> load();
     /**
      * Deze methode slaat artikels op.
      * @param artikels de ArrayList van artikels om op te slaan.

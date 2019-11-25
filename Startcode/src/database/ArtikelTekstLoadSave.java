@@ -4,6 +4,7 @@ import model.Artikel;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -15,14 +16,11 @@ import java.util.Scanner;
  */
 public class ArtikelTekstLoadSave extends TekstLoadSaveTemplate {
 
-    private HashMap<String, Artikel> db;
-
     /**
-     * Deze methode maakt een instantie van de klasse aan en declareert een nieuwe HashMap.
+     * Deze methode maakt een instantie van de klasse aan.
      * @author Andreas Geysegoms
      */
     public ArtikelTekstLoadSave() {
-        this.db = new HashMap<>();
     }
 
     /**
@@ -62,14 +60,29 @@ public class ArtikelTekstLoadSave extends TekstLoadSaveTemplate {
     }
 
     /**
-     * Deze methode slaat artikels op in het local geheugen.
+     * Deze methode slaat artikels op in artikel.txt
      * @param artikels de ArrayList van artikels om op te slaan.
+     * @param filepath pad naar de output file.
      * @author Andreas Geysegoms
      */
     @Override
-    public void save(ArrayList<Artikel> artikels) {
-        for (Artikel artikel : artikels) {
-            db.put(artikel.getCode(), artikel);
+    public void save(ArrayList<Artikel> artikels, String filepath) {
+        try {
+            File file = new File(filepath);
+            PrintWriter printWriter = new PrintWriter(file);
+            for (Artikel artikel : artikels)  {
+                String code = artikel.getCode();
+                String omschrijving = artikel.getOmschrijving();
+                String artikelGroep = artikel.getArtikelGroep();
+                double prijs = artikel.getVerkoopprijs();
+                int actueleVoorraad = artikel.getActueleVoorraad();
+                String res = code + "," + omschrijving + "," + artikelGroep + "," + prijs + "," + actueleVoorraad+"\n";
+                printWriter.write(res);
+            }
+            printWriter.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
+
     }
 }

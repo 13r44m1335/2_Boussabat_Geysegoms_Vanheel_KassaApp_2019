@@ -3,8 +3,13 @@ package application;
 import database.ArtikelTekstLoadSave;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import model.Observer;
+import model.StockObserver;
+import model.Winkel;
 import view.KassaView;
 import view.KlantView;
+
+import static model.SoortObserver.STOCK;
 
 public class Main extends Application {
 	@Override
@@ -14,8 +19,10 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		//launch(args);
-		ArtikelTekstLoadSave a = new ArtikelTekstLoadSave();
-		a.loadAndSave("src/bestanden/artikel.txt");
+		launch(args);
+		/*Winkel winkel = new Winkel();
+		Observer observer = new StockObserver(winkel);
+		winkel.registerObserver(observer, STOCK);
+		winkel.toonStock();*/
 	}
 }
