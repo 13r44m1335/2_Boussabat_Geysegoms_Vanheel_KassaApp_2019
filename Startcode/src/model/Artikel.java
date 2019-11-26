@@ -128,4 +128,11 @@ public class Artikel implements Comparable<Artikel>{
     public int compareTo(Artikel o) {
         return this.getOmschrijving().compareTo(o.getOmschrijving());
     }
+
+    @Override
+    public boolean equals(Object o){
+        Artikel a = (Artikel) o;
+        if (a.getOmschrijving().equals(this.getOmschrijving())) return true;
+        return false;
+    }
 }
