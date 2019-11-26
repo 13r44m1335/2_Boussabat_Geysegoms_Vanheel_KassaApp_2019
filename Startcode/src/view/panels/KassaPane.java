@@ -42,6 +42,11 @@ public class KassaPane extends GridPane {
         this.add(error, 0, 0, 1, 1);
         error = new Label();
         error.setVisible(false);
+        this.add(new Button("Add"),2,1,1,1);
+
+        TableColumn aantalCol = new TableColumn<>("Aantal");
+        aantalCol.setCellValueFactory(new PropertyValueFactory("aantal"));
+        table.getColumns().add(aantalCol);
 
 
         TableColumn omschrijvingCol = new TableColumn<>("Omschrijving");
@@ -49,7 +54,7 @@ public class KassaPane extends GridPane {
         table.getColumns().add(omschrijvingCol);
 
         TableColumn prijsCol = new TableColumn<>("Prijs");
-        prijsCol.setCellValueFactory(new PropertyValueFactory("prijs"));
+        prijsCol.setCellValueFactory(new PropertyValueFactory("verkoopprijs"));
         table.getColumns().add(prijsCol);
 
         this.add(table, 0, 4, 5, 6);
