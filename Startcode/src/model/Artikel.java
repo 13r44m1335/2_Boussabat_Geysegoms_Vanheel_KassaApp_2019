@@ -3,9 +3,9 @@ package model;
 /**
  * Deze klasse beschrijft een artikel.
  * @author Reda Boussabat
- * @version 1.0
+ * @version 1.1
  */
-public class Artikel {
+public class Artikel implements Comparable<Artikel>{
 
     private String code, omschrijving, artikelGroep;
     private double verkoopprijs;
@@ -123,5 +123,14 @@ public class Artikel {
         setArtikelGroep(artikelGroep);
         setVerkoopprijs(verkoopprijs);
         setActueleVoorraad(actueleVoorraad);
+    }
+
+    /**
+     * @param o een tweede artikel waarmee vergeleken wordt.
+     * @author Thomas Vanheel
+     */
+    @Override
+    public int compareTo(Artikel o) {
+        return this.getOmschrijving().compareTo(o.getOmschrijving());
     }
 }
