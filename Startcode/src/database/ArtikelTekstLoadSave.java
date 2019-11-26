@@ -86,5 +86,15 @@ public class ArtikelTekstLoadSave extends TekstLoadSaveTemplate {
 
     }
 
+    /**
+     * Deze methode laadt artikels in via een tekst file en schrijft ze daarna weg.
+     * @param filepath pad naar de in en output file.
+     * @author Andreas Geysegoms
+     */
+    @Override
+    public void loadAndSave(String filepath) {
+        save(load(filepath), filepath);
+    }
+
 
 }

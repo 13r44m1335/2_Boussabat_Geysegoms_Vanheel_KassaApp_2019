@@ -9,10 +9,21 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Deze klasse is gebruikt om excel files in te lezen en weg te schrijven.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
 public class ExcelLoadSaveStrategy {
 
     private ExcelPlugin excelPlugin = new ExcelPlugin();
 
+    /**
+     * Deze methode leest artikels uit uit een excel file.
+     * @param filepath het pad naar de excel file.
+     * @return een ArrayList van artikels.
+     * @author Andreas Geysegoms
+     */
     public ArrayList<Artikel> load(String filepath) {
         File file  = new File(filepath);
         ArrayList<Artikel> res = new ArrayList<>();
@@ -33,11 +44,16 @@ public class ExcelLoadSaveStrategy {
             e.printStackTrace();
         }
         for (Artikel list : res) {
-            System.out.println(list.toString());
         }
         return res;
     }
 
+    /**
+     * Deze methode schrijft artikels weg naar een excel file.
+     * @param artikels de artikels om weg te schrijven.
+     * @param filepath het pad naar de outputfile.
+     * @author Andreas Geysegoms
+     */
     public void save(ArrayList<Artikel> artikels, String filepath) {
         File file  = new File(filepath);
         ArrayList<ArrayList<String>> res = new ArrayList<>();
