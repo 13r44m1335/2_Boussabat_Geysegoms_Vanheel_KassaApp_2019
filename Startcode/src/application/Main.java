@@ -1,19 +1,13 @@
 package application;
-	
-import controller.StockController;
-import database.ArtikelTekstLoadSave;
-import database.DbBehaviour;
-import database.HashMapDb;
-import database.TekstLoadSaveTemplate;
+
+import database.ExcelLoadSaveStrategy;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import model.Observer;
-import model.StockObserver;
-import model.Winkel;
+import model.Artikel;
 import view.KassaView;
 import view.KlantView;
 
-import static model.SoortObserver.STOCK;
+import java.util.ArrayList;
 
 public class Main extends Application {
 	@Override
