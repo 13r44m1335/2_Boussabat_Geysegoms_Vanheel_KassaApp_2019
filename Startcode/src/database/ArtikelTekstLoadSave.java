@@ -52,7 +52,12 @@ public class ArtikelTekstLoadSave extends TekstLoadSaveTemplate {
                 artikels.add(artikel);
             }
 
-            Collections.sort(artikels, new ComparatorByOmschrijving());
+            Collections.sort(artikels, new Comparator<Artikel>() {
+                @Override
+                public int compare(Artikel o1, Artikel o2) {
+                    return o1.getOmschrijving().compareToIgnoreCase(o2.getOmschrijving());
+                }
+            });
             return artikels;
         } catch (FileNotFoundException e) {
             return null;

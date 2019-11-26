@@ -11,6 +11,7 @@ public class StockController extends Observer {
 
     private Winkel subject;
     private ProductOverviewPane stock;
+    private ArrayList<Artikel> artikels;
 
     public StockController() {
         super();
@@ -31,7 +32,7 @@ public class StockController extends Observer {
     @Override
     public void update() {
         subject.toonStock();
-        ArrayList<Artikel> artikels = subject.getDb().load();
+        artikels = subject.getDb().load();
         stock.updateStockView(artikels);
     }
 }
