@@ -1,9 +1,6 @@
 package model;
 
-import database.ArtikelTekstLoadSave;
-import database.DbBehaviour;
-import database.HashMapDb;
-import database.TekstLoadSaveTemplate;
+import database.*;
 
 import java.util.*;
 
@@ -74,8 +71,8 @@ public class Winkel implements Subject {
      */
     public void toonStock() {
         //TODO: cleaner
-        TekstLoadSaveTemplate artikelTekstLoadSave = new ArtikelTekstLoadSave();
-        ArrayList<Artikel> artikels = artikelTekstLoadSave.load("src/bestanden/artikel.txt");
+        LoadSave loadSave = new ExcelAdapter();
+        ArrayList<Artikel> artikels = loadSave.load("src/bestanden/artikel.xls");
         db.save(artikels);
     }
 

@@ -4,15 +4,17 @@ import excel.ExcelPlugin;
 import jxl.read.biff.BiffException;
 import jxl.write.WriteException;
 import model.Artikel;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ExcelLoadSaveStrategy implements LoadSave {
-    @Override
+public class ExcelLoadSaveStrategy {
+
+    private ExcelPlugin excelPlugin = new ExcelPlugin();
+
     public ArrayList<Artikel> load(String filepath) {
         File file  = new File(filepath);
-        ExcelPlugin excelPlugin = new ExcelPlugin();
         ArrayList<Artikel> res = new ArrayList<>();
         try {
             ArrayList<ArrayList<String>> data = excelPlugin.read(file);
@@ -36,9 +38,7 @@ public class ExcelLoadSaveStrategy implements LoadSave {
         return res;
     }
 
-    @Override
     public void save(ArrayList<Artikel> artikels, String filepath) {
-        ExcelPlugin excelPlugin = new ExcelPlugin();
         File file  = new File(filepath);
         ArrayList<ArrayList<String>> res = new ArrayList<>();
         for (Artikel artikel : artikels) {
