@@ -36,7 +36,7 @@ public class HashMapDb implements DbBehaviour {
     }
 
     /**
-     * Deze methode schrijft artikels weg naar het locale gehuegen (de HashMap).
+     * Deze methode schrijft artikels weg naar het locale geheugen (de HashMap).
      * @param artikels de ArrayList van artikels om op te slaan.
      * @author Andreas Geysegoms
      */
