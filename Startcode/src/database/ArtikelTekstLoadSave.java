@@ -1,18 +1,17 @@
 package database;
 
 import model.Artikel;
+import model.ComparatorByOmschrijving;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Deze klasse wordt gebruikt om artikels in te lezen uit een file en op te slaan, gebruik makende van .txt bestanden.
  * @author Andreas Geysegoms
- * @version 1.0
+ * @version 1.1
  */
 public class ArtikelTekstLoadSave extends TekstLoadSaveTemplate {
 
@@ -53,6 +52,7 @@ public class ArtikelTekstLoadSave extends TekstLoadSaveTemplate {
                 artikels.add(artikel);
             }
 
+            Collections.sort(artikels, new ComparatorByOmschrijving());
             return artikels;
         } catch (FileNotFoundException e) {
             return null;
@@ -85,4 +85,6 @@ public class ArtikelTekstLoadSave extends TekstLoadSaveTemplate {
         }
 
     }
+
+
 }
