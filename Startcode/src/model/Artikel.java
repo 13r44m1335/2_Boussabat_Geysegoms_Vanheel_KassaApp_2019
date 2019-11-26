@@ -11,6 +11,11 @@ public class Artikel implements Comparable<Artikel>{
     private double verkoopprijs;
     private int actueleVoorraad;
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     /**
      * Deze methode toont de code van een artikel.
      * @return de code van een artikel.

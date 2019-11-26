@@ -1,0 +1,68 @@
+package database;
+
+import excel.ExcelPlugin;
+import jxl.read.biff.BiffException;
+import jxl.write.WriteException;
+import model.Artikel;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class ExcelLoadSaveStrategy implements LoadSave {
+    @Override
+    public ArrayList<Artikel> load(String filepath) {
+        File file  = new File(filepath);
+        ExcelPlugin excelPlugin = new ExcelPlugin();
+        ArrayList<Artikel> res = new ArrayList<>();
+        try {
+            ArrayList<ArrayList<String>> data = excelPlugin.read(file);
+            for (ArrayList<String> list : data) {
+                String code = list.get(0);
+                String beschrijving = list.get(1);
+                String groep = list.get(2);
+                double prijs = Double.parseDouble(list.get(3));
+                int voorraad = Integer.parseInt(list.get(4));
+                Artikel a = new Artikel(code, beschrijving, groep, prijs, voorraad);
+                res.add(a);
+            }
+        } catch (BiffException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (Artikel list : res) {
+            System.out.println(list.toString());
+        }
+        return res;
+    }
+
+    @Override
+    public void save(ArrayList<Artikel> artikels, String filepath) {
+        ExcelPlugin excelPlugin = new ExcelPlugin();
+        File file  = new File(filepath);
+        ArrayList<ArrayList<String>> res = new ArrayList<>();
+        for (Artikel artikel : artikels) {
+            ArrayList<String> resInner = new ArrayList<>();
+            String code = artikel.getCode();
+            String beschrijving = artikel.getOmschrijving();
+            String artikelgroep = artikel.getArtikelGroep();
+            String prijs = ""+artikel.getVerkoopprijs();
+            String voorraad = ""+artikel.getActueleVoorraad();
+            resInner.add(code);
+            resInner.add(beschrijving);
+            resInner.add(artikelgroep);
+            resInner.add(prijs);
+            resInner.add(voorraad);
+            res.add(resInner);
+        }
+        try {
+            excelPlugin.write(file, res);
+        } catch (BiffException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+    }
+}
