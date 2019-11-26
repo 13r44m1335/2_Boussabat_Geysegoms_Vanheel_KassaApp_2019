@@ -14,7 +14,7 @@ public interface Subject {
      * @param type type observer
      * @author Andreas Geysegoms
      */
-    void registerObserver(Observer observer, Enum type);
+    void registerObserver(Observer observer, SoortObserver type);
 
     /**
      * Deze methode verwijdert een observer zodat deze geen updates meer krijgt.
@@ -28,5 +28,5 @@ public interface Subject {
      * @param type het type observer dat genotified wordt.
      * @author Andreas Geysegoms
      */
-    void notifyObservers(Enum type);
+    void notifyObservers(SoortObserver type, ArrayList<Artikel> artikels);
 }

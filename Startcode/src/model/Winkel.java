@@ -3,6 +3,7 @@ package model;
 import database.ArtikelTekstLoadSave;
 import database.DbBehaviour;
 import database.HashMapDb;
+import database.TekstLoadSaveTemplate;
 
 import java.util.*;
 
@@ -72,9 +73,10 @@ public class Winkel implements Subject {
      * @author Andreas Geysegoms
      */
     public void toonStock() {
-        ArtikelTekstLoadSave artikelTekstLoadSave = new ArtikelTekstLoadSave();
-        artikelTekstLoadSave.load("src/bestanden/artikel.txt");
-        notifyObservers(STOCK);
+        //TODO: cleaner
+        TekstLoadSaveTemplate artikelTekstLoadSave = new ArtikelTekstLoadSave();
+        ArrayList<Artikel> artikels = artikelTekstLoadSave.load("src/bestanden/artikel.txt");
+        db.save(artikels);
     }
 
     /**
@@ -84,7 +86,7 @@ public class Winkel implements Subject {
      * @author Andreas Geysegoms
      */
     @Override
-    public void registerObserver(Observer observer, Enum type) {
+    public void registerObserver(Observer observer, SoortObserver type) {
         observers.get(type).add(observer);
     }
 
@@ -105,11 +107,8 @@ public class Winkel implements Subject {
      * @author Andreas Geysegoms
      */
     @Override
-    public void notifyObservers(Enum type) {
-        List<Observer> obs = null;
-        if (type == STOCK) obs = observers.get(STOCK);
-        else if (type == ARTIKELINSCANNEN) obs = observers.get(ARTIKELINSCANNEN);
-
+    public void notifyObservers(SoortObserver type, ArrayList<Artikel> artikels) {
+        List<Observer> obs = observers.get(type);
 
         if (obs == null)  {
             throw new IllegalArgumentException("Ongeldig type observer");

@@ -14,16 +14,15 @@ public class StockObserver extends Observer {
 
     /**
      * Deze methode maakt een instantie van de klasse aan.
-     * @param subject de winkel waar deze klasse aan gekoppeld is.
      * @author Andreas Geysegoms
      */
-    public StockObserver(Winkel subject) {
-        super(subject);
+    public StockObserver() {
+        super();
         this.subject = subject;
     }
 
     /**
-     * Deze methode laad de gegevens in en updatet de waarde voor stock.
+     * Deze methode laadt de gegevens in en updatet de waarde voor stock.
      * @author Andreas Geysegoms
      */
     @Override

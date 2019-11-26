@@ -1,6 +1,10 @@
 package application;
 	
+import controller.StockController;
 import database.ArtikelTekstLoadSave;
+import database.DbBehaviour;
+import database.HashMapDb;
+import database.TekstLoadSaveTemplate;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import model.Observer;
@@ -20,9 +24,5 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
-		/*Winkel winkel = new Winkel();
-		Observer observer = new StockObserver(winkel);
-		winkel.registerObserver(observer, STOCK);
-		winkel.toonStock();*/
 	}
 }

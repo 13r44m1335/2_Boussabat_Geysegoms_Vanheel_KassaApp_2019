@@ -1,6 +1,7 @@
 package view;
 
 
+import controller.StockController;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
@@ -11,7 +12,10 @@ public class KassaMainPane extends BorderPane {
 		
 	    TabPane tabPane = new TabPane(); 	    
         Tab kassaTab = new Tab("Kassa");
-        ProductOverviewPane productOverviewPane = new ProductOverviewPane();
+
+        StockController stockController = new StockController();
+        ProductOverviewPane productOverviewPane = new ProductOverviewPane(stockController);
+
         Tab artikelTab = new Tab("Artikelen",productOverviewPane);
         Tab instellingTab = new Tab("Instellingen");
         Tab logTab = new Tab("Log");

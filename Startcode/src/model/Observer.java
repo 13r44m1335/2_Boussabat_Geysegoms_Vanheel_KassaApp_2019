@@ -13,10 +13,13 @@ public abstract class Observer {
 
     /**
      * Contructor van de klasse.
-     * @param subject de winkel.
      * @author Andreas Geysegoms
      */
-    public Observer(Winkel subject) {
+    public Observer() {
+
+    }
+
+    public void setSubject(Winkel subject) {
         this.subject = subject;
     }
 
