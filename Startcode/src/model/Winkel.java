@@ -106,7 +106,7 @@ public class Winkel implements Subject {
     }
 
     /**
-     * Deze methode haalt de huidge stock op.
+     * Deze methode haalt de huidge stock op en notifieert de observers.
      * @author Andreas Geysegoms
      */
     public void toonStock() {

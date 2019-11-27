@@ -7,7 +7,7 @@ package model;
  */
 public enum SoortOplslag {
     xls ("Excel", "database.ExcelAdapter"),
-    txt ("text", "database.ArtikelTekstLoadSave");
+    txt ("Text", "database.ArtikelTekstLoadSave");
 
     private final String omschrijving;
     private final String klasseNaam;

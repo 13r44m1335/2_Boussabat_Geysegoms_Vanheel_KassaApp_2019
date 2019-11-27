@@ -1,10 +1,13 @@
 package controller;
 
 import model.Artikel;
+import model.ComparatorByOmschrijving;
 import model.Observer;
 import model.Winkel;
 import view.panels.ProductOverviewPane;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import static model.SoortObserver.STOCK;
 
 /**
@@ -48,12 +51,13 @@ public class StockController extends Observer {
     }
 
     /**
-     * Deze methode updatet de stock bij de view.
+     * Deze methode updatet de stock bij de view. Deze artikelen zijn gesorteerd op beschrijving.
      * @author Andreas Geysegoms
      */
     @Override
     public void update() {
         artikels = subject.getDb().load();
+        Collections.sort(artikels, new ComparatorByOmschrijving());
         stock.updateStockView(artikels);
     }
 

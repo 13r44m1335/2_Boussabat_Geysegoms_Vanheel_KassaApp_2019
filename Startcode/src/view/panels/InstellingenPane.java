@@ -19,11 +19,14 @@ public class InstellingenPane extends GridPane {
      * @author Andreas Geysegoms
      */
     public InstellingenPane(InstellingenController instellingenController) {
+        instellingenController.setView(this);
         btnExcel = new RadioButton("Excel");
         btnTxt = new RadioButton("Txt");
         ToggleGroup group = new ToggleGroup();
         btnTxt.setToggleGroup(group);
         btnExcel.setToggleGroup(group);
+
+        instellingenController.setStandard();
 
         btnTxt.setOnAction(event -> {
             instellingenController.setTxt();
@@ -38,5 +41,20 @@ public class InstellingenPane extends GridPane {
 
     }
 
+    /**
+     * Deze methode stelt de radiobutton in op excel bij inladen.
+     */
+    public void setExcelStandard() {
+        btnTxt.setSelected(false);
+        btnExcel.setSelected(true);
+    }
 
+    /**
+     * Deze methode stelt de radiobutton in op txt bij inladen.
+     * @author Andreas Geysegoms
+     */
+    public void setTxtStandard() {
+        btnExcel.setSelected(false);
+        btnTxt.setSelected(true);
+    }
 }

@@ -62,8 +62,8 @@ public class ExcelLoadSaveStrategy {
             String code = artikel.getCode();
             String beschrijving = artikel.getOmschrijving();
             String artikelgroep = artikel.getArtikelGroep();
-            String prijs = ""+artikel.getVerkoopprijs();
-            String voorraad = ""+artikel.getActueleVoorraad();
+            String prijs = String.valueOf(artikel.getVerkoopprijs());
+            String voorraad = String.valueOf(artikel.getActueleVoorraad());
             resInner.add(code);
             resInner.add(beschrijving);
             resInner.add(artikelgroep);
@@ -73,11 +73,7 @@ public class ExcelLoadSaveStrategy {
         }
         try {
             excelPlugin.write(file, res);
-        } catch (BiffException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (WriteException e) {
+        } catch (IOException | WriteException | BiffException e) {
             e.printStackTrace();
         }
     }
