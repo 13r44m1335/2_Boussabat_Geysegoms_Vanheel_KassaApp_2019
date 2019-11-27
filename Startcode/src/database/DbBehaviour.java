@@ -8,6 +8,7 @@ import java.util.ArrayList;
  * @author Andreas Geysegoms
  * @version 1.0
  */
+//TODO: input @ runtime changen.
 public interface DbBehaviour {
     /**
      * Deze methode leest artikels in van de database.
@@ -21,4 +22,12 @@ public interface DbBehaviour {
      * @author Andreas Geysegoms
      */
     void save(ArrayList<Artikel> artikels);
+
+    /**
+     * Deze methode zoekt een artikel uit de db.
+     * @param code de code van het artikel.
+     * @return het artikel.
+     * @author Andreas Geysegoms
+     */
+    Artikel search(String code);
 }

@@ -2,6 +2,7 @@ package view;
 
 
 import controller.InstellingenController;
+import controller.KassaController;
 import controller.StockController;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -16,7 +17,9 @@ public class KassaMainPane extends BorderPane {
 
 	    Winkel winkel = new Winkel();
 
-        KassaPane kassaPane = new KassaPane();
+	    KassaController controller = new KassaController(winkel);
+
+        KassaPane kassaPane = new KassaPane(controller);
 	    TabPane tabPane = new TabPane();
         Tab kassaTab = new Tab("Kassa",kassaPane);
 

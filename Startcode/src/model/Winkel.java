@@ -153,7 +153,23 @@ public class Winkel implements Subject {
         }
 
         for (Observer observer : obs) {
-            observer.update();
+            observer.update(artikels);
+        }
+    }
+
+    /**
+     * Deze methode scant een artikel in.
+     * @param code de code van het artikel.
+     * @author Andreas Geysegoms
+     */
+    public void scan(String code) {
+        try {
+            Artikel a = db.search(code);
+            ArrayList<Artikel> res = new ArrayList<>();
+            res.add(a);
+            notifyObservers(ARTIKELINSCANNEN,res);
+        } catch (NullPointerException e) {
+            notifyObservers(ARTIKELINSCANNEN,null);
         }
     }
 }

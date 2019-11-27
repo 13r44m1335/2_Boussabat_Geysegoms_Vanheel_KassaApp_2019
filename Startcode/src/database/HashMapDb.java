@@ -24,6 +24,17 @@ public class HashMapDb implements DbBehaviour {
     }
 
     /**
+     * Deze methode zoekt een artikel op uit de db.
+     * @param code de code van het artikel.
+     * @return het artikel.
+     * @author Andreas Geysegoms
+     */
+    @Override
+    public Artikel search(String code) {
+        return this.db.get(code);
+    }
+
+    /**
      * Deze methode laadt alle artikels van het locale geheugen (HashMap) in naar een ArrayList van Artikels.
      * @return de ArrayList van artikels.
      * @author Andreas Geysegoms
