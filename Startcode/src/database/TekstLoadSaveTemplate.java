@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Andreas Geysegoms
  * @version 1.0
  */
-public abstract class TekstLoadSaveTemplate {
+public abstract class TekstLoadSaveTemplate implements LoadSave{
     /**
      * Deze methode leest artikels in via een input file.
      * @param filepath pad naar de input file.
