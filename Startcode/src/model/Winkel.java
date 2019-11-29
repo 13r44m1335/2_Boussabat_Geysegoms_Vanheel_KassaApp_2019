@@ -11,6 +11,7 @@ import java.util.*;
 
 
 import static model.SoortObserver.ARTIKELINSCANNEN;
+import static model.SoortObserver.KLANTSHOW;
 import static model.SoortObserver.STOCK;
 
 /**
@@ -168,6 +169,7 @@ public class Winkel implements Subject {
             ArrayList<Artikel> res = new ArrayList<>();
             res.add(a);
             notifyObservers(ARTIKELINSCANNEN,res);
+            //notifyObservers(KLANTSHOW,res);
         } catch (NullPointerException e) {
             notifyObservers(ARTIKELINSCANNEN,null);
         }
