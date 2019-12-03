@@ -14,12 +14,20 @@ import model.Artikel;
 
 import java.util.ArrayList;
 
-
+/**
+ * Deze pane is gebruikt om artikels te tonen van de stock.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
 public class ProductOverviewPane extends GridPane {
 	private TableView<Artikel> table = new TableView<>();
 	private ObservableList<Artikel> artikels = FXCollections.observableArrayList();
-	
-	
+
+	/**
+	 * Deze methode maakt een overview pane aan met een gekoppelde controller.
+	 * @param controller dde controller.
+	 * @author Andreas Geysegoms
+	 */
 	public ProductOverviewPane(StockController controller) {
 		this.setPadding(new Insets(5, 5, 5, 5));
         this.setVgap(5);
@@ -45,7 +53,8 @@ public class ProductOverviewPane extends GridPane {
 
         controller.setStock(this);
 		this.add(new Label("Products:"), 0, 0, 1, 1);
-		controller.update();
+		controller.toonArtikelen();
+
 		table.setItems(artikels);
 		table.getColumns().addAll(code,beschrijving, groep, prijs, voorraad);
 		this.add(table,0,1);
@@ -53,6 +62,11 @@ public class ProductOverviewPane extends GridPane {
 
 	}
 
+	/**
+	 * Deze methode updatet de stock.
+	 * @param artikels de artikels die doorgegeven worden als stock.
+	 * @author Andreas Geysegoms
+	 */
 	public void updateStockView(ArrayList<Artikel> artikels) {
 	    this.artikels.clear();
         this.artikels.addAll(artikels);

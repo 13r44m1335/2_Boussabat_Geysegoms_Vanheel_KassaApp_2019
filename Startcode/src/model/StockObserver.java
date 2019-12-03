@@ -16,8 +16,8 @@ public class StockObserver extends Observer {
      * Deze methode maakt een instantie van de klasse aan.
      * @author Andreas Geysegoms
      */
-    public StockObserver() {
-        super();
+    public StockObserver(Winkel subject) {
+        super(subject);
         this.subject = subject;
     }
 

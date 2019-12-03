@@ -2,9 +2,10 @@ package view;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.stage.Stage;	
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
-public class KlantView {
+public class KlantView extends BorderPane {
 	private Stage stage = new Stage();		
 		
 	public KlantView(){			

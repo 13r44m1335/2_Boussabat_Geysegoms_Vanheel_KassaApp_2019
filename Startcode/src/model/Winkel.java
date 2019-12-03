@@ -2,6 +2,11 @@ package model;
 
 import database.*;
 
+import javax.xml.stream.FactoryConfigurationError;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 
 
@@ -17,6 +22,9 @@ public class Winkel implements Subject {
 
     private DbBehaviour db;
     private Map<SoortObserver,List<Observer>> observers;
+    private Properties properties;
+    private LoadSave loadSave;
+    private LoadSaveFactory loadSaveFactory;
 
     /**
      * Deze methode is gebruikt om de databank te zetten.
@@ -60,20 +68,53 @@ public class Winkel implements Subject {
      */
     public Winkel() {
         this.db = new HashMapDb();
+        LoadSaveFactory factory = loadSaveFactory.getInstance();
+        this.properties = new Properties();
+        try {
+            InputStream is = new FileInputStream("src/bestanden/instellingen.xml");
+            properties.loadFromXML(is);
+            is.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (InvalidPropertiesFormatException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        loadSave = factory.createLoadSave(properties);
         this.observers = new HashMap<>();
         observers.put(STOCK,new ArrayList<>());
         observers.put(ARTIKELINSCANNEN,new ArrayList<>());
     }
 
     /**
-     * Deze methode haalt de huidge stock op en notifiert de observers.
+     * Deze methode stelt de properties in.
+     * @param properties de properties om in te stellen.
+     * @author Andreas Geysegoms
+     */
+    public void setProperties(Properties properties) {
+        this.properties = properties;
+    }
+
+    /**
+     * Deze methode haalt de properties op.
+     * @return de properties.
+     * @author Andreas Geysegoms
+     */
+    public Properties getProperties() {
+        return properties;
+    }
+
+    /**
+     * Deze methode haalt de huidge stock op en notifieert de observers.
      * @author Andreas Geysegoms
      */
     public void toonStock() {
-        //TODO: cleaner
-        LoadSave loadSave = new ExcelAdapter();
-        ArrayList<Artikel> artikels = loadSave.load("src/bestanden/artikel.xls");
+        Object inputObj = properties.get("input");
+        String input = (String) inputObj;
+        ArrayList<Artikel> artikels = loadSave.load("src/bestanden/artikel."+input);
         db.save(artikels);
+        notifyObservers(STOCK, artikels);
     }
 
     /**

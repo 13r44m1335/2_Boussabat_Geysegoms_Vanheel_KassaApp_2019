@@ -24,4 +24,11 @@ public abstract class TekstLoadSaveTemplate implements LoadSave{
      * @author Andreas Geysegoms
      */
     public abstract void save(ArrayList<Artikel> artikels, String filepath);
+
+    /**
+     * Deze methode laadt artikels in via een tekst file en schrijft ze daarna weg.
+     * @param filepath pad naar de in en output file.
+     * @author Andreas Geysegoms
+     */
+    public abstract void loadAndSave(String filepath);
 }

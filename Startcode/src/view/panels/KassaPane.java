@@ -1,5 +1,6 @@
 package view.panels;
 
+import controller.KassaController;
 import controller.StockController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,7 +25,8 @@ public class KassaPane extends GridPane {
     private TextField artikelCodeField;
     private Label error = new Label("");
 
-    public KassaPane() {
+    public KassaPane(KassaController controller) {
+        controller.setView(this);
         setTable();
     }
 
