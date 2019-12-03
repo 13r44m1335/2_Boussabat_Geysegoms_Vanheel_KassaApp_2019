@@ -70,10 +70,10 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     @Override
-    public void update(ArrayList<Artikel> artikels) {
+    public void update(Object artikels) {
         try {
-            //TODO: cleaner
-            Artikel artikel = artikels.get(0);
+        ArrayList<Artikel> artikels1 = (ArrayList<Artikel>) artikels;
+            Artikel artikel = artikels1.get(0);
             double totaalS = getTotaal() + artikel.getVerkoopprijs();
             this.view.setTotaal(totaalS);
             this.setTotaal(totaalS);

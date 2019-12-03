@@ -55,7 +55,7 @@ public class StockController extends Observer {
      * @author Andreas Geysegoms
      */
     @Override
-    public void update(ArrayList<Artikel> artikels) {
+    public void update(Object object) {
         artikels = subject.getDb().load();
         Collections.sort(artikels, new ComparatorByOmschrijving());
         stock.updateStockView(artikels);

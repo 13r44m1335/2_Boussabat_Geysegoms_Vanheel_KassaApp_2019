@@ -24,6 +24,6 @@ public abstract class Observer {
      * Deze methode updatet de stock, de winkelwagen van de klant en de kassa.
      * @author Andreas Geysegoms
      */
-    public abstract void update(ArrayList<Artikel> artikels);
+    public abstract void update(Object object);
 
 }

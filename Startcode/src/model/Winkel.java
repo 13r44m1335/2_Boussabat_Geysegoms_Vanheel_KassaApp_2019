@@ -146,7 +146,7 @@ public class Winkel implements Subject {
      * @author Andreas Geysegoms
      */
     @Override
-    public void notifyObservers(SoortObserver type, ArrayList<Artikel> artikels) {
+    public void notifyObservers(SoortObserver type, Object artikels) {
         List<Observer> obs = observers.get(type);
 
         if (obs == null)  {
