@@ -178,10 +178,20 @@ public class Winkel implements Subject {
         }
     }
 
+    /**
+     * Deze methode stelt de korting in.
+     * @param k de input voor korting aan te maken.
+     * @author Andreas Geysegoms
+     */
     public void setKorting(String k) {
         this.korting = KortingFactory.getInstance().create(k);
     }
 
+    /**
+     * Deze methode haalt de korting op.
+     * @return de korting.
+     * @author Andreas Geysegoms
+     */
     public Korting getKorting() {
         return this.korting;
     }

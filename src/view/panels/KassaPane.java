@@ -104,6 +104,11 @@ public class KassaPane extends GridPane {
         return error;
     }
 
+    /**
+     * Deze methode haalt alle artikels uit de winkelmand op.
+     * @return de artikels van de winkelmand.
+     * @author Andreas Geysegoms
+     */
     public ArrayList<Artikel> getAll() {
         return new ArrayList<>(artikels);
     }

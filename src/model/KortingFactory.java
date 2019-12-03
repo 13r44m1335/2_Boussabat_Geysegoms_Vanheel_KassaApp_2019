@@ -5,9 +5,19 @@ import model.SoortKorting;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * Deze klasse is een singleton die instaat voor het aanmaken van de kortingen.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
 public class KortingFactory {
     private static KortingFactory ourInstance = new KortingFactory();
 
+    /**
+     * Deze methode haalt de enige instance van deze klasse op.
+     * @return de enige instance.
+     * @author Andreas Geysegoms
+     */
     public static KortingFactory getInstance() {
         if (ourInstance == null) {
             ourInstance = new KortingFactory();
@@ -15,9 +25,19 @@ public class KortingFactory {
         return ourInstance;
     }
 
+    /**
+     * Deze methode maakt een contructor aan voor deze klasse.
+     * @author Andreas Geysegoms
+     */
     private KortingFactory() {
     }
 
+    /**
+     * Deze methode maakt een korting aan en, stelt deze in.
+     * @param input de input om een kortingsobject aan te maken.
+     * @return de korting net aangemaakt.
+     * @author Andreas Geysegoms
+     */
     public Korting create(String input) {
         Korting korting = null;
         SoortKorting soortKorting = SoortKorting.valueOf(input);

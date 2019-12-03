@@ -102,7 +102,13 @@ public class InstellingenController {
         this.view = instellingenPane;
     }
 
-
+    /**
+     * Deze methode maakt de korting aan.
+     * @param type de locatie van de klasse
+     * @param percent het percentage van korting
+     * @param additional extra info; groep of drempel
+     * @author Andreas Geysegoms
+     */
     public void createKorting(final String type, final String percent, String additional) {
         this.winkel.setKorting(type);
         this.winkel.getKorting().setPercent(Double.parseDouble(percent));
@@ -113,11 +119,7 @@ public class InstellingenController {
             this.winkel.getKorting().setAdditional(Double.parseDouble(additional));
         }
         else if (this.winkel.getKorting() instanceof Duurstekorting) {
-            try {
-                this.winkel.getKorting().setAdditional(this.kassaController.getDuursteInKar());
-            } catch (NullPointerException e) {
-                this.winkel.getKorting().setAdditional(new Artikel("X","Dummy","gr1",0.01,1));
-            }
+            this.winkel.getKorting().setAdditional(new Artikel("X","Dummy","gr1",0.01,1));
         }
     }
 }

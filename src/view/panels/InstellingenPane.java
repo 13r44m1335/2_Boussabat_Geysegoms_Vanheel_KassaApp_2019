@@ -8,7 +8,6 @@ import javafx.scene.layout.HBox;
 
 /**
  * Deze pane wordt gebruikt voor de instellingen.
- *
  * @author Andreas Geysegoms
  * @version 1.0
  */
@@ -22,7 +21,6 @@ public class InstellingenPane extends GridPane {
 
     /**
      * Deze methode maakt een pane aan en koppelt deze aan een controller.
-     *
      * @param instellingenController de controller.
      * @author Andreas Geysegoms
      */
@@ -72,6 +70,11 @@ public class InstellingenPane extends GridPane {
         });
     }
 
+    /**
+     * Deze methode stelt de combobox van de kortingen in.
+     * @param in de input voor de korting.
+     * @author Andreas Geysegoms
+     */
     public void setCombobox(String in) {
         if (in.equals("Groepkorting")) {
             this.comboBoxText.setVisible(true);
@@ -90,6 +93,7 @@ public class InstellingenPane extends GridPane {
 
     /**
      * Deze methode stelt de radiobutton in op excel bij inladen.
+     * @author Andreas Geysegoms
      */
     public void setExcelStandard() {
         btnTxt.setSelected(false);
@@ -98,7 +102,6 @@ public class InstellingenPane extends GridPane {
 
     /**
      * Deze methode stelt de radiobutton in op txt bij inladen.
-     *
      * @author Andreas Geysegoms
      */
     public void setTxtStandard() {

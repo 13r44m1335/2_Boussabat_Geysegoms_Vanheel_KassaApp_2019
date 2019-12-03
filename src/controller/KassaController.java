@@ -89,6 +89,7 @@ public class KassaController extends Observer {
             this.setTotaal(totaalS);
             this.view.addArtikel(artikel);
             double korting = this.getKorting().berekenKorting(this);
+            korting = (double) Math.round(korting*100.0)/100.0;
             this.view.setTotaal(totaalS-korting);
         }
         catch (NullPointerException e) {
@@ -96,14 +97,20 @@ public class KassaController extends Observer {
         }
     }
 
-    public Artikel getDuursteInKar() {
-        return this.duurste;
-    }
-
+    /**
+     * Deze methode haalt de korting op.
+     * @return de korting
+     * @author Andreas Geysegoms
+     */
     public Korting getKorting() {
         return this.winkel.getKorting();
     }
 
+    /**
+     * Deze methode haalt alle artikels uit de winkelmand op.
+     * @return een ArrayList van Artikels.
+     * @author Andreas Geysegoms
+     */
     public ArrayList<Artikel> getAll() {
         return view.getAll();
     }

@@ -2,19 +2,42 @@ package model;
 
 import controller.KassaController;
 
+/**
+ * Deze klasse implementeert de 'Korting' interface. Specifieker zorgt deze klasse voor de drempelkorting.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
 public class Drempelkorting implements Korting {
     private double percent;
     private double additional;
 
+    /**
+     * Deze methode returnt de totale korting.
+     * @param kassaController de controller waar de cart te vinden is.
+     * @return de totale korting.
+     * @author Andreas Geysegoms
+     */
     @Override
     public double berekenKorting(KassaController kassaController) {
-        if (kassaController.getTotaal() > additional) return kassaController.getTotaal()*(1-percent/100);
+        if (kassaController.getTotaal() > additional) return kassaController.getTotaal()*(percent/100);
         else return 0;
     }
+
+    /**
+     * Deze methode stelt de percentage korting in.
+     * @param percent het percentage in te stellen.
+     * @author Andreas Geysegoms
+     */
     @Override
-    public void setPercent(double parseDouble) {
-        this.percent = parseDouble;
+    public void setPercent(double percent) {
+        this.percent = percent;
     }
+
+    /**
+     * Deze methode stelt de additional in.
+     * @param additional de extra info.
+     * @author Andreas Geysegoms
+     */
     @Override
     public void setAdditional(Object additional) {
         this.additional = (Double)additional;
