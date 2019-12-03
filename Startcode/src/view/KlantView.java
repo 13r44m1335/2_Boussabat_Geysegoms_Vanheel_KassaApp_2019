@@ -1,50 +1,54 @@
 package view;
 
-import javafx.util.Callback;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.TableColumn;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.Group;
 import javafx.collections.FXCollections;
-import model.Artikel;
 import javafx.collections.ObservableList;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import model.Artikel;
 
-public class KlantView
-{
-    private Stage stage;
-    private TableView table;
-    private ObservableList<Artikel> artikels;
+public class KlantView {
+    private Stage stage = new Stage();
+    private TableView table = new TableView();
+    //private KlantController controller;
+    private ObservableList<Artikel> artikels = FXCollections.observableArrayList();
 
     public KlantView() {
-        this.stage = new Stage();
-        this.table = new TableView();
-        this.artikels = FXCollections.observableArrayList();
-        this.stage.setTitle("KLANT VIEW");
-        this.stage.setResizable(false);
-        this.stage.setX(775.0);
-        this.stage.setY(20.0);
-        final Group root = new Group();
-        final Scene scene = new Scene((Parent)root, 500.0, 500.0);
-        this.stage.setScene(scene);
-        this.stage.sizeToScene();
-        this.setTable();
-        this.stage.show();
+        //setController(controller);
+        //controller.setView(this);
+        stage.setTitle("KLANT VIEW");
+        stage.setResizable(false);
+        stage.setX(775);
+        stage.setY(20);
+        Group root = new Group();
+        Scene scene = new Scene(root, 500, 500);
+        stage.setScene(scene);
+        stage.sizeToScene();
+        setTable();
+        stage.show();
     }
 
+    /*private void setController(KlantController controller) {
+        this.controller = controller;
+    }*/
+
     private void setTable() {
-        this.table = new TableView();
-        final TableColumn omschrijvingCol = new TableColumn("Beschrijving");
-        omschrijvingCol.setCellValueFactory((Callback)new PropertyValueFactory("omschrijving"));
-        this.table.getColumns().add((Object)omschrijvingCol);
-        final TableColumn prijsCol = new TableColumn("Prijs");
-        prijsCol.setCellValueFactory((Callback)new PropertyValueFactory("verkoopprijs"));
-        this.table.getColumns().add((Object)prijsCol);
-        final TableColumn aantal = new TableColumn("Aantal");
-        aantal.setCellValueFactory((Callback)new PropertyValueFactory("AANTAL"));
-        this.table.getColumns().add((Object)aantal);
-        this.table.setItems((ObservableList)this.artikels);
+        table = new TableView();
+        TableColumn omschrijvingCol = new TableColumn<>("Beschrijving");
+        omschrijvingCol.setCellValueFactory(new PropertyValueFactory("omschrijving"));
+        table.getColumns().add(omschrijvingCol);
+
+        TableColumn prijsCol = new TableColumn<>("Prijs");
+        prijsCol.setCellValueFactory(new PropertyValueFactory("verkoopprijs"));
+        table.getColumns().add(prijsCol);
+
+        TableColumn aantal = new TableColumn("Aantal");
+        //TODO: fix dit.
+        aantal.setCellValueFactory(new PropertyValueFactory("AANTAL"));
+        table.getColumns().add(aantal);
+        table.setItems(artikels);
     }
 }

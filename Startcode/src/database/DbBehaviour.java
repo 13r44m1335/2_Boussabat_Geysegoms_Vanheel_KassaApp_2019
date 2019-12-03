@@ -1,12 +1,33 @@
 package database;
 
-import java.util.ArrayList;
 import model.Artikel;
+import java.util.ArrayList;
 
+/**
+ * Deze interface dient als strategy om eenvoudig een andere type database te kiezen.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
+//TODO: input @ runtime changen.
 public interface DbBehaviour {
-    public ArrayList<Artikel> load();
+    /**
+     * Deze methode leest artikels in van de database.
+     * @return Arraylist van Artikels.
+     * @author Andreas Geysegoms
+     */
+    ArrayList<Artikel> load();
+    /**
+     * Deze methode slaat artikels op.
+     * @param artikels de ArrayList van artikels om op te slaan.
+     * @author Andreas Geysegoms
+     */
+    void save(ArrayList<Artikel> artikels);
 
-    public void save(ArrayList<Artikel> var1);
-
-    public Artikel search(String var1);
+    /**
+     * Deze methode zoekt een artikel uit de db.
+     * @param code de code van het artikel.
+     * @return het artikel.
+     * @author Andreas Geysegoms
+     */
+    Artikel search(String code);
 }

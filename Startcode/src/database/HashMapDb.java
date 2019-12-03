@@ -1,35 +1,60 @@
 package database;
 
-import java.util.Iterator;
-import java.util.Collection;
-import java.util.ArrayList;
 import model.Artikel;
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
-public class HashMapDb implements DbBehaviour
-{
+/**
+ * Deze klasse is een in memory databank in de vorm van een HashMap.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
+public class HashMapDb implements DbBehaviour {
+
     private HashMap<String, Artikel> db;
 
+    /**
+     * Deze methode maakt een instantie van deze klasse aan.
+     * @author Andreas Geysegoms
+     */
     public HashMapDb() {
-        this.db = new HashMap<String, Artikel>();
+        this.db = new HashMap<>();
     }
 
+    /**
+     * Deze methode zoekt een artikel op uit de db.
+     * @param code de code van het artikel.
+     * @return het artikel.
+     * @author Andreas Geysegoms
+     */
     @Override
     public Artikel search(String code) {
         return this.db.get(code);
     }
 
+    /**
+     * Deze methode laadt alle artikels van het locale geheugen (HashMap) in naar een ArrayList van Artikels.
+     * @return de ArrayList van artikels.
+     * @author Andreas Geysegoms
+     */
     @Override
     public ArrayList<Artikel> load() {
-        final ArrayList<Artikel> res = new ArrayList<Artikel>();
-        res.addAll(this.db.values());
+        ArrayList<Artikel> res = new ArrayList<>();
+        res.addAll(db.values());
         return res;
     }
 
+    /**
+     * Deze methode schrijft artikels weg naar het locale geheugen (de HashMap).
+     * @param artikels de ArrayList van artikels om op te slaan.
+     * @author Andreas Geysegoms
+     */
     @Override
     public void save(ArrayList<Artikel> artikels) {
         for (Artikel artikel : artikels) {
-            this.db.put(artikel.getCode(), artikel);
+            db.put(artikel.getCode(), artikel);
         }
     }
 }

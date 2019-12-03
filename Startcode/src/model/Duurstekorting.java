@@ -1,8 +1,6 @@
 package model;
 
 import controller.KassaController;
-import model.Artikel;
-import model.Korting;
 
 public class Duurstekorting
         implements Korting {

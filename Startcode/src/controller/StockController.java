@@ -1,43 +1,70 @@
 package controller;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Collections;
-import model.ComparatorByOmschrijving;
-import model.SoortObserver;
 import model.Artikel;
-import java.util.ArrayList;
-import view.panels.ProductOverviewPane;
-import model.Winkel;
+import model.ComparatorByOmschrijving;
 import model.Observer;
+import model.Winkel;
+import view.panels.ProductOverviewPane;
+import java.util.ArrayList;
+import java.util.Collections;
 
-public class StockController extends Observer
-{
+import static model.SoortObserver.STOCK;
+
+/**
+ * Deze klasse fungeert als controller tussen tab2 van de kassa (Stock) en de winkel.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
+public class StockController extends Observer {
+
     private Winkel subject;
     private ProductOverviewPane stock;
     private ArrayList<Artikel> artikels;
 
-    public StockController(final Winkel winkel) {
+    /**
+     * Deze methode maakt een instantie van deze klasse aan ahv een winkel.
+     * @param winkel de winkel
+     * @author Andreas Geysegoms
+     */
+    public StockController(Winkel winkel) {
         super(winkel);
         this.setSubject(winkel);
-        this.subject.registerObserver((Observer)this, SoortObserver.STOCK);
+        subject.registerObserver(this, STOCK);
     }
 
-    public void setSubject(final Winkel subject) {
+    /**
+     * Deze methode stelt een winkel in.
+     * @param subject de winkel.
+     * @author Andreas Geysegoms
+     */
+    public void setSubject(Winkel subject) {
         this.subject = subject;
     }
 
-    public void setStock(final ProductOverviewPane stock) {
+    /**
+     * Deze methode stelt de stock in.
+     * @param stock de stock
+     * @author Andreas Geysegoms
+     */
+    public void setStock(ProductOverviewPane stock) {
         this.stock = stock;
     }
 
+    /**
+     * Deze methode updatet de stock bij de view. Deze artikelen zijn gesorteerd op beschrijving.
+     * @author Andreas Geysegoms
+     */
     @Override
-    public void update(final Object object) {
-        Collections.sort(this.artikels = this.subject.getDb().load(), new ComparatorByOmschrijving());
-        this.stock.updateStockView(this.artikels);
+    public void update(Object object) {
+        artikels = subject.getDb().load();
+        Collections.sort(artikels, new ComparatorByOmschrijving());
+        stock.updateStockView(artikels);
     }
 
-    public void toonArtikelen() {
-        this.subject.toonStock();
+    /**
+     * Deze methode toont de artikelen van de stock.
+     */
+    public void toonArtikelen(){
+        subject.toonStock();
     }
 }

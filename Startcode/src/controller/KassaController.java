@@ -1,49 +1,86 @@
 package controller;
 
-import model.Korting;
-import model.Duurstekorting;
-import model.DrempelKorting;
-import model.Groepkorting;
-import java.util.ArrayList;
-import model.SoortObserver;
-import model.Artikel;
+import model.*;
 import view.panels.KassaPane;
-import model.Winkel;
-import model.Observer;
 
-public class KassaController extends Observer
-{
+import java.util.ArrayList;
+
+/**
+ * Deze klasse is de controller tussen winkel en view.
+ */
+public class KassaController extends Observer {
+
     private Winkel winkel;
     private KassaPane view;
-    private double totaal;
+    private double totaal = 0;
     private Artikel duurste;
-    private String groep;
-    private double hogerDanBedrag;
 
-    public KassaController(final Winkel winkel) {
+    /**
+     * Deze methode maakt een isntantie aan van een kassaController.
+     * @param winkel de winkel die gebruikt wordt.
+     * @author Andreas Geysegoms
+     */
+    public KassaController(Winkel winkel) {
         super(winkel);
-        this.totaal = 0.0;
-        this.duurste = null;
-        this.setWinkel(winkel);
-        winkel.registerObserver((Observer)this, SoortObserver.ARTIKELINSCANNEN);
+        setWinkel(winkel);
+        winkel.registerObserver(this, SoortObserver.ARTIKELINSCANNEN);
     }
 
-    public void setWinkel(final Winkel winkel) {
+    /**
+     * Deze methode stelt de winkel in.
+     * @param winkel de winkel.
+     * @author Andreas Geysegoms
+     */
+    public void setWinkel(Winkel winkel) {
         this.winkel = winkel;
     }
 
-    public void setView(final KassaPane view) {
+    /**
+     * Deze methode stelt de view in.
+     * @param view de view.
+     * @author Andreas Geysegoms
+     */
+    public void setView(KassaPane view) {
         this.view = view;
     }
 
-    public void setTotaal(final double totaal) {
+    /**
+     * Deze methode stelt het totale bedrag in.
+     * @param totaal het totale bedrag
+     * @author Andreas Geysegoms
+     */
+    public void setTotaal(double totaal) {
         this.totaal = totaal;
     }
 
+    /**
+     * Deze methode haalt het totale bedrag op.
+     * @return het totale bedrag.
+     * @author Andreas Geysegoms
+     */
     public double getTotaal() {
-        return this.totaal;
+        return totaal;
     }
 
+
+
+
+    /**
+     * Deze methode scant een item in in de winkel.
+     * @param code de code van het artikel dat ingescand wordt.
+     * @author Andreas Geysegoms
+     */
+    public void scan(String code) {
+        winkel.scan(code);
+    }
+
+
+    /**
+     * Deze methode updatet de view van kassa.
+     * @param artikels de artikels die doorgegeven worden.
+     * @author Andreas Geysegoms
+     */
+    @Override
     public void update(final Object artikels) {
         try {
             final ArrayList<Artikel> artikels2 = (ArrayList<Artikel>)artikels;
@@ -64,10 +101,6 @@ public class KassaController extends Observer
         }
     }
 
-    public void scan(final String code) {
-        this.winkel.scan(code);
-    }
-
     public Artikel getDuursteInKar() {
         return this.duurste;
     }
@@ -77,7 +110,7 @@ public class KassaController extends Observer
             final String s = (String)additional;
         }
         else if (this.winkel.getKorting() instanceof DrempelKorting) {
-           double drempel =  (double)additional;
+            double drempel =  (double)additional;
         }
         else if (this.winkel.getKorting() instanceof Duurstekorting) {
             final Artikel artikel = (Artikel)additional;

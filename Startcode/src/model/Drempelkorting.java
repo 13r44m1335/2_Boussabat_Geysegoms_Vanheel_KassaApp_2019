@@ -1,7 +1,6 @@
 package model;
 
 import controller.KassaController;
-import model.Korting;
 
 public class DrempelKorting implements Korting {
     private double percent;

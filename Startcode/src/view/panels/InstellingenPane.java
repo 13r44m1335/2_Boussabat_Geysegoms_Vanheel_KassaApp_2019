@@ -1,37 +1,39 @@
 package view.panels;
 
-import javafx.event.Event;
-import javafx.event.ActionEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.Node;
-import javafx.scene.control.Label;
-import javafx.scene.control.ToggleGroup;
 import controller.InstellingenController;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 
-public class InstellingenPane extends GridPane
-{
-    private RadioButton btnExcel;
-    private RadioButton btnTxt;
+/**
+ * Deze pane wordt gebruikt voor de instellingen.
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
+public class InstellingenPane extends GridPane {
+
+    private RadioButton btnExcel, btnTxt;
     private ComboBox comboBox;
     private TextField comboBoxText;
     private TextField additional;
     private Button saveKorting;
 
-    public InstellingenPane(final InstellingenController instellingenController) {
+    /**
+     * Deze methode maakt een pane aan en koppelt deze aan een controller.
+     * @param instellingenController de controller.
+     * @author Andreas Geysegoms
+     */
+    public InstellingenPane(InstellingenController instellingenController) {
         this.comboBoxText = new TextField("Vul hier het gewenste percentage in.");
         this.additional = new TextField("drempel");
         this.saveKorting = new Button("Save");
         instellingenController.setView(this);
-        this.btnExcel = new RadioButton("Excel");
-        this.btnTxt = new RadioButton("Txt");
+        btnExcel = new RadioButton("Excel");
+        btnTxt = new RadioButton("Txt");
         ToggleGroup group = new ToggleGroup();
-        this.btnTxt.setToggleGroup(group);
-        this.btnExcel.setToggleGroup(group);
+        btnTxt.setToggleGroup(group);
+        btnExcel.setToggleGroup(group);
         ComboBox comboBox = new ComboBox();
         Label placeholder = new Label("kies een korting");
         comboBox.setPlaceholder((Node)placeholder);
@@ -43,12 +45,20 @@ public class InstellingenPane extends GridPane
             String newVal = (String)comboBox.getValue();
             this.setCombobox(newVal);
         });
-        this.add((Node)hbox, 1, 0);
+
+
         instellingenController.setStandard();
-        this.btnTxt.setOnAction(event -> instellingenController.setTxt());
-        this.btnExcel.setOnAction(event -> instellingenController.setExcel());
-        this.add((Node)this.btnExcel, 0, 0);
-        this.add((Node)this.btnTxt, 0, 1);
+
+        btnTxt.setOnAction(event -> {
+            instellingenController.setTxt();
+        });
+
+        btnExcel.setOnAction(event -> {
+            instellingenController.setExcel();
+        });
+
+        this.add(btnExcel,0,0);
+        this.add(btnTxt,0,1);
         this.add((Node)this.comboBoxText, 2, 0);
         this.add((Node)this.additional, 3, 0);
         this.comboBoxText.setVisible(false);
@@ -56,19 +66,11 @@ public class InstellingenPane extends GridPane
         this.add((Node)this.saveKorting, 4, 0);
         this.saveKorting.setVisible(false);
         this.saveKorting.setOnAction(event -> instellingenController.createKorting((String)comboBox.getValue(), this.comboBoxText.getText(), this.additional.getText()));
+
+
     }
 
-    public void setExcelStandard() {
-        this.btnTxt.setSelected(false);
-        this.btnExcel.setSelected(true);
-    }
-
-    public void setTxtStandard() {
-        this.btnExcel.setSelected(false);
-        this.btnTxt.setSelected(true);
-    }
-
-    public void setCombobox(final String in) {
+    public void setCombobox(String in) {
         if (in.equals("Groepkorting")) {
             this.comboBoxText.setVisible(true);
             this.additional.setText("Groep");
@@ -84,5 +86,22 @@ public class InstellingenPane extends GridPane
             this.additional.setVisible(false);
         }
         this.saveKorting.setVisible(true);
+    }
+
+    /**
+     * Deze methode stelt de radiobutton in op excel bij inladen.
+     */
+    public void setExcelStandard() {
+        btnTxt.setSelected(false);
+        btnExcel.setSelected(true);
+    }
+
+    /**
+     * Deze methode stelt de radiobutton in op txt bij inladen.
+     * @author Andreas Geysegoms
+     */
+    public void setTxtStandard() {
+        btnExcel.setSelected(false);
+        btnTxt.setSelected(true);
     }
 }

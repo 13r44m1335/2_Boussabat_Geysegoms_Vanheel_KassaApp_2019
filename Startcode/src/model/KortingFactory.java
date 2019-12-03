@@ -1,10 +1,9 @@
 package model;
 
-import java.io.PrintStream;
+import model.SoortKorting;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import model.Korting;
-import model.SoortKorting;
 
 public class KortingFactory {
     private static KortingFactory ourInstance = new KortingFactory();

@@ -1,20 +1,25 @@
 package controller;
 
-import model.Duurstekorting;
-import model.DrempelKorting;
-import model.Groepkorting;
-import model.SoortOpslag;
-import java.util.Properties;
-import java.io.IOException;
-import java.io.FileNotFoundException;
-import java.io.OutputStream;
-import java.io.FileOutputStream;
-import java.io.File;
+import database.LoadSave;
+import model.*;
 import view.panels.InstellingenPane;
-import model.Winkel;
 
-public class InstellingenController
-{
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Properties;
+
+/**
+ * Deze klasse fungeert als controller tussen de instellingen tab en de winkel.
+ *
+ * @author Andreas Geysegoms
+ * @version 1.0
+ */
+public class InstellingenController {
+
     private Winkel winkel;
     private InstellingenPane view;
     private KassaController kassaController;
@@ -23,64 +28,84 @@ public class InstellingenController
         this.kassaController = kassaController;
     }
 
-    public InstellingenController(final Winkel winkel) {
+    /**
+     * Deze methode maakt een instantie aan van een isntellingencontroller ahv de winkel.
+     *
+     * @param winkel de winkel.
+     * @author Andreas Geysegoms
+     */
+    public InstellingenController(Winkel winkel) {
         this.winkel = winkel;
     }
 
+    /**
+     * Deze methode stelt de input in als txt.
+     * @author Andreas Geysegoms
+     */
     public void setTxt() {
-        final Properties properties = this.winkel.getProperties();
+        Properties properties = winkel.getProperties();
         FileOutputStream os = null;
         try {
-            final File prop = new File("src/bestanden/instellingen.xml");
+            File prop = new File("src/bestanden/instellingen.xml");
             os = new FileOutputStream(prop);
             properties.setProperty("input", "txt");
             properties.storeToXML(os, "");
             os.close();
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }
-        catch (IOException e2) {
-            e2.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
+    /**
+     * Deze methode stelt de input in als een excel file.
+     *
+     * @author Andreas Geysegoms
+     */
     public void setExcel() {
-        final Properties properties = this.winkel.getProperties();
+        Properties properties = winkel.getProperties();
         FileOutputStream os = null;
         try {
-            final File prop = new File("src/bestanden/instellingen.xml");
+            File prop = new File("src/bestanden/instellingen.xml");
             os = new FileOutputStream(prop);
             properties.setProperty("input", "xls");
             properties.storeToXML(os, "");
             os.close();
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        catch (IOException e2) {
-            e2.printStackTrace();
-        }
     }
 
+    /**
+     * Deze methode stelt de radiobutton in ahv de properties.
+     * @author Andreas Geysegoms
+     */
     public void setStandard() {
-        final Object inputObj = this.winkel.getProperties().get("input");
-        final String input = (String)inputObj;
-        final SoortOpslag soortOplslag = SoortOpslag.valueOf(input);
-        final String beschrijving = soortOplslag.getOmschrijving();
+        Object inputObj = winkel.getProperties().get("input");
+        String input = (String) inputObj;
+        SoortOplslag soortOplslag = SoortOplslag.valueOf(input);
+        String beschrijving = soortOplslag.getOmschrijving();
         if (beschrijving.equals("Excel")) {
-            this.view.setExcelStandard();
-        }
-        else if (beschrijving.equals("Text")) {
-            this.view.setTxtStandard();
+            view.setExcelStandard();
+        } else if (beschrijving.equals("Text")) {
+            view.setTxtStandard();
         }
     }
 
-    public void setView(final InstellingenPane instellingenPane) {
+    /**
+     * Deze methode stelt de view in.
+     * @param instellingenPane de view.
+     * @author Andreas Geysegoms
+     */
+    public void setView(InstellingenPane instellingenPane) {
         this.view = instellingenPane;
     }
 
-    public void createKorting(final String type, final String percent, final String additional) {
+
+    public void createKorting(final String type, final String percent, String additional) {
         this.winkel.setKorting(type);
         this.winkel.getKorting().setPercent(Double.parseDouble(percent));
         if (this.winkel.getKorting() instanceof Groepkorting) {
