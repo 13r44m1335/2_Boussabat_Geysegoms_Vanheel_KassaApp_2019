@@ -3,10 +3,9 @@ package model;
 import controller.KassaController;
 
 public interface Korting {
+    public double berekenKorting(KassaController var1);
 
-    double berekenKorting(KassaController kassaController);
+    public void setPercent(double var1);
 
-    void setPercent(double parseDouble);
-
-    void setAdditional(Object additional);
+    public void setAdditional(Object var1);
 }

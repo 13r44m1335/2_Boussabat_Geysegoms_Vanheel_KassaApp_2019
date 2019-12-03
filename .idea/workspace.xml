@@ -2,38 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e7124ed-a94a-4c84-838b-fd9935b83dd7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ExcelPlugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jxl_2_6_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startcode/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/application/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/controller/InstellingenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/controller/KassaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/controller/StockController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/database/ArtikelTekstLoadSave.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/database/DbBehaviour.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/database/ExcelAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/database/ExcelLoadSaveStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/database/HashMapDb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/database/LoadSave.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/database/TekstLoadSaveTemplate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Artikel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/ComparatorByOmschrijving.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Drempelkorting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Duurstekorting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Groepkorting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Korting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/KortingFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/LoadSaveFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/SoortKorting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/SoortObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/SoortOplslag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/model/Winkel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/view/KassaMainPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/view/KassaView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/view/KlantView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/view/panels/InstellingenPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/view/panels/KassaPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/out/production/Startcode/view/panels/ProductOverviewPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/controller/KassaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/controller/KassaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Drempelkorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Drempelkorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Duurstekorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Duurstekorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Groepkorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Groepkorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Korting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Korting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/model/KortingFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/KortingFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/model/SoortKorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/SoortKorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Winkel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Winkel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startcode/src/view/panels/InstellingenPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/view/panels/InstellingenPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/ExcelPlugin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/artikel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/artikel.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/instellingen.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/jxl-2.6.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/~$artikel.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InstellingenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/KassaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/StockController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ArtikelTekstLoadSave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/DbBehaviour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ExcelAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/ExcelLoadSaveStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/HashMapDb.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/LoadSave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/LoadSaveFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/TekstLoadSaveTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Artikel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ComparatorByOmschrijving.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DrempelKorting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Duurstekorting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Groepkorting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Korting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/KortingFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Observer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SoortKorting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SoortObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SoortOpslag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Subject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Winkel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/KassaMainPane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/KassaView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/KlantView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/InstellingenPane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/KassaPane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,41 +95,64 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="2004807081">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="java" value="15" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="JAVA" value="15" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="55" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="55" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/application/Main.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/KassaPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="1575">
+              <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
+                <element signature="e#2837#2838#0" expanded="true" />
+                <element signature="e#2914#2915#0" expanded="true" />
+                <element signature="e#3360#3361#0" expanded="true" />
+                <element signature="e#3388#3389#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Observer.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/database/ExcelLoadSaveStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding>
-                <element signature="e#120#121#0" expanded="true" />
-                <element signature="e#158#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+            <state relative-caret-position="360">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,89 +161,75 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/SoortKorting.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/model/KortingFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-              <folding>
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#606#607#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/SoortObserver.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="345">
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/SoortOpslag.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/ProductOverviewPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding>
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/StockController.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/view/KlantView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#799#800#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1129#1130#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Subject.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/view/KassaView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/TekstLoadSaveTemplate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Startcode/src/bestanden/instellingen.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/Winkel.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Startcode/src/model/Winkel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="e#2804#2805#0" expanded="true" />
+                <element signature="e#2858#2859#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/database/HashMapDb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -245,6 +278,19 @@
         <option value="$PROJECT_DIR$/src/model/Subject.java" />
         <option value="$PROJECT_DIR$/src/database/TekstLoadSaveTemplate.java" />
         <option value="$PROJECT_DIR$/src/model/Winkel.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/model/DrempelKorting.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/database/LoadSaveFactory.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/controller/KassaController.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/view/panels/KassaPane.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/database/ExcelLoadSaveStrategy.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/model/KortingFactory.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/view/panels/ProductOverviewPane.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/view/KlantView.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/view/KassaView.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/database/HashMapDb.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/model/Winkel.java" />
       </list>
     </option>
   </component>
@@ -254,10 +300,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
-    <option name="height" value="1092" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -268,47 +316,59 @@
         <subPane>
           <expand>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bestanden" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="panels" type="462c0819:PsiDirectoryNode" />
@@ -317,16 +377,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575377461063" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575380176837" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -348,6 +412,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -359,43 +443,47 @@
       <option name="presentableId" value="Default" />
       <updated>1575375589880</updated>
       <workItem from="1575375593343" duration="1774000" />
+      <workItem from="1575377701626" duration="124000" />
+      <workItem from="1575377881258" duration="2055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1774000" />
+    <option name="totallyTimeSpent" value="3953000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24939272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Messages" weight="0.3841388" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32961586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,398 +493,248 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/Artikel.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Artikel.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/ArtikelTekstLoadSave.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/ComparatorByOmschrijving.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/DbBehaviour.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/DrempelKorting.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/Duurstekorting.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/ExcelAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/ExcelLoadSaveStrategy.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/Groepkorting.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/HashMapDb.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/InstellingenController.java" />
+    <entry file="file://$PROJECT_DIR$/src/view/panels/InstellingenPane.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/KassaController.java" />
+    <entry file="file://$PROJECT_DIR$/src/view/KassaMainPane.java" />
+    <entry file="file://$PROJECT_DIR$/src/view/panels/KassaPane.java" />
+    <entry file="file://$PROJECT_DIR$/src/view/KlantView.java" />
+    <entry file="file://$PROJECT_DIR$/src/view/KassaView.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/Korting.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/KortingFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/LoadSave.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/LoadSaveFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/application/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/Observer.java" />
+    <entry file="file://$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/SoortKorting.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/SoortObserver.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/SoortOpslag.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/StockController.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/Subject.java" />
+    <entry file="file://$PROJECT_DIR$/src/database/TekstLoadSaveTemplate.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/Winkel.java" />
+    <entry file="file://$PROJECT_DIR$/Startcode/src/application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1283#1284#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#2011#2012#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/ArtikelTekstLoadSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#431#440#0" expanded="true" />
-            <element signature="e#2355#2356#0" expanded="true" />
-            <element signature="e#2411#2412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ComparatorByOmschrijving.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/DbBehaviour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/DrempelKorting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Duurstekorting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/ExcelAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/ExcelLoadSaveStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#564#573#0" expanded="true" />
-            <element signature="e#1606#1625#0" expanded="true" />
-            <element signature="e#1738#1746#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Groepkorting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/HashMapDb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#531#540#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/InstellingenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#2423#2424#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/panels/InstellingenPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/KassaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1859#1860#0" expanded="true" />
-            <element signature="e#1897#1898#0" expanded="true" />
-            <element signature="e#1937#1938#0" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
-            <element signature="e#2464#2465#0" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/KassaMainPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/panels/KassaPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3139#3140#0" expanded="true" />
-            <element signature="e#3172#3173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/KlantView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/KassaView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Korting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/KortingFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/LoadSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/LoadSaveFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Observer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SoortKorting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#606#607#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SoortObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SoortOpslag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/StockController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/TekstLoadSaveTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Winkel.java">
+    <entry file="file://$PROJECT_DIR$/Startcode/src/application/application.css">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/controller/StockController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/model/DrempelKorting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/database/LoadSaveFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/controller/KassaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="95" column="1" lean-forward="true" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/KassaPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2837#2838#0" expanded="true" />
+            <element signature="e#2914#2915#0" expanded="true" />
+            <element signature="e#3360#3361#0" expanded="true" />
+            <element signature="e#3388#3389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/database/ExcelLoadSaveStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/model/KortingFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/ProductOverviewPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/view/KlantView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/view/KassaView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/bestanden/instellingen.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/database/HashMapDb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/model/Winkel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#2804#2805#0" expanded="true" />
+            <element signature="e#2858#2859#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Project</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>ExcelPlugin</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

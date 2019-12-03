@@ -1,13 +1,18 @@
 package model;
 
+import java.io.PrintStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import model.Korting;
+import model.SoortKorting;
 
 public class KortingFactory {
-        private static KortingFactory ourInstance = new KortingFactory();
+    private static KortingFactory ourInstance = new KortingFactory();
 
     public static KortingFactory getInstance() {
-        if (ourInstance == null) ourInstance = new KortingFactory();
+        if (ourInstance == null) {
+            ourInstance = new KortingFactory();
+        }
         return ourInstance;
     }
 
@@ -15,24 +20,29 @@ public class KortingFactory {
     }
 
     public Korting create(String input) {
-        Korting korting = null;
-        SoortKorting soortKorting = SoortKorting.valueOf(input);
+        Object korting = null;
+        SoortKorting soortKorting = SoortKorting.valueOf((String)input);
         try {
             Class<?> clazz = Class.forName(soortKorting.getKlasseNaam());
-            Constructor<?> constructor = clazz.getConstructor();
-            korting = (Korting) constructor.newInstance();
-        } catch (ClassNotFoundException e) {
+            Constructor<?> constructor = clazz.getConstructor(new Class[0]);
+            korting = (Korting)constructor.newInstance(new Object[0]);
+        }
+        catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        }
+        catch (NoSuchMethodException e) {
             e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        }
+        catch (IllegalAccessException e) {
             e.printStackTrace();
-        } catch (InstantiationException e) {
+        }
+        catch (InstantiationException e) {
             e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        }
+        catch (InvocationTargetException e) {
             e.printStackTrace();
         }
         System.out.println(korting.toString());
-        return korting;
+        return (Korting)korting;
     }
 }

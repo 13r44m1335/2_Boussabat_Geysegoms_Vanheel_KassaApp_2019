@@ -2,29 +2,21 @@ package model;
 
 import controller.KassaController;
 
-import java.util.Objects;
-
-public class Groepkorting implements Korting {
-
+public class Groepkorting implements Korting
+{
     private Double percent;
     private String additional;
 
-    public Groepkorting() {
+    public double berekenKorting(final KassaController kassaController) {
+        final Korting korting = kassaController.getKorting();
+        return 0.0;
     }
 
-    @Override
-    public double berekenKorting(KassaController kassaController) {
-        Korting korting = kassaController.getKorting();
-        return 0;
+    public void setPercent(final double parseDouble) {
+        this.percent = this.percent;
     }
 
-    @Override
-    public void setPercent(double parseDouble) {
-        this.percent = percent;
-    }
-
-    @Override
-    public void setAdditional(Object additional) {
-        this.additional = (String) additional;
+    public void setAdditional(final Object additional) {
+        this.additional = (String)additional;
     }
 }

@@ -1,24 +1,23 @@
 package model;
 
 import controller.KassaController;
+import model.Artikel;
+import model.Korting;
 
-public class Duurstekorting implements Korting {
-
+public class Duurstekorting
+        implements Korting {
     private double percent;
     private Artikel additional;
 
-    @Override
     public double berekenKorting(KassaController kassaController) {
-        return 0;
+        return 0.0;
     }
 
-    @Override
     public void setPercent(double parseDouble) {
-        this.percent = percent;
+        this.percent = this.percent;
     }
 
-    @Override
     public void setAdditional(Object additional) {
-        this.additional = (Artikel) additional;
+        this.additional = (Artikel)additional;
     }
 }
