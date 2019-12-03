@@ -103,4 +103,8 @@ public class KassaPane extends GridPane {
     public Label getError() {
         return error;
     }
+
+    public ArrayList<Artikel> getAll() {
+        return new ArrayList<>(artikels);
+    }
 }

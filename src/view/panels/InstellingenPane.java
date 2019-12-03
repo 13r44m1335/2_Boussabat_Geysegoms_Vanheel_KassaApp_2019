@@ -8,6 +8,7 @@ import javafx.scene.layout.HBox;
 
 /**
  * Deze pane wordt gebruikt voor de instellingen.
+ *
  * @author Andreas Geysegoms
  * @version 1.0
  */
@@ -21,6 +22,7 @@ public class InstellingenPane extends GridPane {
 
     /**
      * Deze methode maakt een pane aan en koppelt deze aan een controller.
+     *
      * @param instellingenController de controller.
      * @author Andreas Geysegoms
      */
@@ -36,13 +38,13 @@ public class InstellingenPane extends GridPane {
         btnExcel.setToggleGroup(group);
         ComboBox comboBox = new ComboBox();
         Label placeholder = new Label("kies een korting");
-        comboBox.setPlaceholder((Node)placeholder);
-        comboBox.getItems().add((Object)"Groepkorting");
-        comboBox.getItems().add((Object)"Drempelkorting");
-        comboBox.getItems().add((Object)"Duurstekorting");
-        HBox hbox = new HBox(new Node[] { (Node)comboBox });
+        comboBox.setPlaceholder((Node) placeholder);
+        comboBox.getItems().add((Object) "Groepkorting");
+        comboBox.getItems().add((Object) "Drempelkorting");
+        comboBox.getItems().add((Object) "Duurstekorting");
+        HBox hbox = new HBox(new Node[]{(Node) comboBox});
         comboBox.setOnAction(event -> {
-            String newVal = (String)comboBox.getValue();
+            String newVal = (String) comboBox.getValue();
             this.setCombobox(newVal);
         });
 
@@ -56,18 +58,18 @@ public class InstellingenPane extends GridPane {
         btnExcel.setOnAction(event -> {
             instellingenController.setExcel();
         });
-
-        this.add(btnExcel,0,0);
-        this.add(btnTxt,0,1);
-        this.add((Node)this.comboBoxText, 2, 0);
-        this.add((Node)this.additional, 3, 0);
+        this.add(comboBox, 1, 0);
+        this.add(btnExcel, 0, 0);
+        this.add(btnTxt, 0, 1);
+        this.add(this.comboBoxText, 2, 0);
+        this.add(this.additional, 3, 0);
         this.comboBoxText.setVisible(false);
         this.additional.setVisible(false);
-        this.add((Node)this.saveKorting, 4, 0);
+        this.add(this.saveKorting, 4, 0);
         this.saveKorting.setVisible(false);
-        this.saveKorting.setOnAction(event -> instellingenController.createKorting((String)comboBox.getValue(), this.comboBoxText.getText(), this.additional.getText()));
-
-
+        this.saveKorting.setOnAction(event -> {
+            instellingenController.createKorting((String) comboBox.getValue(), this.comboBoxText.getText(), this.additional.getText());
+        });
     }
 
     public void setCombobox(String in) {
@@ -75,13 +77,11 @@ public class InstellingenPane extends GridPane {
             this.comboBoxText.setVisible(true);
             this.additional.setText("Groep");
             this.additional.setVisible(true);
-        }
-        else if (in.equals("Drempelkorting")) {
+        } else if (in.equals("Drempelkorting")) {
             this.comboBoxText.setVisible(true);
             this.additional.setText("Drempel");
             this.additional.setVisible(true);
-        }
-        else if (in.equals("Duurstekorting")) {
+        } else if (in.equals("Duurstekorting")) {
             this.comboBoxText.setVisible(true);
             this.additional.setVisible(false);
         }
@@ -98,6 +98,7 @@ public class InstellingenPane extends GridPane {
 
     /**
      * Deze methode stelt de radiobutton in op txt bij inladen.
+     *
      * @author Andreas Geysegoms
      */
     public void setTxtStandard() {

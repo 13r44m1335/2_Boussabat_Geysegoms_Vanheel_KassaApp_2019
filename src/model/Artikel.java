@@ -91,7 +91,7 @@ public class Artikel implements Comparable<Artikel>{
      * @author Andreas Geysegoms
      */
     public void setVerkoopprijs(double verkoopprijs) {
-        if (verkoopprijs <= 0) throw new IllegalArgumentException("Prijs moet meer dan € 0.00");
+        if (verkoopprijs < 0) throw new IllegalArgumentException("Prijs moet meer dan € 0.00");
         else this.verkoopprijs = verkoopprijs;
     }
 
@@ -110,7 +110,7 @@ public class Artikel implements Comparable<Artikel>{
      * @author Andreas Geysegoms
      */
     public void setActueleVoorraad(int actueleVoorraad) {
-        if (actueleVoorraad < 0) throw new IllegalArgumentException("Voorraad moet een positief geheel getal zijn.");
+        if (actueleVoorraad <= 0) throw new IllegalArgumentException("Voorraad moet een positief geheel getal zijn.");
         else this.actueleVoorraad = actueleVoorraad;
     }
 

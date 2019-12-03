@@ -81,20 +81,15 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     @Override
-    public void update(final Object artikels) {
+    public void update(Object artikels) {
         try {
-            final ArrayList<Artikel> artikels2 = (ArrayList<Artikel>)artikels;
-            final Artikel artikel = artikels2.get(0);
-            final double totaalS = this.getTotaal() + artikel.getVerkoopprijs();
-            this.view.setTotaal(totaalS);
+            ArrayList<Artikel> artikels2 = (ArrayList<Artikel>) artikels;
+            Artikel artikel = artikels2.get(0);
+            double totaalS = this.getTotaal() + artikel.getVerkoopprijs();
             this.setTotaal(totaalS);
             this.view.addArtikel(artikel);
-            if (this.duurste == null) {
-                this.duurste = artikel;
-            }
-            else if (this.duurste.getVerkoopprijs() < artikel.getVerkoopprijs()) {
-                this.duurste = artikel;
-            }
+            double korting = this.getKorting().berekenKorting(this);
+            this.view.setTotaal(totaalS-korting);
         }
         catch (NullPointerException e) {
             this.view.getError().setVisible(true);
@@ -105,19 +100,11 @@ public class KassaController extends Observer {
         return this.duurste;
     }
 
-    public void setDetails(final double percent, final Object additional) {
-        if (this.winkel.getKorting() instanceof Groepkorting) {
-            final String s = (String)additional;
-        }
-        else if (this.winkel.getKorting() instanceof DrempelKorting) {
-            double drempel =  (double)additional;
-        }
-        else if (this.winkel.getKorting() instanceof Duurstekorting) {
-            final Artikel artikel = (Artikel)additional;
-        }
-    }
-
     public Korting getKorting() {
         return this.winkel.getKorting();
+    }
+
+    public ArrayList<Artikel> getAll() {
+        return view.getAll();
     }
 }

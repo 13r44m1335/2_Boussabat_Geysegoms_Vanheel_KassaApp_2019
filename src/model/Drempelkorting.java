@@ -2,13 +2,14 @@ package model;
 
 import controller.KassaController;
 
-public class DrempelKorting implements Korting {
+public class Drempelkorting implements Korting {
     private double percent;
     private double additional;
 
     @Override
     public double berekenKorting(KassaController kassaController) {
-        return 0.0;
+        if (kassaController.getTotaal() > additional) return kassaController.getTotaal()*(1-percent/100);
+        else return 0;
     }
     @Override
     public void setPercent(double parseDouble) {

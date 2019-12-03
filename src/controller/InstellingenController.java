@@ -1,6 +1,5 @@
 package controller;
 
-import database.LoadSave;
 import model.*;
 import view.panels.InstellingenPane;
 
@@ -8,8 +7,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
 /**
@@ -24,7 +21,7 @@ public class InstellingenController {
     private InstellingenPane view;
     private KassaController kassaController;
 
-    public void setKassaController(final KassaController kassaController) {
+    public void setKassaController(KassaController kassaController) {
         this.kassaController = kassaController;
     }
 
@@ -34,8 +31,9 @@ public class InstellingenController {
      * @param winkel de winkel.
      * @author Andreas Geysegoms
      */
-    public InstellingenController(Winkel winkel) {
+    public InstellingenController(Winkel winkel, KassaController kassaController) {
         this.winkel = winkel;
+        this.kassaController = kassaController;
     }
 
     /**
@@ -109,13 +107,17 @@ public class InstellingenController {
         this.winkel.setKorting(type);
         this.winkel.getKorting().setPercent(Double.parseDouble(percent));
         if (this.winkel.getKorting() instanceof Groepkorting) {
-            this.winkel.getKorting().setAdditional((Object)additional);
+            this.winkel.getKorting().setAdditional(additional);
         }
-        else if (this.winkel.getKorting() instanceof DrempelKorting) {
-            this.winkel.getKorting().setAdditional((Object)Double.parseDouble(additional));
+        else if (this.winkel.getKorting() instanceof Drempelkorting) {
+            this.winkel.getKorting().setAdditional(Double.parseDouble(additional));
         }
         else if (this.winkel.getKorting() instanceof Duurstekorting) {
-            this.winkel.getKorting().setAdditional((Object)this.kassaController.getDuursteInKar());
+            try {
+                this.winkel.getKorting().setAdditional(this.kassaController.getDuursteInKar());
+            } catch (NullPointerException e) {
+                this.winkel.getKorting().setAdditional(new Artikel("X","Dummy","gr1",0.01,1));
+            }
         }
     }
 }

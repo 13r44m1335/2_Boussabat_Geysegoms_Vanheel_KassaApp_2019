@@ -72,6 +72,7 @@ public class Winkel implements Subject {
     public Winkel() {
         this.db = new HashMapDb();
         LoadSaveFactory factory = loadSaveFactory.getInstance();
+        KortingFactory kortingFactory = KortingFactory.getInstance();
         this.properties = new Properties();
         try {
             InputStream is = new FileInputStream("src/bestanden/instellingen.xml");
@@ -178,7 +179,7 @@ public class Winkel implements Subject {
     }
 
     public void setKorting(String k) {
-        this.korting = this.kortingFactory.create(k);
+        this.korting = KortingFactory.getInstance().create(k);
     }
 
     public Korting getKorting() {

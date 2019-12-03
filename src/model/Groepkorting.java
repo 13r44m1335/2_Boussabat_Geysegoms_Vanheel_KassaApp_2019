@@ -2,18 +2,25 @@ package model;
 
 import controller.KassaController;
 
-public class Groepkorting implements Korting
-{
+import java.util.ArrayList;
+
+public class Groepkorting implements Korting {
     private Double percent;
     private String additional;
 
     public double berekenKorting(KassaController kassaController) {
-        Korting korting = kassaController.getKorting();
-        return 0.0;
+        double res = 0;
+        ArrayList<Artikel> artikelsMetKorting = kassaController.getAll();
+        for (Artikel artikel : artikelsMetKorting) {
+            if (artikel.getArtikelGroep().equals(additional)) {
+                res += artikel.getVerkoopprijs()*(1-percent/100);
+            }
+        }
+        return res;
     }
 
     public void setPercent(double parseDouble) {
-        this.percent = this.percent;
+        this.percent = parseDouble;
     }
 
     public void setAdditional(Object additional) {

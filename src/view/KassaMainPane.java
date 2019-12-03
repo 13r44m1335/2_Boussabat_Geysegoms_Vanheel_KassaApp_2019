@@ -26,7 +26,7 @@ public class KassaMainPane extends BorderPane {
         StockController stockController = new StockController(winkel);
         ProductOverviewPane productOverviewPane = new ProductOverviewPane(stockController);
 
-        InstellingenController instellingenController = new InstellingenController(winkel);
+        InstellingenController instellingenController = new InstellingenController(winkel, controller);
         InstellingenPane instellingenPane = new InstellingenPane(instellingenController);
 
         Tab artikelTab = new Tab("Artikelen",productOverviewPane);

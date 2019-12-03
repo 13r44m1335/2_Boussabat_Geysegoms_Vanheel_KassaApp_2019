@@ -19,12 +19,12 @@ public class KortingFactory {
     }
 
     public Korting create(String input) {
-        Object korting = null;
-        SoortKorting soortKorting = SoortKorting.valueOf((String)input);
+        Korting korting = null;
+        SoortKorting soortKorting = SoortKorting.valueOf(input);
         try {
             Class<?> clazz = Class.forName(soortKorting.getKlasseNaam());
-            Constructor<?> constructor = clazz.getConstructor(new Class[0]);
-            korting = (Korting)constructor.newInstance(new Object[0]);
+            Constructor<?> constructor = clazz.getConstructor();
+            korting = (Korting)constructor.newInstance();
         }
         catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -41,7 +41,6 @@ public class KortingFactory {
         catch (InvocationTargetException e) {
             e.printStackTrace();
         }
-        System.out.println(korting.toString());
-        return (Korting)korting;
+        return korting;
     }
 }
