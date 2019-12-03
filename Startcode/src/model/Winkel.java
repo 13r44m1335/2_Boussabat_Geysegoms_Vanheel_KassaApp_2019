@@ -74,7 +74,7 @@ public class Winkel implements Subject {
         LoadSaveFactory factory = loadSaveFactory.getInstance();
         this.properties = new Properties();
         try {
-            InputStream is = new FileInputStream("src/bestanden/instellingen.xml");
+            InputStream is = new FileInputStream("Startcode/src/bestanden/instellingen.xml");
             properties.loadFromXML(is);
             is.close();
         } catch (FileNotFoundException e) {
@@ -115,7 +115,7 @@ public class Winkel implements Subject {
     public void toonStock() {
         Object inputObj = properties.get("input");
         String input = (String) inputObj;
-        ArrayList<Artikel> artikels = loadSave.load("src/bestanden/artikel."+input);
+        ArrayList<Artikel> artikels = loadSave.load("Startcode/src/bestanden/artikel."+input);
         db.save(artikels);
         notifyObservers(STOCK, artikels);
     }

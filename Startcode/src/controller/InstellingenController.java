@@ -67,7 +67,7 @@ public class InstellingenController {
         Properties properties = winkel.getProperties();
         FileOutputStream os = null;
         try {
-            File prop = new File("src/bestanden/instellingen.xml");
+            File prop = new File("Startcode/src/bestanden/instellingen.xml");
             os = new FileOutputStream(prop);
             properties.setProperty("input", "xls");
             properties.storeToXML(os, "");
