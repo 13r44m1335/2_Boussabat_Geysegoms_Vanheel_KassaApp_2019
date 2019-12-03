@@ -2,62 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e7124ed-a94a-4c84-838b-fd9935b83dd7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ExcelPlugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jxl_2_6_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/the-comits/Startcode/src/model/DrempelKorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/the-comits/Startcode/src/model/Duurstekorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/the-comits/Startcode/src/model/Groepkorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/the-comits/Startcode/src/model/Korting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/the-comits/Startcode/src/model/KortingFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/the-comits/Startcode/src/model/SoortKorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/controller/KassaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/controller/KassaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Drempelkorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Drempelkorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Duurstekorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Duurstekorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Groepkorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Groepkorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Korting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Korting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/model/KortingFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/KortingFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/model/SoortKorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/SoortKorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/model/Winkel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/model/Winkel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startcode/src/view/panels/InstellingenPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/Startcode/src/view/panels/InstellingenPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/application.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestanden/ExcelPlugin.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestanden/artikel.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestanden/artikel.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestanden/instellingen.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestanden/jxl-2.6.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestanden/~$artikel.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InstellingenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/KassaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/StockController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/ArtikelTekstLoadSave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/DbBehaviour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/ExcelAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/ExcelLoadSaveStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/HashMapDb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/LoadSave.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/LoadSaveFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/TekstLoadSaveTemplate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Artikel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ComparatorByOmschrijving.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DrempelKorting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Duurstekorting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Groepkorting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Korting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/KortingFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Observer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SoortKorting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SoortObserver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SoortOpslag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Subject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Winkel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/KassaMainPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/KassaView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/KlantView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/InstellingenPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/KassaPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,14 +59,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="java" value="15" />
+          <entry key="java" value="20" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="JAVA" value="15" />
+          <entry key="JAVA" value="20" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -133,9 +85,21 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/controller/KassaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/KassaPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
+            <state relative-caret-position="404">
               <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,10 +113,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Startcode/src/database/ExcelLoadSaveStrategy.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="-674">
+              <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,37 +125,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Startcode/src/model/KortingFactory.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/InstellingenPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Startcode/src/view/KassaMainPane.java">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/model/Observer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/ProductOverviewPane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Startcode/src/view/KlantView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -213,8 +159,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Startcode/src/model/Winkel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="331">
+              <caret line="127" column="42" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="42" />
               <folding>
                 <element signature="e#2804#2805#0" expanded="true" />
                 <element signature="e#2858#2859#0" expanded="true" />
@@ -224,10 +170,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Startcode/src/model/KortingFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Startcode/src/database/HashMapDb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="330">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -240,6 +195,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>kassa</find>
+      <find>object</find>
+      <find>kortingfactory</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -291,6 +253,7 @@
         <option value="$PROJECT_DIR$/Startcode/src/view/KassaView.java" />
         <option value="$PROJECT_DIR$/Startcode/src/database/HashMapDb.java" />
         <option value="$PROJECT_DIR$/Startcode/src/model/Winkel.java" />
+        <option value="$PROJECT_DIR$/Startcode/src/view/panels/InstellingenPane.java" />
       </list>
     </option>
   </component>
@@ -301,8 +264,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -356,6 +320,13 @@
               <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
               <item name="Startcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Groepsopdracht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Groepsopdracht" type="462c0819:PsiDirectoryNode" />
+              <item name="Startcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -384,7 +355,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575380176837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575382582410" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -444,18 +415,18 @@
       <updated>1575375589880</updated>
       <workItem from="1575375593343" duration="1774000" />
       <workItem from="1575377701626" duration="124000" />
-      <workItem from="1575377881258" duration="2055000" />
+      <workItem from="1575377881258" duration="3772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3953000" />
+    <option name="totallyTimeSpent" value="5670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -466,7 +437,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3841388" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32961586" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32961586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -474,7 +445,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32961586" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -488,6 +459,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -558,54 +555,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Startcode/src/controller/KassaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="83" column="9" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="95" column="1" lean-forward="true" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/KassaPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2837#2838#0" expanded="true" />
-            <element signature="e#2914#2915#0" expanded="true" />
-            <element signature="e#3360#3361#0" expanded="true" />
-            <element signature="e#3388#3389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Startcode/src/database/ExcelLoadSaveStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Startcode/src/model/KortingFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -642,15 +598,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Startcode/src/database/HashMapDb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="330">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/KassaPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2837#2838#0" expanded="true" />
+            <element signature="e#2914#2915#0" expanded="true" />
+            <element signature="e#3360#3361#0" expanded="true" />
+            <element signature="e#3388#3389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/model/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/view/panels/InstellingenPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/controller/InstellingenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/controller/KassaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Startcode/src/model/KortingFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Startcode/src/model/Winkel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="331">
+          <caret line="127" column="42" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="42" />
           <folding>
             <element signature="e#2804#2805#0" expanded="true" />
             <element signature="e#2858#2859#0" expanded="true" />
