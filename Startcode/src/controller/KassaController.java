@@ -1,9 +1,6 @@
 package controller;
 
-import model.Artikel;
-import model.Observer;
-import model.SoortObserver;
-import model.Winkel;
+import model.*;
 import view.panels.KassaPane;
 
 import java.util.ArrayList;
@@ -16,6 +13,9 @@ public class KassaController extends Observer {
     private Winkel winkel;
     private KassaPane view;
     private double totaal = 0;
+    private Artikel duurste = null;
+    private String groep;
+    private double hogerDanBedrag;
 
     /**
      * Deze methode maakt een isntantie aan van een kassaController.
@@ -78,6 +78,11 @@ public class KassaController extends Observer {
             this.view.setTotaal(totaalS);
             this.setTotaal(totaalS);
             this.view.addArtikel(artikel);
+            if (duurste == null) {
+                duurste = artikel;
+            } else if (duurste.getVerkoopprijs() < artikel.getVerkoopprijs()) {
+                duurste = artikel;
+            }
         } catch (NullPointerException e) {
             this.view.getError().setVisible(true);
         }
@@ -90,5 +95,27 @@ public class KassaController extends Observer {
      */
     public void scan(String code) {
         winkel.scan(code);
+    }
+
+    public Artikel getDuursteInKar() {
+       return duurste;
+    }
+
+    public void setDetails(double percent, Object additional) {
+        if (winkel.getKorting() instanceof Groepkorting) {
+            //groep
+            String res = (String) additional;
+
+        } else if (winkel.getKorting() instanceof Drempelkorting) {
+            //drempel
+            double res = (double) additional;
+        } else if (winkel.getKorting() instanceof Duurstekorting) {
+            //duurste
+            Artikel res = (Artikel) additional;
+        }
+    }
+
+    public Korting getKorting() {
+        return winkel.getKorting();
     }
 }

@@ -4,6 +4,7 @@ import database.ExcelLoadSaveStrategy;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import model.Artikel;
+import model.KortingFactory;
 import view.KassaView;
 import view.KlantView;
 

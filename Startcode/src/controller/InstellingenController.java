@@ -1,9 +1,7 @@
 package controller;
 
 import database.LoadSave;
-import model.Observer;
-import model.SoortOplslag;
-import model.Winkel;
+import model.*;
 import view.panels.InstellingenPane;
 
 import java.io.File;
@@ -12,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.text.ParseException;
 import java.util.Properties;
 
 /**
@@ -24,6 +23,11 @@ public class InstellingenController {
 
     private Winkel winkel;
     private InstellingenPane view;
+    private KassaController kassaController;
+
+    public void setKassaController(KassaController kassaController) {
+        this.kassaController = kassaController;
+    }
 
     /**
      * Deze methode maakt een instantie aan van een isntellingencontroller ahv de winkel.
@@ -99,5 +103,17 @@ public class InstellingenController {
      */
     public void setView(InstellingenPane instellingenPane) {
         this.view = instellingenPane;
+    }
+
+    public void createKorting(String type, String percent, String additional) {
+        winkel.setKorting(type);
+        winkel.getKorting().setPercent(Double.parseDouble(percent));
+        if (winkel.getKorting() instanceof Groepkorting) {
+            winkel.getKorting().setAdditional(additional);
+        } else if (winkel.getKorting() instanceof Drempelkorting) {
+            winkel.getKorting().setAdditional(Double.parseDouble(additional));
+        } else if (winkel.getKorting() instanceof Duurstekorting) {
+            winkel.getKorting().setAdditional(kassaController.getDuursteInKar());
+        }
     }
 }

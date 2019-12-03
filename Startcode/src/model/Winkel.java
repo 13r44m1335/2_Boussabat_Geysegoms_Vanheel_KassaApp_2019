@@ -26,6 +26,8 @@ public class Winkel implements Subject {
     private Properties properties;
     private LoadSave loadSave;
     private LoadSaveFactory loadSaveFactory;
+    private Korting korting;
+    private KortingFactory kortingFactory;
 
     /**
      * Deze methode is gebruikt om de databank te zetten.
@@ -174,4 +176,13 @@ public class Winkel implements Subject {
             notifyObservers(ARTIKELINSCANNEN,null);
         }
     }
+
+    public void setKorting(String k) {
+        korting = kortingFactory.create(k);
+    }
+
+    public Korting getKorting() {
+        return korting;
+    }
+
 }
