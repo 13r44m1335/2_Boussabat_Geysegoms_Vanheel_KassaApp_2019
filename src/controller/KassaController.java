@@ -12,7 +12,9 @@ public class KassaController extends Observer {
 
     private Winkel winkel;
     private KassaPane view;
-    private double totaal = 0;
+    private Winkelwagen[] winkelwagens = new Winkelwagen[2];
+    private Winkelwagen current = new Winkelwagen();
+    private Winkelwagen hold = new Winkelwagen();
 
     /**
      * Deze methode maakt een isntantie aan van een kassaController.
@@ -23,6 +25,8 @@ public class KassaController extends Observer {
         super(winkel);
         setWinkel(winkel);
         winkel.registerObserver(this, SoortObserver.ARTIKELINSCANNEN);
+        winkelwagens[0] = current;
+        winkelwagens[1] = hold;
     }
 
     /**
@@ -49,7 +53,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void setTotaal(double totaal) {
-        this.totaal = totaal;
+        current.setTotaal(totaal);
     }
 
     /**
@@ -58,7 +62,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public double getTotaal() {
-        return totaal;
+        return current.getTotaal();
     }
 
 
@@ -87,6 +91,7 @@ public class KassaController extends Observer {
             Artikel artikel = artikels2.get(0);
             double totaalS = this.getTotaal() + artikel.getVerkoopprijs();
             this.setTotaal(totaalS);
+            this.current.addArtikel(artikel);
             this.view.addArtikel(artikel);
             if (this.getKorting()!=null) {
                 double korting = this.getKorting().berekenKorting(this);
@@ -125,5 +130,33 @@ public class KassaController extends Observer {
      */
     public KassaPane getView() {
         return view;
+    }
+
+    /**
+     * Deze methode zet een verkoop op hold.
+     * @author Andreas Geysegoms
+     */
+    public void putOnHold() {
+        Winkelwagen temp = this.current;
+        this.current = this.hold;
+        this.hold = temp;
+        view.reset();
+        view.setTotaal(current.getTotaal());
+    }
+
+    /**
+     * Deze methode de verkoop van hold terug op de voorgrond.
+     * @author Andreas Geysegoms
+     */
+    public void resume() {
+        this.current = hold;
+        view.resume(current.getAll());
+        double totaal = current.getTotaal();
+        if (this.getKorting()!=null) {
+            double korting = this.getKorting().berekenKorting(this);
+            totaal = totaal - korting;
+        }
+        totaal = (double) Math.round(totaal*100.0)/100.0;
+        this.view.setTotaal(totaal);
     }
 }

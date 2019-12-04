@@ -25,7 +25,7 @@ import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
 
 public class KassaPane extends GridPane {
     private TableView table;
-    private Button btnAdd, btnCancel;
+    private Button btnHold, btnResume;
     private TextField artikelCodeField;
     private Label error = new Label("Niet bestaande code"), totaal;
     private KassaController controller;
@@ -50,6 +50,9 @@ public class KassaPane extends GridPane {
         table.setPrefWidth(REMAINING);
         this.add(error, 0, 0, 1, 1);
         error.setVisible(false);
+        btnHold = new Button("Hold Up!");
+        btnResume = new Button("Resume hold");
+        btnResume.setDisable(true);
 
         artikelCodeField.setOnKeyReleased(event -> {
             if (event.getCode() == KeyCode.ENTER){
@@ -70,6 +73,17 @@ public class KassaPane extends GridPane {
         table.getColumns().add(aantal);
 
         this.add(table, 0, 4, 5, 6);
+        this.add(btnHold,1,11);
+        this.add(btnResume,2,11);
+
+        btnResume.setOnAction(event ->  {
+            controller.resume();
+        });
+
+        btnHold.setOnAction(event -> {
+            controller.putOnHold();
+        });
+
         table.setItems(artikels);
         totaal = new Label();
         totaal.setText("Totale bedrag: € 0.00");
@@ -120,5 +134,29 @@ public class KassaPane extends GridPane {
      */
     public ArrayList<Artikel> getAll() {
         return new ArrayList<>(artikels);
+    }
+
+    /**
+     * Deze methode handelt het visuele van het op hold zetten van een aankoop.
+     * Deze methode reset de view.
+     * @author Andreas Geysegoms
+     */
+    public void reset() {
+        artikels = FXCollections.observableArrayList();
+        btnHold.setDisable(true);
+        btnResume.setDisable(false);
+        this.table.setItems(artikels);
+    }
+
+    /**
+     * Deze methode handelt het visuele van herstellen van de on hold aankoop.
+     * @param artikelArrayList de artikels uit de winkelwagen die op hold staat.
+     * @author Andreas Geysegoms
+     */
+    public void resume(ArrayList<Artikel> artikelArrayList) {
+        artikels = FXCollections.observableArrayList(artikelArrayList);
+        this.table.setItems(artikels);
+        btnHold.setDisable(false);
+        btnResume.setDisable(true);
     }
 }
