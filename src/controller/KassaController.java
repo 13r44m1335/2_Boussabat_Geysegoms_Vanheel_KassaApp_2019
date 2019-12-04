@@ -13,7 +13,6 @@ public class KassaController extends Observer {
     private Winkel winkel;
     private KassaPane view;
     private double totaal = 0;
-    private Artikel duurste;
 
     /**
      * Deze methode maakt een isntantie aan van een kassaController.
@@ -72,6 +71,7 @@ public class KassaController extends Observer {
      */
     public void scan(String code) {
         winkel.scan(code);
+        view.getArtikelCodeField().clear();
     }
 
 
@@ -88,9 +88,12 @@ public class KassaController extends Observer {
             double totaalS = this.getTotaal() + artikel.getVerkoopprijs();
             this.setTotaal(totaalS);
             this.view.addArtikel(artikel);
-            double korting = this.getKorting().berekenKorting(this);
-            korting = (double) Math.round(korting*100.0)/100.0;
-            this.view.setTotaal(totaalS-korting);
+            if (this.getKorting()!=null) {
+                double korting = this.getKorting().berekenKorting(this);
+                totaalS = totaalS - korting;
+            }
+            totaalS = (double) Math.round(totaalS*100.0)/100.0;
+            this.view.setTotaal(totaalS);
         }
         catch (NullPointerException e) {
             this.view.getError().setVisible(true);
@@ -113,5 +116,14 @@ public class KassaController extends Observer {
      */
     public ArrayList<Artikel> getAll() {
         return view.getAll();
+    }
+
+    /**
+     * Deze methode haalt de view op.
+     * @return de view.
+     * @author Andreas Geysegoms
+     */
+    public KassaPane getView() {
+        return view;
     }
 }

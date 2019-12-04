@@ -37,7 +37,7 @@ public class KassaPane extends GridPane {
         setTable();
     }
 
-    public void setTable() {
+    private void setTable() {
         this.setPrefHeight(150);
         this.setPrefWidth(300);
         this.setPadding(new Insets(5, 5, 5, 5));
@@ -102,6 +102,15 @@ public class KassaPane extends GridPane {
      */
     public Label getError() {
         return error;
+    }
+
+    /**
+     * Deze methode haalt de textfield waarmee we artikels inscannen op.
+     * @return het scan veld.
+     * @author Andreas Geysegoms
+     */
+    public TextField getArtikelCodeField() {
+        return artikelCodeField;
     }
 
     /**

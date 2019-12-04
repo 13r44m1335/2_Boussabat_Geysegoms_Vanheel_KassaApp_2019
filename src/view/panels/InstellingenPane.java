@@ -4,8 +4,6 @@ import controller.InstellingenController;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-
 /**
  * Deze pane wordt gebruikt voor de instellingen.
  * @author Andreas Geysegoms
@@ -18,6 +16,10 @@ public class InstellingenPane extends GridPane {
     private TextField comboBoxText;
     private TextField additional;
     private Button saveKorting;
+    private Label input = new Label("Inlezen uit:");
+    private Label korting = new Label("Korting:");
+    private Label percent = new Label("%  ");
+    private Label euro = new Label("€  ");
 
     /**
      * Deze methode maakt een pane aan en koppelt deze aan een controller.
@@ -25,6 +27,8 @@ public class InstellingenPane extends GridPane {
      * @author Andreas Geysegoms
      */
     public InstellingenPane(InstellingenController instellingenController) {
+        percent.setVisible(false);
+        euro.setVisible(false);
         this.comboBoxText = new TextField("Vul hier het gewenste percentage in.");
         this.additional = new TextField("drempel");
         this.saveKorting = new Button("Save");
@@ -36,11 +40,10 @@ public class InstellingenPane extends GridPane {
         btnExcel.setToggleGroup(group);
         ComboBox comboBox = new ComboBox();
         Label placeholder = new Label("kies een korting");
-        comboBox.setPlaceholder((Node) placeholder);
-        comboBox.getItems().add((Object) "Groepkorting");
-        comboBox.getItems().add((Object) "Drempelkorting");
-        comboBox.getItems().add((Object) "Duurstekorting");
-        HBox hbox = new HBox(new Node[]{(Node) comboBox});
+        comboBox.setPlaceholder(placeholder);
+        comboBox.getItems().add("Groepkorting");
+        comboBox.getItems().add("Drempelkorting");
+        comboBox.getItems().add("Duurstekorting");
         comboBox.setOnAction(event -> {
             String newVal = (String) comboBox.getValue();
             this.setCombobox(newVal);
@@ -56,14 +59,18 @@ public class InstellingenPane extends GridPane {
         btnExcel.setOnAction(event -> {
             instellingenController.setExcel();
         });
-        this.add(comboBox, 1, 0);
-        this.add(btnExcel, 0, 0);
-        this.add(btnTxt, 0, 1);
-        this.add(this.comboBoxText, 2, 0);
-        this.add(this.additional, 3, 0);
+        this.add(input,0,0);
+        this.add(korting, 1,0);
+        this.add(comboBox, 1, 1);
+        this.add(btnExcel, 0, 1);
+        this.add(btnTxt, 0, 2);
+        this.add(this.comboBoxText, 2, 1);
+        this.add(percent,3,1);
+        this.add(this.additional, 4, 1);
         this.comboBoxText.setVisible(false);
         this.additional.setVisible(false);
-        this.add(this.saveKorting, 4, 0);
+        this.add(euro,5,1);
+        this.add(this.saveKorting, 6, 1);
         this.saveKorting.setVisible(false);
         this.saveKorting.setOnAction(event -> {
             instellingenController.createKorting((String) comboBox.getValue(), this.comboBoxText.getText(), this.additional.getText());
@@ -75,18 +82,25 @@ public class InstellingenPane extends GridPane {
      * @param in de input voor de korting.
      * @author Andreas Geysegoms
      */
-    public void setCombobox(String in) {
-        if (in.equals("Groepkorting")) {
-            this.comboBoxText.setVisible(true);
-            this.additional.setText("Groep");
-            this.additional.setVisible(true);
-        } else if (in.equals("Drempelkorting")) {
-            this.comboBoxText.setVisible(true);
-            this.additional.setText("Drempel");
-            this.additional.setVisible(true);
-        } else if (in.equals("Duurstekorting")) {
-            this.comboBoxText.setVisible(true);
-            this.additional.setVisible(false);
+    private void setCombobox(String in) {
+        percent.setVisible(true);
+        euro.setVisible(false);
+        switch (in) {
+            case "Groepkorting":
+                this.comboBoxText.setVisible(true);
+                this.additional.setText("Groep");
+                this.additional.setVisible(true);
+                break;
+            case "Drempelkorting":
+                this.comboBoxText.setVisible(true);
+                this.additional.setText("Drempel");
+                this.additional.setVisible(true);
+                this.euro.setVisible(true);
+                break;
+            case "Duurstekorting":
+                this.comboBoxText.setVisible(true);
+                this.additional.setVisible(false);
+                break;
         }
         this.saveKorting.setVisible(true);
     }

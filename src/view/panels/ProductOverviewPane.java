@@ -58,8 +58,6 @@ public class ProductOverviewPane extends GridPane {
 		table.setItems(artikels);
 		table.getColumns().addAll(code,beschrijving, groep, prijs, voorraad);
 		this.add(table,0,1);
-
-
 	}
 
 	/**
