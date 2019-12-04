@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="71e58179-0faf-44b0-adac-a2065a34459c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/KlantController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/KlantMainPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/panels/KlantPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/artikel.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestanden/artikel.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/InstellingenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InstellingenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Winkel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Winkel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/KassaMainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/KassaMainPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/KassaView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/KassaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/KlantView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/KlantView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/KassaPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/KassaPane.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TvjJAvINzBh9KLz1S7nZRv7plf" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id>AOP</id>
+          </State>
+          <State>
+            <id>AccessibilityLintAndroid</id>
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Code StyleScala</id>
+          </State>
+          <State>
+            <id>CorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>FinalizationJava</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>ImportsJava</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>JUnitJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>MemoryJava</id>
+          </State>
+          <State>
+            <id>MessagesCorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>PerformanceLintAndroid</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Probable bugsGroovy</id>
+          </State>
+          <State>
+            <id>Scala</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+          <State>
+            <id>UsabilityLintAndroid</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574263689375" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Theorie/OOO_Theorie_With_Notes (1)/OOO_Theorie" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\Documents\Hogeschool\Bach.2\Semester 1\OO Ontwerpen\Project\Startcode\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <module name="Startcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="71e58179-0faf-44b0-adac-a2065a34459c" name="Default Changelist" comment="" />
+      <created>1574261980045</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574261980045</updated>
+      <workItem from="1574261981280" duration="502000" />
+      <workItem from="1574263142828" duration="530000" />
+      <workItem from="1574347394428" duration="1299000" />
+      <workItem from="1574798738211" duration="189000" />
+      <workItem from="1574798960972" duration="22000" />
+      <workItem from="1574798990728" duration="27000" />
+      <workItem from="1574818748011" duration="40000" />
+      <workItem from="1574818832605" duration="168000" />
+      <workItem from="1574819028991" duration="196000" />
+      <workItem from="1574819276548" duration="322000" />
+      <workItem from="1574819625231" duration="51000" />
+      <workItem from="1575139890528" duration="716000" />
+      <workItem from="1575144523101" duration="11000" />
+      <workItem from="1575362803175" duration="109000" />
+      <workItem from="1575363186709" duration="1177000" />
+      <workItem from="1575364403708" duration="12648000" />
+      <workItem from="1575377204652" duration="10245000" />
+      <workItem from="1575388234538" duration="424000" />
+    </task>
+    <task id="LOCAL-00001" summary="Artikel en gitignore aangemaakt">
+      <created>1574264300873</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574264300873</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Artikel en gitignore aangemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Artikel en gitignore aangemaakt" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="874" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1575386974373">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="874" y="177" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1575386974373" />
+    <state x="684" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575364334875">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="684" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575364334875" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1575363384460">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575363384460" />
+    <state width="914" height="294" key="GridCell.Tab.0.bottom" timestamp="1575388663477">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575388663477" />
+    <state width="914" height="294" key="GridCell.Tab.0.center" timestamp="1575388663477">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="294" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575388663477" />
+    <state width="914" height="294" key="GridCell.Tab.0.left" timestamp="1575388663477">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="294" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575388663477" />
+    <state width="914" height="294" key="GridCell.Tab.0.right" timestamp="1575388663477">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="294" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575388663477" />
+    <state width="914" height="239" key="GridCell.Tab.1.bottom" timestamp="1575388063323">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="239" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575388063323" />
+    <state width="914" height="239" key="GridCell.Tab.1.center" timestamp="1575388063323">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="239" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575388063323" />
+    <state width="914" height="239" key="GridCell.Tab.1.left" timestamp="1575388063323">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="239" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575388063323" />
+    <state width="914" height="239" key="GridCell.Tab.1.right" timestamp="1575388063323">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="914" height="239" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575388063323" />
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575363229208">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575363229208" />
+    <state x="521" y="275" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1575383843149">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="521" y="275" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1575383843149" />
+    <state x="953" y="0" width="974" height="1087" key="dock-window-1" timestamp="1575466370994">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="953" y="0" width="974" height="1087" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1575466370994" />
+    <state x="953" y="0" width="974" height="1087" key="dock-window-2" timestamp="1575388305032">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="953" y="0" width="974" height="1087" key="dock-window-2/0.0.1920.1080@0.0.1920.1080" timestamp="1575388305032" />
+    <state x="656" y="277" width="607" height="526" key="find.popup" timestamp="1575371407527">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="656" y="277" width="607" height="526" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575371407527" />
+    <state x="136" y="258" key="run.anything.popup" timestamp="1575385693376">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="136" y="258" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575385693376" />
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1575369274307">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575369274307" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/Winkel.java</url>
+          <line>168</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Startcode</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.31152633" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jxl-2.6.12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

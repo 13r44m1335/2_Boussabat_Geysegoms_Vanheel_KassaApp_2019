@@ -3,12 +3,15 @@ package view;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;	
+import javafx.stage.Stage;
+import model.Artikel;
 
 public class KassaView {
-	private Stage stage = new Stage();		
+	private Stage stage = new Stage();
+	private Artikel artikel;
+
 		
-	public KassaView(){			
+	public KassaView(){
 		stage.setTitle("KASSA VIEW");
 		stage.setResizable(false);		
 		stage.setX(20);
@@ -22,6 +25,11 @@ public class KassaView {
 
 		stage.setScene(scene);
 		stage.sizeToScene();			
-		stage.show();		
+		stage.show();
+
+
 	}
+
+
+
 }

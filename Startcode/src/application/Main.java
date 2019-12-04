@@ -1,5 +1,6 @@
 package application;
 
+import controller.KlantController;
 import database.ExcelLoadSaveStrategy;
 import javafx.application.Application;
 import javafx.stage.Stage;

@@ -1,7 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-
 /**
  * Deze interface beschrijft de methodes om met Observers om te gaan (registreren, verwijderen en notifyen).
  * @author Andreas Geysegoms

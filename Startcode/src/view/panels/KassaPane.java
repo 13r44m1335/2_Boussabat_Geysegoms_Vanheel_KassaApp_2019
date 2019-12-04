@@ -56,6 +56,7 @@ public class KassaPane extends GridPane {
                 controller.scan(artikelCodeField.getText());
             }
         });
+
         TableColumn omschrijvingCol = new TableColumn<>("Beschrijving");
         omschrijvingCol.setCellValueFactory(new PropertyValueFactory("omschrijving"));
         table.getColumns().add(omschrijvingCol);

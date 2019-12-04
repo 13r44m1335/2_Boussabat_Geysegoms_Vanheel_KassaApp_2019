@@ -2,17 +2,13 @@ package model;
 
 import database.*;
 
-import javax.xml.stream.FactoryConfigurationError;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-
-import static model.SoortObserver.ARTIKELINSCANNEN;
-import static model.SoortObserver.KLANTSHOW;
-import static model.SoortObserver.STOCK;
+import static model.SoortObserver.*;
 
 /**
  * Deze klasse beschrijft een winkel met 1 kassa.
@@ -86,6 +82,7 @@ public class Winkel implements Subject {
         this.observers = new HashMap<>();
         observers.put(STOCK,new ArrayList<>());
         observers.put(ARTIKELINSCANNEN,new ArrayList<>());
+        observers.put(KLANTSHOW, new ArrayList<>());
     }
 
     /**
@@ -169,7 +166,7 @@ public class Winkel implements Subject {
             ArrayList<Artikel> res = new ArrayList<>();
             res.add(a);
             notifyObservers(ARTIKELINSCANNEN,res);
-            //notifyObservers(KLANTSHOW,res);
+            notifyObservers(KLANTSHOW,res);
         } catch (NullPointerException e) {
             notifyObservers(ARTIKELINSCANNEN,null);
         }
