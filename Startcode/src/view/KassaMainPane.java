@@ -14,12 +14,11 @@ import view.panels.KassaPane;
 import view.panels.ProductOverviewPane;
 
 public class KassaMainPane extends BorderPane {
-	public KassaMainPane(){
+	public KassaMainPane(Winkel w2){
 
-	    Winkel winkel = new Winkel();
+	    Winkel winkel = w2;
 
 	    KassaController controller = new KassaController(winkel);
-        KlantController controller1 = new KlantController(winkel);
 
         KassaPane kassaPane = new KassaPane(controller);
 	    TabPane tabPane = new TabPane();

@@ -9,8 +9,8 @@ import view.panels.KlantPane;
 
 public class KlantMainPane extends BorderPane {
 
-    public KlantMainPane() {
-        Winkel winkel = new Winkel();
+    public KlantMainPane(Winkel w2) {
+        Winkel winkel = w2;
 
         KlantController controller = new KlantController(winkel);
 

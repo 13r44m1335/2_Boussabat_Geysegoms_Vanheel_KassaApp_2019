@@ -32,6 +32,8 @@ public class KlantPane extends GridPane {
         this.controller = controller;
         controller.setView(this);
         setTable();
+        this.add(table,0,0);
+        this.add(totaal,0,1);
     }
 
 
@@ -51,9 +53,14 @@ public class KlantPane extends GridPane {
         TableColumn aantal = new TableColumn<>("Aantal");
         aantal.setCellValueFactory(new PropertyValueFactory<>("AANTAL"));
 
+        table.setItems(artikels);
         table.getColumns().add(omschrijvingCol);
         table.getColumns().add(aantal);
+        totaal = new Label();
+
+
     }
+
 
     /**
      * Deze methode stelt de label van het totale bedrag in.
