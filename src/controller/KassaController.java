@@ -157,6 +157,7 @@ public class KassaController extends Observer {
             totaal = totaal - korting;
         }
         totaal = (double) Math.round(totaal*100.0)/100.0;
+        this.hold = new Winkelwagen();
         this.view.setTotaal(totaal);
     }
 }
