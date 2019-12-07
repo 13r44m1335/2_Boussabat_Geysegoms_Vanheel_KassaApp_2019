@@ -11,15 +11,18 @@ public class Artikel implements Comparable<Artikel>{
     private double verkoopprijs;
     private int actueleVoorraad;
 
-    public String getAANTAL() {
+    private int AANTAL = 1;
+    public int getAANTAL() {
         return AANTAL;
     }
 
-    private final String AANTAL = "1";
+    public void setAANTAL(int AANTAL) {
+        this.AANTAL = AANTAL;
+    }
 
     @Override
     public String toString() {
-        return super.toString();
+        return code + " " + omschrijving + " " + artikelGroep + " " + verkoopprijs;
     }
 
     /**

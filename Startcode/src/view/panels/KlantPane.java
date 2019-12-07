@@ -1,25 +1,15 @@
 package view.panels;
 
 import controller.KlantController;
-import javafx.beans.binding.ObjectExpression;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 import model.Artikel;
-
-import java.util.ArrayList;
-
-import static javafx.scene.layout.GridPane.REMAINING;
 
 public class KlantPane extends GridPane {
     private TableView table;
@@ -32,8 +22,8 @@ public class KlantPane extends GridPane {
         this.controller = controller;
         controller.setView(this);
         setTable();
-        this.add(table,0,0);
-        this.add(totaal,0,1);
+        this.add(table, 0, 0);
+        this.add(totaal, 0, 1);
     }
 
 
@@ -58,7 +48,6 @@ public class KlantPane extends GridPane {
         table.getColumns().add(aantal);
         totaal = new Label();
 
-
     }
 
 
@@ -72,7 +61,6 @@ public class KlantPane extends GridPane {
     public void setTotaal(double totaalS) {
         totaal.setText("Totale bedrag: € " + String.valueOf(totaalS));
     }
-
 
     /**
      * Deze methode updatet de view en zet een error indien nodig.
@@ -93,6 +81,11 @@ public class KlantPane extends GridPane {
      */
     public Label getError() {
         return error;
+    }
+
+
+    public ObservableList<Artikel> getArtikels() {
+        return artikels;
     }
 }
 

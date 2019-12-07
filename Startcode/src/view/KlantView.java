@@ -24,6 +24,7 @@ public class KlantView {
         borderPane.prefWidthProperty().bind(scene.widthProperty());
         root.getChildren().add(borderPane);
 
+
         stage.setScene(scene);
         stage.sizeToScene();
         stage.show();

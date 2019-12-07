@@ -70,9 +70,11 @@ public class KlantController extends Observer {
             double totaals = getTotaal() + artikel.getVerkoopprijs();
             this.view.setTotaal(totaals);
             this.setTotaal(totaals);
+
             this.view.addArtikel(artikel);
         } catch (NullPointerException e) {
             this.view.getError().setVisible(true);
         }
     }
+
 }
