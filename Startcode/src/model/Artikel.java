@@ -22,7 +22,7 @@ public class Artikel implements Comparable<Artikel>{
 
     @Override
     public String toString() {
-        return code + " " + omschrijving + " " + artikelGroep + " " + verkoopprijs;
+        return code + " " + omschrijving + " " + artikelGroep + " " + verkoopprijs + " aantal: " + AANTAL;
     }
 
     /**

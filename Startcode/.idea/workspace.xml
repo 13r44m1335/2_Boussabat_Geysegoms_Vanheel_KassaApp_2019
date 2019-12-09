@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3647dfb8-c62e-4631-a6c2-39cfdf91a7e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/KlantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KlantController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Artikel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Artikel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/KlantView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/KlantView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/KlantPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/KlantPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +110,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574263689375" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/3_Berx_Draelants_Fiers_KassaApp_2019-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -191,7 +189,11 @@
       <workItem from="1575364403708" duration="12648000" />
       <workItem from="1575377204652" duration="10245000" />
       <workItem from="1575388234538" duration="424000" />
-      <workItem from="1575734176969" duration="973000" />
+      <workItem from="1575734176969" duration="8029000" />
+      <workItem from="1575807071472" duration="10728000" />
+      <workItem from="1575841038195" duration="1959000" />
+      <workItem from="1575879997919" duration="2961000" />
+      <workItem from="1575896649570" duration="184000" />
     </task>
     <task id="LOCAL-00001" summary="Artikel en gitignore aangemaakt">
       <created>1574264300873</created>
@@ -214,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575470386320</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Story 4 nog in progress 7/12/2019&#10;  - Gescande artikels zijn te zien in KlantView scherm&#10;  - Het aantal aanpassen is nog in progress">
+      <created>1575735221764</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575735221764</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +246,8 @@
     <MESSAGE value="Artikel en gitignore aangemaakt" />
     <MESSAGE value="Story 4 nog in progress" />
     <MESSAGE value="Story 4 nog in progress&#10;  - Gescande artikels zijn te zien in KlantView scherm&#10;  - Het aantal aanpassen is nog in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Story 4 nog in progress&#10;  - Gescande artikels zijn te zien in KlantView scherm&#10;  - Het aantal aanpassen is nog in progress" />
+    <MESSAGE value="Story 4 nog in progress 7/12/2019&#10;  - Gescande artikels zijn te zien in KlantView scherm&#10;  - Het aantal aanpassen is nog in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Story 4 nog in progress 7/12/2019&#10;  - Gescande artikels zijn te zien in KlantView scherm&#10;  - Het aantal aanpassen is nog in progress" />
   </component>
   <component name="WindowStateProjectService">
     <state x="874" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1575386974373">
@@ -248,62 +258,66 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="684" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575364334875" />
-    <state x="307" y="133" key="CommitChangelistDialog2" timestamp="1575735195710">
+    <state x="307" y="133" key="CommitChangelistDialog2" timestamp="1575735220639">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="307" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575735195710" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1575363384460">
+    <state x="307" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575735220639" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1575845396790">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575363384460" />
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom" timestamp="1575735195741">
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575845396790" />
+    <state width="914" height="244" key="GridCell.Tab.0.bottom" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575735195741" />
-    <state width="1877" height="294" key="GridCell.Tab.0.center" timestamp="1575735195741">
+    <state width="914" height="244" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state width="914" height="244" key="GridCell.Tab.0.center" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575735195741" />
-    <state width="1877" height="294" key="GridCell.Tab.0.left" timestamp="1575735195741">
+    <state width="914" height="244" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state width="914" height="244" key="GridCell.Tab.0.left" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575735195741" />
-    <state width="1877" height="294" key="GridCell.Tab.0.right" timestamp="1575735195741">
+    <state width="914" height="244" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state width="914" height="244" key="GridCell.Tab.0.right" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575735195741" />
-    <state width="1877" height="243" key="GridCell.Tab.1.bottom" timestamp="1575473868723">
+    <state width="914" height="244" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state width="914" height="244" key="GridCell.Tab.1.bottom" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575473868723" />
-    <state width="1877" height="243" key="GridCell.Tab.1.center" timestamp="1575473868723">
+    <state width="914" height="244" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state width="914" height="244" key="GridCell.Tab.1.center" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575473868723" />
-    <state width="1877" height="243" key="GridCell.Tab.1.left" timestamp="1575473868723">
+    <state width="914" height="244" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state width="914" height="244" key="GridCell.Tab.1.left" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575473868723" />
-    <state width="1877" height="243" key="GridCell.Tab.1.right" timestamp="1575473868723">
+    <state width="914" height="244" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state width="914" height="244" key="GridCell.Tab.1.right" timestamp="1575883591411">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575473868723" />
-    <state x="491" y="261" key="Vcs.Push.Dialog.v2" timestamp="1575470391621">
+    <state width="914" height="244" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575883591411" />
+    <state x="453" y="261" key="RollbackChangesDialog" timestamp="1575841129684">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="491" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575470391621" />
+    <state x="453" y="261" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1575841129684" />
+    <state x="491" y="261" key="Vcs.Push.Dialog.v2" timestamp="1575735235403">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="491" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575735235403" />
     <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575363229208">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575363229208" />
-    <state x="521" y="275" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1575469852057">
+    <state x="521" y="275" width="916" height="568" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1575880706574">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="521" y="275" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1575469852057" />
-    <state x="953" y="0" width="974" height="1087" key="dock-window-1" timestamp="1575466370994">
+    <state x="521" y="275" width="916" height="568" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1080@0.0.1920.1080" timestamp="1575880706574" />
+    <state x="1006" y="538" width="930" height="1067" key="dock-window-1" timestamp="1575881285722">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="953" y="0" width="974" height="1087" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1575466370994" />
+    <state x="1006" y="538" width="930" height="1067" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1575881285722" />
     <state x="953" y="0" width="974" height="1087" key="dock-window-2" timestamp="1575388305032">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -316,18 +330,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="136" y="258" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575468675620" />
-    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1575369274307">
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1575881847886">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575369274307" />
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1575881847886" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/panels/KlantPane.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="31" />
+          <line>80</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

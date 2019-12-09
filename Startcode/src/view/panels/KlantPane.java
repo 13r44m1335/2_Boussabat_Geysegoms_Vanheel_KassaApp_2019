@@ -11,11 +11,15 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import model.Artikel;
 
+import java.util.ArrayList;
+
+import static javafx.collections.FXCollections.observableArrayList;
+
 public class KlantPane extends GridPane {
     private TableView table;
     private Label error = new Label("Klant error"), totaal;
     private KlantController controller;
-    private ObservableList<Artikel> artikels = FXCollections.observableArrayList();
+    private ObservableList<Artikel> artikelsKlant = observableArrayList();
 
 
     public KlantPane(KlantController controller) {
@@ -43,7 +47,7 @@ public class KlantPane extends GridPane {
         TableColumn aantal = new TableColumn<>("Aantal");
         aantal.setCellValueFactory(new PropertyValueFactory<>("AANTAL"));
 
-        table.setItems(artikels);
+        table.setItems(artikelsKlant);
         table.getColumns().add(omschrijvingCol);
         table.getColumns().add(aantal);
         totaal = new Label();
@@ -55,7 +59,7 @@ public class KlantPane extends GridPane {
      * Deze methode stelt de label van het totale bedrag in.
      *
      * @param totaalS het totale bedrag.
-     * @author Andreas Geysegoms
+
      */
 
     public void setTotaal(double totaalS) {
@@ -66,26 +70,47 @@ public class KlantPane extends GridPane {
      * Deze methode updatet de view en zet een error indien nodig.
      *
      * @param artikel het artikel dat ingescand is.
-     * @author Andreas Geysegoms
      */
     public void addArtikel(Artikel artikel) {
-        error.setVisible(false);
-        this.artikels.add(artikel);
+        Artikel res = new Artikel("x","x","x",0.001,1);
+        if(artikelsKlant.contains(artikel)){
+            pasAantalAan(artikel);
+            /*artikelsKlant.add(res);
+            artikelsKlant.remove(res);*/
+        } else {
+            artikelsKlant.add(artikel);
+            ArrayList<Artikel> current = new ArrayList<>(artikelsKlant);
+            artikelsKlant = FXCollections.observableArrayList(current);
+        }
     }
 
     /**
      * Deze methode haalt de label error op.
      *
      * @return de error label.
-     * @author Andreas Geysegoms
      */
     public Label getError() {
         return error;
     }
 
 
-    public ObservableList<Artikel> getArtikels() {
-        return artikels;
+    //-----------------------//
+    public Artikel getArtikel(Artikel artikel){
+        Artikel res = null;
+        for (Artikel a : artikelsKlant){
+            if(a == artikel) res = a;
+        }
+        return res;
+    }
+
+    public void pasAantalAan(Artikel artikel){
+        Artikel res = getArtikel(artikel);
+        res.setAANTAL(res.getAANTAL() + 1);
+        artikelsKlant.remove(artikel);
+        artikelsKlant.add(res);
+
+        ArrayList<Artikel> current = new ArrayList<>(artikelsKlant);
+        artikelsKlant = FXCollections.observableArrayList(current);
     }
 }
 
