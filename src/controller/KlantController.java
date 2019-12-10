@@ -68,7 +68,6 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode updatet de view van kassa.
-     *
      * @param artikels de artikels die doorgegeven worden.
      * @author Andreas Geysegoms
      */
@@ -135,6 +134,12 @@ public class KlantController extends Observer {
         }
     }
 
+    /**
+     * Deze methode zet een lijst van artikels om naar een lijst van paren.
+     * @param artikels een lijst van artikels.
+     * @return een lijst van paren.
+     * @author Andreas Geysegoms
+     */
     private ArrayList<Pair<Artikel, Integer>> artikelsToPair(ArrayList<Artikel> artikels) {
         ArrayList<Pair<Artikel, Integer>> res = new ArrayList<>();
         for (Artikel a : artikels) {
@@ -149,6 +154,13 @@ public class KlantController extends Observer {
         return res;
     }
 
+    /**
+     * Deze methode haalt een pair op van een lijst van paren uit een gegeven list ahv een artikel.
+     * @param a een artikel.
+     * @param res een lijst
+     * @return een paar.
+     * @author Andreas Geysegoms
+     */
     private Pair<Artikel, Integer> getPairWithList(Artikel a, ArrayList<Pair<Artikel, Integer>> res) {
         for (Pair pair : res) {
             if (pair.getKey().equals(a)) {
@@ -158,13 +170,12 @@ public class KlantController extends Observer {
         return null;
     }
 
-    private Artikel compare(ArrayList<Artikel> artikelsKlant, ArrayList<Artikel> artikels) {
-        for (int i = 0; i < artikelsKlant.size(); i++) {
-            if (!artikelsKlant.get(i).equals(artikels.get(i))) return artikelsKlant.get(i);
-        }
-        return null;
-    }
-
+    /**
+     * Deze methode zet een lijst van paren om naar een lijst van artikels.
+     * @param artikelsKlantPairs een lijst van paren.
+     * @return een lijst van artikels.
+     * @author Andreas Geysegoms
+     */
     private ArrayList<Artikel> toArrayList(ArrayList<Pair<Artikel, Integer>> artikelsKlantPairs) {
         ArrayList<Artikel> artikels = new ArrayList<>();
         for (Pair<Artikel, Integer> pair : artikelsKlantPairs) {
@@ -175,6 +186,11 @@ public class KlantController extends Observer {
         return artikels;
     }
 
+    /**
+     * Deze methode berekent het totaal ahv de lijst van artikels.
+     * @param artikels de lijst van artikels.
+     * @return de totale prijs
+     */
     private double berekenTotaal(ArrayList<Artikel> artikels) {
         double res = 0;
         for (Artikel a : artikels) {
@@ -226,7 +242,6 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode haalt een pair op ahv een artikel.
-     *
      * @param artikel het artikel van het pair.
      * @return het pair.
      * @author Andreas Geysegoms
@@ -243,7 +258,6 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode haalt het aantal artikels x van de huidige klant op.
-     *
      * @param artikel het artikel x
      * @return het aantal artikels x.
      * @author Andreas Geysegoms
@@ -260,7 +274,6 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode voegt een artikel toe aan de artikellijst van de klant.
-     *
      * @param artikel het artikel toe te voegen aan de lijst van de klant.
      * @author Andreas Geysegoms
      */
@@ -276,6 +289,11 @@ public class KlantController extends Observer {
         view.refresh();
     }
 
+    /**
+     * Deze methode verwijdert een artikel uit de view.
+     * @param artikel het artikel dat verwijdert dient te worden.
+     * @author Andreas Geysegoms
+     */
     public void deleteArtikel(Artikel artikel) {
         ArrayList<Pair<Artikel, Integer>> artikelsKlant = view.getArtikelsKlant();
         if (getPair(artikel).getValue() == 1) {
@@ -290,9 +308,10 @@ public class KlantController extends Observer {
     }
 
     /**
-     * Deze methode 
-     * @param artikel
-     * @param artikelsKlant
+     * Deze methode haalt een pair uit de view ahv het artikel.
+     * @param artikel het artikel
+     * @param artikelsKlant de artikels uit de view.
+     * @author Andreas Geysegoms
      */
     private void removePair(Artikel artikel, ArrayList<Pair<Artikel, Integer>> artikelsKlant) {
         Pair<Artikel, Integer> oldPair = getPair(artikel);

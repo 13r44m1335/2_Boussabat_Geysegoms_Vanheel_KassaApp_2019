@@ -30,13 +30,16 @@ public class KlantView extends GridPane {
     private Stage stage = new Stage();
 
     private TableView table;
-    private Label error = new Label("Klant error"), totaal;
-    private KlantController controller;
+    private Label totaal;
     private ObservableList<Pair<Artikel, Integer>> artikelsKlant = observableArrayList();
 
-
+    /**
+     * Deze methode maakt een instantie van de klasse aan ahv een winkel.
+     * @param winkel een winkel.
+     * @author Andreas Geysegoms
+     */
     public KlantView(Winkel winkel) {
-        this.controller = new KlantController(winkel);
+        KlantController controller = new KlantController(winkel);
         controller.setView(this);
         stage.setTitle("KLANT VIEW");
         stage.setResizable(false);
@@ -54,8 +57,10 @@ public class KlantView extends GridPane {
     }
 
 
-
-
+    /**
+     * Deze methode stelt de tabel in.
+     * @author Andreas Geysegoms
+     */
     public void setTable() {
         this.setPrefHeight(150);
         this.setPrefWidth(300);
@@ -85,28 +90,10 @@ public class KlantView extends GridPane {
 
     /**
      * Deze methode stelt de label van het totale bedrag in.
-     *
      * @param totaalS het totale bedrag.
-
      */
-
     public void setTotaal(double totaalS) {
         totaal.setText("Totale bedrag: € " + String.valueOf(totaalS));
-    }
-
-    /**
-     * Deze methode updatet de view en zet een error indien nodig.
-     *
-     * @param artikel het artikel dat ingescand is.
-     */
-
-    /**
-     * Deze methode haalt de label error op.
-     *
-     * @return de error label.
-     */
-    public Label getError() {
-        return error;
     }
 
     /**
@@ -135,11 +122,20 @@ public class KlantView extends GridPane {
         this.artikelsKlant = FXCollections.observableArrayList(artikelsKlant);
     }
 
+    /**
+     * Deze methode reset de view na een verkoop op hold te zetten.
+     * @author Andreas Geysegoms
+     */
     public void reset() {
         artikelsKlant = FXCollections.observableArrayList();
         this.table.setItems(artikelsKlant);
     }
 
+    /**
+     * Deze methode herstelt de view ahv een lijst van paren van artikels na een verkoop op hold te zetten.
+     * @param artikels een lijst van paren van artikels.
+     * @author Andreas Geysegoms
+     */
     public void resume(ArrayList<Pair<Artikel, Integer>> artikels) {
         artikelsKlant = FXCollections.observableArrayList(artikels);
         this.table.setItems(artikelsKlant);
