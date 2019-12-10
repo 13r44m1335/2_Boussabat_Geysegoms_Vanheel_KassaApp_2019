@@ -9,10 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-
-import static model.SoortObserver.ARTIKELINSCANNEN;
-import static model.SoortObserver.KLANTSHOW;
-import static model.SoortObserver.STOCK;
+import static model.SoortObserver.*;
 
 /**
  * Deze klasse beschrijft een winkel met 1 kassa.
@@ -89,6 +86,9 @@ public class Winkel implements Subject {
         this.observers = new HashMap<>();
         observers.put(STOCK,new ArrayList<>());
         observers.put(ARTIKELINSCANNEN,new ArrayList<>());
+        observers.put(DELETEARTIKEL,new ArrayList<>());
+        observers.put(RESUME,new ArrayList<>());
+        observers.put(HOLD, new ArrayList<>());
     }
 
     /**
@@ -157,7 +157,7 @@ public class Winkel implements Subject {
         }
 
         for (Observer observer : obs) {
-            observer.update(artikels);
+            observer.update(artikels, type);
         }
     }
 

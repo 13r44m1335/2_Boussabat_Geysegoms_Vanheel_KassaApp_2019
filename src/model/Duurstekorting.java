@@ -14,15 +14,14 @@ public class Duurstekorting implements Korting {
 
     /**
      * Deze methode returnt de totale korting.
-     * @param kassaController de controller waar de cart te vinden is.
+     * @param artikels de controller waar de cart te vinden is.
      * @return de totale korting.
      * @author Andreas Geysegoms
      */
     @Override
-    public double berekenKorting(KassaController kassaController) {
-        ArrayList<Artikel> cart = kassaController.getAll();
+    public double berekenKorting(ArrayList<Artikel> artikels) {
         Artikel duurste = new Artikel("XXX","dummy","grdf",0.01,1);
-        for (Artikel artikel : cart) {
+        for (Artikel artikel : artikels) {
             if (duurste.getVerkoopprijs() < artikel.getVerkoopprijs()) {
                 duurste = artikel;
             }

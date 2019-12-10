@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 import static model.SoortObserver.ARTIKELINSCANNEN;
+import static model.SoortObserver.DELETEARTIKEL;
 
 /**
  * Deze klasse stelt een winkelwagen voor. Dit wordt gebruikt om een verkoop op hold te zetten.
@@ -63,11 +64,13 @@ public class Winkelwagen {
         try{
             if (artikels.contains(code)) {
                 artikels.remove(code);
-                winkel.notifyObservers(ARTIKELINSCANNEN,artikels);
+                ArrayList<Artikel> res = new ArrayList<>();
+                res.add(code);
+                winkel.notifyObservers(DELETEARTIKEL,res);
             }
-            else winkel.notifyObservers(ARTIKELINSCANNEN, null);
+            else winkel.notifyObservers(DELETEARTIKEL, null);
         } catch (NullPointerException e){
-            winkel.notifyObservers(ARTIKELINSCANNEN, null);
+            winkel.notifyObservers(DELETEARTIKEL, null);
         }
     }
 

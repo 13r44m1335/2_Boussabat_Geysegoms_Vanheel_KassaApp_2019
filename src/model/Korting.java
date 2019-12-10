@@ -1,6 +1,9 @@
 package model;
 
 import controller.KassaController;
+
+import java.util.ArrayList;
+
 /**
  * Deze interface dient als template voor alle kortingen.
  * @author Andreas Geysegoms
@@ -10,11 +13,11 @@ public interface Korting {
 
     /**
      * Deze methode returnt de totale korting.
-     * @param kassaController de controller waar de cart te vinden is.
+     * @param artikels de controller waar de cart te vinden is.
      * @return de totale korting.
      * @author Andreas Geysegoms
      */
-    double berekenKorting(KassaController kassaController);
+    double berekenKorting(ArrayList<Artikel> artikels);
 
     /**
      * Deze methode stelt de percentage korting in.
@@ -29,4 +32,12 @@ public interface Korting {
      * @author Andreas Geysegoms
      */
     void setAdditional(Object additional);
+
+    default double berekenTotaal(ArrayList<Artikel> artikels) {
+        double res = 0;
+        for (Artikel a : artikels) {
+            res += a.getVerkoopprijs();
+        }
+        return res;
+    }
 }

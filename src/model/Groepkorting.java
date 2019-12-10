@@ -15,15 +15,14 @@ public class Groepkorting implements Korting {
 
     /**
      * Deze methode returnt de totale korting.
-     * @param kassaController de controller waar de cart te vinden is.
+     * @param artikels de controller waar de cart te vinden is.
      * @return de totale korting.
      * @author Andreas Geysegoms
      */
     @Override
-    public double berekenKorting(KassaController kassaController) {
+    public double berekenKorting(ArrayList<Artikel> artikels) {
         double res = 0;
-        ArrayList<Artikel> artikelsMetKorting = kassaController.getAll();
-        for (Artikel artikel : artikelsMetKorting) {
+        for (Artikel artikel : artikels) {
             if (artikel.getArtikelGroep().equals(additional)) {
                 res += artikel.getVerkoopprijs()*(percent/100);
             }

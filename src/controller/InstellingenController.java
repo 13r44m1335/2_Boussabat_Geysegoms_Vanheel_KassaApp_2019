@@ -109,7 +109,7 @@ public class InstellingenController {
      * @param additional extra info; groep of drempel
      * @author Andreas Geysegoms
      */
-    public void createKorting(final String type, final String percent, String additional) {
+    public void createKorting(String type, String percent, String additional) {
         this.winkel.setKorting(type);
         this.winkel.getKorting().setPercent(Double.parseDouble(percent));
         if (this.winkel.getKorting() instanceof Groepkorting) {
