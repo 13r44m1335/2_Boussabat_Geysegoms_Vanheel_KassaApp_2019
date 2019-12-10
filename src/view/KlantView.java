@@ -47,10 +47,12 @@ public class KlantView extends GridPane {
         stage.setY(20);
         Group root = new Group();
         Scene scene = new Scene(root, 500, 500);
+        scene.getStylesheets().add("application/instellingen.css");
         setTable();
         this.add(table, 0, 0);
         this.add(totaal, 0, 1);
         root.getChildren().add(this);
+        setTotaal(0);
         stage.setScene(scene);
         stage.sizeToScene();
         stage.show();
@@ -62,8 +64,8 @@ public class KlantView extends GridPane {
      * @author Andreas Geysegoms
      */
     public void setTable() {
-        this.setPrefHeight(150);
-        this.setPrefWidth(300);
+        this.setPrefHeight(500);
+        this.setPrefWidth(500);
         this.setPadding(new Insets(5, 5, 5, 5));
 
         table = new TableView<Pair<Artikel, Integer>>();
@@ -76,15 +78,13 @@ public class KlantView extends GridPane {
         TableColumn<Pair<Artikel, Integer>, Integer> aantal = new TableColumn<>("Aantal");
         aantal.setCellValueFactory(cell -> new SimpleIntegerProperty(cell.getValue().getValue()).asObject());
 
-        TableColumn<Pair<Artikel, Number>, Double> prijsCol = new TableColumn<>("Prijs");
-        prijsCol.setCellValueFactory(cell -> new SimpleDoubleProperty(cell.getValue().getKey().getVerkoopprijs()).asObject());
-
+        TableColumn<Pair<Artikel, Number>, String> prijsCol = new TableColumn<>("Prijs");
+        prijsCol.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f",cell.getValue().getKey().getVerkoopprijs())));
         table.setItems(artikelsKlant);
         table.getColumns().add(omschrijvingCol);
         table.getColumns().add(aantal);
         table.getColumns().add(prijsCol);
         totaal = new Label();
-
     }
 
 
@@ -93,7 +93,7 @@ public class KlantView extends GridPane {
      * @param totaalS het totale bedrag.
      */
     public void setTotaal(double totaalS) {
-        totaal.setText("Totale bedrag: € " + String.valueOf(totaalS));
+        totaal.setText(String.format("Totale bedrag: € %.2f",totaalS));
     }
 
     /**

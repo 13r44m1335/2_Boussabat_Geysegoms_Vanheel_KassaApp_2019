@@ -3,6 +3,7 @@ package view.panels;
 import com.sun.jdi.Value;
 import controller.KassaController;
 import controller.StockController;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -86,8 +87,8 @@ public class KassaPane extends GridPane {
         omschrijvingCol.setCellValueFactory(new PropertyValueFactory("omschrijving"));
         table.getColumns().add(omschrijvingCol);
 
-        TableColumn prijsCol = new TableColumn<>("Prijs");
-        prijsCol.setCellValueFactory(new PropertyValueFactory("verkoopprijs"));
+        TableColumn<Artikel, String> prijsCol = new TableColumn<>("Prijs");
+        prijsCol.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f",cell.getValue().getVerkoopprijs())));
         table.getColumns().add(prijsCol);
 
         TableColumn aantal = new TableColumn("Aantal");
@@ -108,7 +109,7 @@ public class KassaPane extends GridPane {
 
         table.setItems(artikels);
         totaal = new Label();
-        totaal.setText("Totale bedrag: € 0.00");
+        totaal.setText("Totale bedrag: € 0,00");
         this.add(totaal, 0,11);
     }
 
@@ -118,7 +119,7 @@ public class KassaPane extends GridPane {
      * @author Andreas Geysegoms
      */
     public void setTotaal(double totaalS) {
-        totaal.setText("Totale bedrag: € " + String.valueOf(totaalS));
+        totaal.setText(String.format("Totale bedrag: € %.2f",totaalS));
     }
 
     /**
