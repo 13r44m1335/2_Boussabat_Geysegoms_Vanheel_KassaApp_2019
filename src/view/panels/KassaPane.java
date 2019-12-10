@@ -56,9 +56,32 @@ public class KassaPane extends GridPane {
 
         artikelCodeField.setOnKeyReleased(event -> {
             if (event.getCode() == KeyCode.ENTER){
+                error.setVisible(false);
                 controller.scan(artikelCodeField.getText());
             }
         });
+
+        Button scanButton = new Button("Scan");
+        scanButton.setOnAction(event -> {
+            error.setVisible(false);
+            controller.scan(artikelCodeField.getText());
+        });
+        this.add(scanButton, 2, 1, 1, 1);
+
+        Button deleteButton = new Button("Verwijder");
+        deleteButton.setOnAction(event -> {
+            error.setVisible(false);
+            if (table.getSelectionModel().getSelectedCells().isEmpty()) {
+                controller.verwijderArtikelByInput(artikelCodeField.getText());
+            }
+            else {
+                Artikel artikel = (Artikel) table.getSelectionModel().getSelectedItem();
+                controller.verwijderArtikel(artikel);
+            }
+        });
+        this.add(deleteButton, 4,1,1,1);
+
+
         TableColumn omschrijvingCol = new TableColumn<>("Beschrijving");
         omschrijvingCol.setCellValueFactory(new PropertyValueFactory("omschrijving"));
         table.getColumns().add(omschrijvingCol);
@@ -68,7 +91,6 @@ public class KassaPane extends GridPane {
         table.getColumns().add(prijsCol);
 
         TableColumn aantal = new TableColumn("Aantal");
-        //TODO: fix dit.
         aantal.setCellValueFactory(new PropertyValueFactory("AANTAL"));
         table.getColumns().add(aantal);
 
@@ -159,4 +181,15 @@ public class KassaPane extends GridPane {
         btnHold.setDisable(false);
         btnResume.setDisable(true);
     }
+
+    /**
+     * Deze methode stelt de artikels in.
+     * @param artikels de artikels.
+     * @author Andreas Geysegoms
+     */
+    public void setArtikels(ArrayList<Artikel> artikels) {
+        this.artikels = FXCollections.observableArrayList(artikels);
+        table.setItems(this.artikels);
+    }
+
 }

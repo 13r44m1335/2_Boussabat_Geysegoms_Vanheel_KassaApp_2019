@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import static model.SoortObserver.ARTIKELINSCANNEN;
+
 /**
  * Deze klasse stelt een winkelwagen voor. Dit wordt gebruikt om een verkoop op hold te zetten.
  * @author Andreas Geysegoms
@@ -9,14 +11,16 @@ import java.util.ArrayList;
 public class Winkelwagen {
     private ArrayList<Artikel> artikels;
     private double totaal;
+    private Winkel winkel;
 
     /**
      * Deze methode maakt een instance van deze klasse aan.
      * @author Andreas Geysegoms
      */
-    public Winkelwagen() {
+    public Winkelwagen(Winkel winkel) {
         this.artikels = new ArrayList<>();
         totaal = 0;
+        this.winkel = winkel;
     }
 
     /**
@@ -53,5 +57,49 @@ public class Winkelwagen {
      */
     public ArrayList<Artikel> getAll() {
         return artikels;
+    }
+
+    public void deleteArtikel(Artikel code) {
+        try{
+            if (artikels.contains(code)) {
+                artikels.remove(code);
+                winkel.notifyObservers(ARTIKELINSCANNEN,artikels);
+            }
+            else winkel.notifyObservers(ARTIKELINSCANNEN, null);
+        } catch (NullPointerException e){
+            winkel.notifyObservers(ARTIKELINSCANNEN, null);
+        }
+    }
+
+    /**
+     * Deze methode scant een artikel in.
+     * @param code de code van het artikel.
+     * @author Andreas Geysegoms
+     */
+    public void scan(String code) {
+        try {
+            Artikel a = winkel.getDb().search(code);
+            if (a == null) throw new NullPointerException("Artikel staat niet in het magazijn.");
+            artikels.add(a);
+            winkel.notifyObservers(ARTIKELINSCANNEN,artikels);
+            //notifyObservers(KLANTSHOW,res);
+        } catch (NullPointerException e) {
+            winkel.notifyObservers(ARTIKELINSCANNEN,null);
+        }
+    }
+
+    /**
+     * Deze methode zoekt een item op in de winkelwagen.
+     * @param artikelCode de code van het artikel.
+     * @return het artikel dat gezocht wordt.
+     * @author Andreas Geysegoms
+     */
+    public Artikel get(String artikelCode) {
+        for (Artikel a : artikels) {
+            if (a.getCode().equals(artikelCode)) {
+                return a;
+            }
+        }
+        throw new IllegalArgumentException("Dit artikel is nog niet toegevoegd.");
     }
 }

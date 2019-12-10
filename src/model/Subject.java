@@ -28,5 +28,5 @@ public interface Subject {
      * @param type het type observer dat genotified wordt.
      * @author Andreas Geysegoms
      */
-    void notifyObservers(SoortObserver type, Object object);
+    void notifyObservers(SoortObserver type, ArrayList<Artikel> artikels);
 }

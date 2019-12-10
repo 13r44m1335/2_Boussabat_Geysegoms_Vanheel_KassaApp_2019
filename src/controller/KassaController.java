@@ -13,11 +13,12 @@ public class KassaController extends Observer {
     private Winkel winkel;
     private KassaPane view;
     private Winkelwagen[] winkelwagens = new Winkelwagen[2];
-    private Winkelwagen current = new Winkelwagen();
-    private Winkelwagen hold = new Winkelwagen();
+    private Winkelwagen current;
+    private Winkelwagen hold;
 
     /**
      * Deze methode maakt een isntantie aan van een kassaController.
+     *
      * @param winkel de winkel die gebruikt wordt.
      * @author Andreas Geysegoms
      */
@@ -25,6 +26,8 @@ public class KassaController extends Observer {
         super(winkel);
         setWinkel(winkel);
         winkel.registerObserver(this, SoortObserver.ARTIKELINSCANNEN);
+        current = new Winkelwagen(winkel);
+        hold = new Winkelwagen(winkel);
         winkelwagens[0] = current;
         winkelwagens[1] = hold;
     }
@@ -40,6 +43,7 @@ public class KassaController extends Observer {
 
     /**
      * Deze methode stelt de view in.
+     *
      * @param view de view.
      * @author Andreas Geysegoms
      */
@@ -49,6 +53,7 @@ public class KassaController extends Observer {
 
     /**
      * Deze methode stelt het totale bedrag in.
+     *
      * @param totaal het totale bedrag
      * @author Andreas Geysegoms
      */
@@ -58,6 +63,7 @@ public class KassaController extends Observer {
 
     /**
      * Deze methode haalt het totale bedrag op.
+     *
      * @return het totale bedrag.
      * @author Andreas Geysegoms
      */
@@ -66,47 +72,56 @@ public class KassaController extends Observer {
     }
 
 
-
-
     /**
      * Deze methode scant een item in in de winkel.
+     *
      * @param code de code van het artikel dat ingescand wordt.
      * @author Andreas Geysegoms
      */
     public void scan(String code) {
-        winkel.scan(code);
+        current.scan(code);
         view.getArtikelCodeField().clear();
     }
 
 
     /**
      * Deze methode updatet de view van kassa.
+     *
      * @param artikels de artikels die doorgegeven worden.
      * @author Andreas Geysegoms
      */
     @Override
-    public void update(Object artikels) {
+    public void update(ArrayList<Artikel> artikels) {
         try {
-            ArrayList<Artikel> artikels2 = (ArrayList<Artikel>) artikels;
-            Artikel artikel = artikels2.get(0);
-            double totaalS = this.getTotaal() + artikel.getVerkoopprijs();
+            if (artikels == null) {
+                throw new NullPointerException("Dit artikel bestaat niet.");
+            }
+            double totaalS = this.berekenTotaal(artikels);
             this.setTotaal(totaalS);
-            this.current.addArtikel(artikel);
-            this.view.addArtikel(artikel);
-            if (this.getKorting()!=null) {
+            this.view.setArtikels(artikels);
+            if (this.getKorting() != null) {
                 double korting = this.getKorting().berekenKorting(this);
                 totaalS = totaalS - korting;
             }
-            totaalS = (double) Math.round(totaalS*100.0)/100.0;
+            totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
             this.view.setTotaal(totaalS);
-        }
-        catch (NullPointerException e) {
+        } catch (NullPointerException e) {
+            this.view.getError().setText(e.getMessage());
             this.view.getError().setVisible(true);
         }
     }
 
+    private double berekenTotaal(ArrayList<Artikel> artikels) {
+        double res = 0;
+        for (Artikel a : artikels) {
+            res += a.getVerkoopprijs();
+        }
+        return res;
+    }
+
     /**
      * Deze methode haalt de korting op.
+     *
      * @return de korting
      * @author Andreas Geysegoms
      */
@@ -116,6 +131,7 @@ public class KassaController extends Observer {
 
     /**
      * Deze methode haalt alle artikels uit de winkelmand op.
+     *
      * @return een ArrayList van Artikels.
      * @author Andreas Geysegoms
      */
@@ -125,6 +141,7 @@ public class KassaController extends Observer {
 
     /**
      * Deze methode haalt de view op.
+     *
      * @return de view.
      * @author Andreas Geysegoms
      */
@@ -134,6 +151,7 @@ public class KassaController extends Observer {
 
     /**
      * Deze methode zet een verkoop op hold.
+     *
      * @author Andreas Geysegoms
      */
     public void putOnHold() {
@@ -146,18 +164,43 @@ public class KassaController extends Observer {
 
     /**
      * Deze methode de verkoop van hold terug op de voorgrond.
+     *
      * @author Andreas Geysegoms
      */
     public void resume() {
         this.current = hold;
         view.resume(current.getAll());
         double totaal = current.getTotaal();
-        if (this.getKorting()!=null) {
+        if (this.getKorting() != null) {
             double korting = this.getKorting().berekenKorting(this);
             totaal = totaal - korting;
         }
-        totaal = (double) Math.round(totaal*100.0)/100.0;
-        this.hold = new Winkelwagen();
+        totaal = (double) Math.round(totaal * 100.0) / 100.0;
+        this.hold = new Winkelwagen(winkel);
         this.view.setTotaal(totaal);
+    }
+
+    /**
+     * Thomas
+     * @param code
+     */
+    public void verwijderArtikel(Artikel code) {
+        current.deleteArtikel(code);
+        view.getArtikelCodeField().clear();
+    }
+
+    /**
+     * Deze methode verwijdert een artikel uit de winkelwagen ahv het invoerveld.
+     * @param artikelCode de code van het artikel dat verwijderd dient te worden.
+     * @author Andreas Geysegoms
+     */
+    public void verwijderArtikelByInput(String artikelCode) {
+        try {
+            Artikel  a = current.get(artikelCode);
+            verwijderArtikel(a);
+        } catch (IllegalArgumentException e) {
+            view.getError().setText(e.getMessage());
+            view.getError().setVisible(true);
+        }
     }
 }
