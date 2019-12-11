@@ -91,8 +91,8 @@ public class KlantController extends Observer {
 
                 totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
                 this.view.setTotaal(totaalS);
-            } catch (NullPointerException e) {
-                e.printStackTrace();
+            } catch (NullPointerException ignored) {
+                
             }
         }
         else if (soort.equals(DELETEARTIKEL)) {
