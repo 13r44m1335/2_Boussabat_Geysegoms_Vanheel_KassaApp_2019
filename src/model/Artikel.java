@@ -11,12 +11,6 @@ public class Artikel implements Comparable<Artikel>{
     private double verkoopprijs;
     private int actueleVoorraad;
 
-    public String getAANTAL() {
-        return AANTAL;
-    }
-
-    private final String AANTAL = "1";
-
     @Override
     public String toString() {
         return super.toString();

@@ -91,8 +91,8 @@ public class KassaPane extends GridPane {
         prijsCol.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f",cell.getValue().getVerkoopprijs())));
         table.getColumns().add(prijsCol);
 
-        TableColumn aantal = new TableColumn("Aantal");
-        aantal.setCellValueFactory(new PropertyValueFactory("AANTAL"));
+        TableColumn<Artikel, String> aantal = new TableColumn("Aantal");
+        aantal.setCellValueFactory(cell -> new SimpleStringProperty("1"));
         table.getColumns().add(aantal);
 
         this.add(table, 0, 4, 5, 6);

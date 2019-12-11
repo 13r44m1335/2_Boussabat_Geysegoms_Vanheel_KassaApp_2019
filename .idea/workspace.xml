@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1910efed-4c09-4bc7-a8b1-ddff23fcbb51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/KlantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KlantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/KlantView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/KlantView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/KassaPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/KassaPane.java" afterDir="false" />
-    </list>
+    <list default="true" id="1910efed-4c09-4bc7-a8b1-ddff23fcbb51" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -418,7 +413,7 @@
     <property name="SearchEverywhereHistoryKey" value="STOCK&#9;FILE&#9;file://C:/Users/andre/Documents/Hogeschool/Bach.2/Semester 1/OO Ontwerpen/Project/src/controller/StockController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576005491395" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576057772552" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -478,12 +473,12 @@
       <workItem from="1575381588109" duration="988000" />
       <workItem from="1575385489952" duration="13720000" />
       <workItem from="1575985537140" duration="13021000" />
-      <workItem from="1576001817067" duration="1780000" />
+      <workItem from="1576001817067" duration="2417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48575000" />
+    <option name="totallyTimeSpent" value="49212000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -498,7 +493,7 @@
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2574899" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2574899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -508,7 +503,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24875621" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24875621" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2620232" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
