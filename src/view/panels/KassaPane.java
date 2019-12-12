@@ -48,10 +48,10 @@ public class KassaPane extends GridPane {
         artikelCodeField = new TextField();
         this.add(artikelCodeField, 1, 1, 1, 1);
         table = new TableView<>();
-        table.setPrefWidth(REMAINING);
+        //table.setPrefWidth(REMAINING);
         this.add(error, 0, 0, 1, 1);
         error.setVisible(false);
-        btnHold = new Button("Hold Up!");
+        btnHold = new Button("Zet een verkoop op hold");
         btnResume = new Button("Resume hold");
         btnResume.setDisable(true);
 
@@ -80,21 +80,21 @@ public class KassaPane extends GridPane {
                 controller.verwijderArtikel(artikel);
             }
         });
-        this.add(deleteButton, 4,1,1,1);
+        this.add(deleteButton, 3,1,1,1);
 
 
         TableColumn omschrijvingCol = new TableColumn<>("Beschrijving");
         omschrijvingCol.setCellValueFactory(new PropertyValueFactory("omschrijving"));
         table.getColumns().add(omschrijvingCol);
-
+        omschrijvingCol.setPrefWidth(250);
         TableColumn<Artikel, String> prijsCol = new TableColumn<>("Prijs");
         prijsCol.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f",cell.getValue().getVerkoopprijs())));
         table.getColumns().add(prijsCol);
-
+prijsCol.setPrefWidth(250);
         TableColumn<Artikel, String> aantal = new TableColumn("Aantal");
         aantal.setCellValueFactory(cell -> new SimpleStringProperty("1"));
         table.getColumns().add(aantal);
-
+aantal.setPrefWidth(250);
         this.add(table, 0, 4, 5, 6);
         this.add(btnHold,1,11);
         this.add(btnResume,2,11);
@@ -111,6 +111,11 @@ public class KassaPane extends GridPane {
         totaal = new Label();
         totaal.setText("Totale bedrag: € 0,00");
         this.add(totaal, 0,11);
+        Button print = new Button("Print rekening(deze moet automatisch na afsluiten en betalen van aankoop)");
+        print.setOnAction(event -> {
+            controller.print();
+        });
+        this.add(print,3,11);
     }
 
     /**

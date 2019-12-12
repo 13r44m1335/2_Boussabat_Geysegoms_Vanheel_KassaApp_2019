@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.beans.property.Property;
 import model.*;
 import view.panels.InstellingenPane;
 
@@ -19,11 +20,6 @@ public class InstellingenController {
 
     private Winkel winkel;
     private InstellingenPane view;
-    private KassaController kassaController;
-
-    public void setKassaController(KassaController kassaController) {
-        this.kassaController = kassaController;
-    }
 
     /**
      * Deze methode maakt een instantie aan van een isntellingencontroller ahv de winkel.
@@ -31,13 +27,13 @@ public class InstellingenController {
      * @param winkel de winkel.
      * @author Andreas Geysegoms
      */
-    public InstellingenController(Winkel winkel, KassaController kassaController) {
+    public InstellingenController(Winkel winkel) {
         this.winkel = winkel;
-        this.kassaController = kassaController;
     }
 
     /**
      * Deze methode stelt de input in als txt.
+     *
      * @author Andreas Geysegoms
      */
     public void setTxt() {
@@ -79,6 +75,7 @@ public class InstellingenController {
 
     /**
      * Deze methode stelt de radiobutton in ahv de properties.
+     *
      * @author Andreas Geysegoms
      */
     public void setStandard() {
@@ -95,6 +92,7 @@ public class InstellingenController {
 
     /**
      * Deze methode stelt de view in.
+     *
      * @param instellingenPane de view.
      * @author Andreas Geysegoms
      */
@@ -104,8 +102,9 @@ public class InstellingenController {
 
     /**
      * Deze methode maakt de korting aan.
-     * @param type de locatie van de klasse
-     * @param percent het percentage van korting
+     *
+     * @param type       de locatie van de klasse
+     * @param percent    het percentage van korting
      * @param additional extra info; groep of drempel
      * @author Andreas Geysegoms
      */
@@ -114,12 +113,93 @@ public class InstellingenController {
         this.winkel.getKorting().setPercent(Double.parseDouble(percent));
         if (this.winkel.getKorting() instanceof Groepkorting) {
             this.winkel.getKorting().setAdditional(additional);
-        }
-        else if (this.winkel.getKorting() instanceof Drempelkorting) {
+        } else if (this.winkel.getKorting() instanceof Drempelkorting) {
             this.winkel.getKorting().setAdditional(Double.parseDouble(additional));
+        } else if (this.winkel.getKorting() instanceof Duurstekorting) {
+            this.winkel.getKorting().setAdditional(new Artikel("X", "Dummy", "gr1", 0.01, 1));
         }
-        else if (this.winkel.getKorting() instanceof Duurstekorting) {
-            this.winkel.getKorting().setAdditional(new Artikel("X","Dummy","gr1",0.01,1));
+    }
+
+    /**
+     * Deze methode haalt de kassabon instellingen op.
+     * @return een lijst van de properties.
+     * @author Andreas Geysegoms
+     */
+    public String[] getKassaBonSettings() {
+        String[] res = new String[5];
+        if (view.getInputKassaBon() != null) res[0] = view.getInputKassaBon();
+        else res[0] = "";
+        if (view.getHeaderTime() != null) res[1] = view.getHeaderTime();
+        else res[1] = "";
+        if (view.getFooterExclusiefBTW() != null) res[2] = view.getFooterExclusiefBTW();
+        else res[2] = "";
+        if (view.getFooterZonderKorting() != null) res[3] = view.getFooterZonderKorting();
+        else res[3] = "";
+        if (view.getFooterAfsluitLijn() != null) res[4] = view.getFooterAfsluitLijn();
+        else res[4] = "";
+        return res;
+    }
+
+    /**
+     * Deze methode slaat de instellingen van de kassabon op.
+     * @author Andreas Geysegoms
+     */
+    public void saveKassaBonSettings() {
+        String[] aangevinkt = getKassaBonSettings();
+        Properties properties = winkel.getProperties();
+        if (aangevinkt[0] != null) properties.setProperty("headerCustom",aangevinkt[0]);
+        if (aangevinkt[1] != null) properties.setProperty("headerTijd", aangevinkt[1]);
+        if (aangevinkt[2] != null) properties.setProperty("footerBTW", aangevinkt[2]);
+        if (aangevinkt[3] != null) properties.setProperty("footerKorting", aangevinkt[3]);
+        if (aangevinkt[4] != null) properties.setProperty("footerAfsluitlijn", aangevinkt[4]);
+        FileOutputStream os = null;
+        try {
+            File prop = new File("src/bestanden/instellingen.xml");
+            os = new FileOutputStream(prop);
+            properties.storeToXML(os, "");
+            os.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        winkel.setProperties(properties);
+    }
+
+    /**
+     * Deze methode initialiseert de kassabon instellingen bij het opstarten.
+     * @author Andreas Geysegoms
+     */
+    public void initKassaBonSettings() {
+        Properties properties = winkel.getProperties();
+        //String customHeader = properties.getProperty("headerCustom");
+        String headerTijd = properties.getProperty("headerTijd");
+        String footerBTW = properties.getProperty("footerBTW");
+        String footerKorting = properties.getProperty("footerKorting");
+        String footerAfsluilijn = properties.getProperty("footerAfsluitlijn");
+        /*if (!customHeader.equals("")) {
+            view.setCustomHeader(true,customHeader);
+        }*/ if (!headerTijd.equals("")) {
+            view.setHeaderTijd(true);
+        } if (!footerBTW.equals("")) {
+            view.setFooterBTW(true);
+        } if (!footerKorting.equals("")) {
+            view.setFooterKorting(true);
+        } if (!footerAfsluilijn.equals("")) {
+            view.setFooterAfsluitlijn(true);
+        }
+        properties.setProperty("totaal","");
+        FileOutputStream os = null;
+        try {
+            File prop = new File("src/bestanden/instellingen.xml");
+            os = new FileOutputStream(prop);
+            properties.storeToXML(os, "");
+            os.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        winkel.setProperties(properties);
     }
 }

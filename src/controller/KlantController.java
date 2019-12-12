@@ -139,7 +139,7 @@ public class KlantController extends Observer {
      * @return een lijst van paren.
      * @author Andreas Geysegoms
      */
-    private ArrayList<Pair<Artikel, Integer>> artikelsToPair(ArrayList<Artikel> artikels) {
+    public static ArrayList<Pair<Artikel, Integer>> artikelsToPair(ArrayList<Artikel> artikels) {
         ArrayList<Pair<Artikel, Integer>> res = new ArrayList<>();
         for (Artikel a : artikels) {
             Pair<Artikel, Integer> oldPair = getPairWithList(a, res);
@@ -160,7 +160,7 @@ public class KlantController extends Observer {
      * @return een paar.
      * @author Andreas Geysegoms
      */
-    private Pair<Artikel, Integer> getPairWithList(Artikel a, ArrayList<Pair<Artikel, Integer>> res) {
+    public static Pair<Artikel, Integer> getPairWithList(Artikel a, ArrayList<Pair<Artikel, Integer>> res) {
         for (Pair pair : res) {
             if (pair.getKey().equals(a)) {
                 return pair;

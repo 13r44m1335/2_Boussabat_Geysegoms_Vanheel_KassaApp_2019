@@ -1,5 +1,6 @@
 package model;
 
+import controller.KassaController;
 import database.*;
 
 import javax.xml.stream.FactoryConfigurationError;
@@ -25,6 +26,11 @@ public class Winkel implements Subject {
     private LoadSaveFactory loadSaveFactory;
     private Korting korting;
     private KortingFactory kortingFactory;
+    private Rekening rekening;
+    private RekeningFactory rekeningFactory;
+    private Winkelwagen[] winkelwagens = new Winkelwagen[2];
+    private Winkelwagen current;
+    private Winkelwagen hold;
 
     /**
      * Deze methode is gebruikt om de databank te zetten.
@@ -68,7 +74,8 @@ public class Winkel implements Subject {
      */
     public Winkel() {
         this.db = new HashMapDb();
-        LoadSaveFactory factory = loadSaveFactory.getInstance();
+        RekeningFactory rekeningFactory = RekeningFactory.getInstance();
+        LoadSaveFactory factory = LoadSaveFactory.getInstance();
         KortingFactory kortingFactory = KortingFactory.getInstance();
         this.properties = new Properties();
         try {
@@ -89,6 +96,11 @@ public class Winkel implements Subject {
         observers.put(DELETEARTIKEL,new ArrayList<>());
         observers.put(RESUME,new ArrayList<>());
         observers.put(HOLD, new ArrayList<>());
+        rekeningFactory.setWinkel(this);
+        current = new Winkelwagen(this);
+        hold = new Winkelwagen(this);
+        winkelwagens[0] = current;
+        winkelwagens[1] = hold;
     }
 
     /**
@@ -177,5 +189,46 @@ public class Winkel implements Subject {
      */
     public Korting getKorting() {
         return this.korting;
+    }
+
+    /**
+     * Deze methode print de rekening uit.
+     * @author Andreas Geysegoms
+     */
+    public void printRekening() {
+        RekeningAbstract r = RekeningFactory.getInstance().create(properties);
+        System.out.println(r.getDescription());
+    }
+
+    /**
+     * Deze methode zet een verkoop op hold.
+     *
+     * @author Andreas Geysegoms
+     */
+    public void putOnHold() {
+        Winkelwagen temp = this.current;
+        this.current = this.hold;
+        this.hold = temp;
+    }
+
+    /**
+     * Deze methode de verkoop van hold terug op de voorgrond.
+     *
+     * @author Andreas Geysegoms
+     */
+    public void resume() {
+        this.current = hold;
+    }
+
+    public Winkelwagen getCurrent() {
+        return current;
+    }
+
+    public Winkelwagen getHold() {
+        return hold;
+    }
+
+    public void setHold(Winkelwagen winkelwagen) {
+        this.hold = winkelwagen;
     }
 }

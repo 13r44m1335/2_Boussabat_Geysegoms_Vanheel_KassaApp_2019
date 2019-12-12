@@ -47,7 +47,7 @@ public class KlantView extends GridPane {
         stage.setY(20);
         Group root = new Group();
         Scene scene = new Scene(root, 500, 500);
-        scene.getStylesheets().add("application/instellingen.css");
+        scene.getStylesheets().add("application/klant.css");
         setTable();
         this.add(table, 0, 0);
         this.add(totaal, 0, 1);
@@ -84,6 +84,9 @@ public class KlantView extends GridPane {
         table.getColumns().add(omschrijvingCol);
         table.getColumns().add(aantal);
         table.getColumns().add(prijsCol);
+        omschrijvingCol.setPrefWidth(500/3);
+        aantal.setPrefWidth(500/3);
+        prijsCol.setPrefWidth(500/3);
         totaal = new Label();
     }
 

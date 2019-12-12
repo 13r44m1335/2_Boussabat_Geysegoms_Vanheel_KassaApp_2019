@@ -2,4 +2,10 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <entry key="input">xls</entry>
+<entry key="footerAfsluitlijn">Dank u voor uw aankopen bij ons.</entry>
+<entry key="headerTijd">Toon de tijd van de aankoop</entry>
+<entry key="headerCustom">Hello, my name is Apu</entry>
+<entry key="totaal"></entry>
+<entry key="footerBTW"></entry>
+<entry key="footerKorting">828.3000000000001</entry>
 </properties>

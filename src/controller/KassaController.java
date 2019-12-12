@@ -3,7 +3,12 @@ package controller;
 import model.*;
 import view.panels.KassaPane;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 
 import static model.SoortObserver.*;
 
@@ -14,9 +19,6 @@ public class KassaController extends Observer {
 
     private Winkel winkel;
     private KassaPane view;
-    private Winkelwagen[] winkelwagens = new Winkelwagen[2];
-    private Winkelwagen current;
-    private Winkelwagen hold;
 
     /**
      * Deze methode maakt een isntantie aan van een kassaController.
@@ -29,10 +31,6 @@ public class KassaController extends Observer {
         setWinkel(winkel);
         winkel.registerObserver(this, SoortObserver.ARTIKELINSCANNEN);
         winkel.registerObserver(this, DELETEARTIKEL);
-        current = new Winkelwagen(winkel);
-        hold = new Winkelwagen(winkel);
-        winkelwagens[0] = current;
-        winkelwagens[1] = hold;
     }
 
     /**
@@ -62,7 +60,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void setTotaal(double totaal) {
-        current.setTotaal(totaal);
+        winkel.getCurrent().setTotaal(totaal);
     }
 
     /**
@@ -72,7 +70,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public double getTotaal() {
-        return current.getTotaal();
+        return winkel.getCurrent().getTotaal();
     }
 
 
@@ -83,7 +81,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void scan(String code) {
-        current.scan(code);
+        winkel.getCurrent().scan(code);
         view.getArtikelCodeField().clear();
     }
 
@@ -112,19 +110,40 @@ public class KassaController extends Observer {
                 this.view.setArtikels(getAll());
 
             }
+            Properties properties = winkel.getProperties();
             this.setTotaal(totaalS);
             if (this.getKorting() != null) {
                 double korting = this.getKorting().berekenKorting(this.getAll());
                 totaalS = totaalS - korting;
+                properties.setProperty("footerKorting",String.valueOf(korting));
             }
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
             this.view.setTotaal(totaalS);
+            properties.setProperty("totaal",String.valueOf(this.berekenTotaal(winkel.getCurrent().getAll())));
+            FileOutputStream os = null;
+            try {
+                File prop = new File("src/bestanden/instellingen.xml");
+                os = new FileOutputStream(prop);
+                properties.storeToXML(os, "");
+                os.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            winkel.setProperties(properties);
         } catch (NullPointerException e) {
             this.view.getError().setText(e.getMessage());
             this.view.getError().setVisible(true);
         }
     }
 
+    /**
+     * Deze methode berekent het totaal van de producten zonder korting in rekening te brengen van de huidige winklewagen.
+     * @param artikels de artikels van de huidige winkelwagen.
+     * @return de totale prijs van de items in de winkelwagen.
+     * @author Andreas Geysegoms
+     */
     private double berekenTotaal(ArrayList<Artikel> artikels) {
         double res = 0;
         for (Artikel a : artikels) {
@@ -150,7 +169,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public ArrayList<Artikel> getAll() {
-        return current.getAll();
+        return winkel.getCurrent().getAll();
     }
 
     /**
@@ -169,11 +188,9 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void putOnHold() {
-        Winkelwagen temp = this.current;
-        this.current = this.hold;
-        this.hold = temp;
+        this.winkel.putOnHold();
         view.reset();
-        view.setTotaal(current.getTotaal());
+        view.setTotaal(winkel.getCurrent().getTotaal());
         winkel.notifyObservers(HOLD,new ArrayList<>(0));
     }
 
@@ -183,17 +200,32 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void resume() {
-        this.current = hold;
-        view.resume(current.getAll());
-        double totaal = current.getTotaal();
+        this.winkel.resume();
+        view.resume(winkel.getCurrent().getAll());
+        double totaal = winkel.getCurrent().getTotaal();
+        Properties properties = winkel.getProperties();
         if (this.getKorting() != null) {
             double korting = this.getKorting().berekenKorting(this.getAll());
             totaal = totaal - korting;
+            properties.setProperty("footerKorting",String.valueOf(korting));
         }
         totaal = (double) Math.round(totaal * 100.0) / 100.0;
-        this.hold = new Winkelwagen(winkel);
+        winkel.setHold(new Winkelwagen(winkel));
         this.view.setTotaal(totaal);
-        winkel.notifyObservers(RESUME, current.getAll());
+        winkel.notifyObservers(RESUME, winkel.getCurrent().getAll());
+        properties.setProperty("totaal",String.valueOf(this.berekenTotaal(winkel.getCurrent().getAll())));
+        FileOutputStream os = null;
+        try {
+            File prop = new File("src/bestanden/instellingen.xml");
+            os = new FileOutputStream(prop);
+            properties.storeToXML(os, "");
+            os.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        winkel.setProperties(properties);
     }
 
     /**
@@ -202,7 +234,7 @@ public class KassaController extends Observer {
      * @param code
      */
     public void verwijderArtikel(Artikel code) {
-        current.deleteArtikel(code);
+        winkel.getCurrent().deleteArtikel(code);
         view.getArtikelCodeField().clear();
     }
 
@@ -214,11 +246,19 @@ public class KassaController extends Observer {
      */
     public void verwijderArtikelByInput(String artikelCode) {
         try {
-            Artikel a = current.get(artikelCode);
+            Artikel a = winkel.getCurrent().get(artikelCode);
             verwijderArtikel(a);
         } catch (IllegalArgumentException e) {
             view.getError().setText(e.getMessage());
             view.getError().setVisible(true);
         }
+    }
+
+    /**
+     * Deze methode geeft door aan de winkel om de rekening te printen.
+     * @author Andreas Geysegoms
+     */
+    public void print() {
+        winkel.printRekening();
     }
 }
