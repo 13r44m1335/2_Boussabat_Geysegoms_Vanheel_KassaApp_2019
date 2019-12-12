@@ -86,15 +86,15 @@ public class KassaPane extends GridPane {
         TableColumn omschrijvingCol = new TableColumn<>("Beschrijving");
         omschrijvingCol.setCellValueFactory(new PropertyValueFactory("omschrijving"));
         table.getColumns().add(omschrijvingCol);
-        omschrijvingCol.setPrefWidth(250);
+        omschrijvingCol.setPrefWidth(245);
         TableColumn<Artikel, String> prijsCol = new TableColumn<>("Prijs");
         prijsCol.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f",cell.getValue().getVerkoopprijs())));
         table.getColumns().add(prijsCol);
-prijsCol.setPrefWidth(250);
+        prijsCol.setPrefWidth(245);
         TableColumn<Artikel, String> aantal = new TableColumn("Aantal");
         aantal.setCellValueFactory(cell -> new SimpleStringProperty("1"));
         table.getColumns().add(aantal);
-aantal.setPrefWidth(250);
+        aantal.setPrefWidth(245);
         this.add(table, 0, 4, 5, 6);
         this.add(btnHold,1,11);
         this.add(btnResume,2,11);
