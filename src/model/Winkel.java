@@ -220,6 +220,14 @@ public class Winkel implements Subject {
         this.current = hold;
     }
 
+    public void sell(){
+
+    }
+
+    public void cancel(){
+        this.current = new Winkelwagen(this);
+    }
+
     public Winkelwagen getCurrent() {
         return current;
     }

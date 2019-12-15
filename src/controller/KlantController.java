@@ -94,6 +94,8 @@ public class KlantController extends Observer {
             } catch (NullPointerException ignored) {
                 
             }
+        } else if (soort.equals(ANNULEER)){
+
         }
         else if (soort.equals(DELETEARTIKEL)) {
             ArrayList<Pair<Artikel, Integer>> artikelsKlantPairs = view.getArtikelsKlant();

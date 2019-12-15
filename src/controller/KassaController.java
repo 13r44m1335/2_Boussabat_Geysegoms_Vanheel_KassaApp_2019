@@ -228,6 +228,20 @@ public class KassaController extends Observer {
         winkel.setProperties(properties);
     }
 
+
+    public void cancel(){
+      /*  this.winkel.putOnHold();
+        view.reset();
+        view.setTotaal(winkel.getCurrent().getTotaal());
+        winkel.notifyObservers(HOLD,new ArrayList<>(0));*/
+      this.winkel.cancel();
+      view.reset();
+    }
+
+    public void sell(){
+
+    }
+
     /**
      * Thomas
      *
