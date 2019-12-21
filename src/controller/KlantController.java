@@ -146,8 +146,9 @@ public class KlantController extends Observer {
             if (oldPair == null) {
                 res.add(new Pair<>(a,1));
             }  else {
+                int i = artikels.indexOf(oldPair);
                 res.remove(oldPair);
-                res.add(new Pair<>(a,oldPair.getValue()+1));
+                res.add(i,new Pair<>(a,oldPair.getValue()+1));
             }
         }
         return res;
@@ -234,8 +235,9 @@ public class KlantController extends Observer {
         int current = (int) oldPair.getValue();
         Pair<Artikel, Integer> newPair = new Pair<>(artikel, current + 1);
         ArrayList<Pair<Artikel, Integer>> artikelsKlant = view.getArtikelsKlant();
+        int i = artikelsKlant.indexOf(oldPair);
         artikelsKlant.remove(oldPair);
-        artikelsKlant.add(newPair);
+        artikelsKlant.add(i, newPair);
         view.setArtikelsKlant(artikelsKlant);
     }
 
