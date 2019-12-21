@@ -252,6 +252,10 @@ public class Winkel implements Subject {
         this.hold = winkelwagen;
     }
 
+    /**
+     * Deze methode past de stock aan.
+     * @author Andreas Geysegoms
+     */
     public void pasStockAan(){
         ArrayList<Artikel> weg = new ArrayList<>(current.getAll());
         ArrayList<Artikel> current = this.getDb().load();
@@ -259,6 +263,9 @@ public class Winkel implements Subject {
             downStock(a, current);
         }
         db.save(current);
+        Object inputObj = properties.get("input");
+        String input = (String) inputObj;
+        loadSave.save(current,"src/bestanden/artikel."+input);
     }
 
     /**

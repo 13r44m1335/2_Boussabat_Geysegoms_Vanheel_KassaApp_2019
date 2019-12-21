@@ -86,10 +86,11 @@ public class InstellingenPane extends GridPane {
         Label header = new Label("\tHeaders:");
         this.add(header,3,1);
         headerCustom = new CheckBox("Schrijf een custom header");
+        this.add(inputHeader,3,3);
+        inputHeader.setVisible(false);
         headerCustom.setOnAction(event -> {
             if (headerCustom.isSelected()) {
-                inputHeader.setText("Vink deze optie aan om een custom header te schrijven");
-                this.add(inputHeader,3,3);
+                inputHeader.setText("");
                 headerCustom.setText("Gebruik deze custom header");
                 this.inputHeader.setVisible(true);
             } else {
@@ -250,5 +251,17 @@ public class InstellingenPane extends GridPane {
      */
     public void setFooterAfsluitlijn(boolean b) {
         footerAfsluitLijn.setSelected(b);
+    }
+
+
+    /**
+     * Deze methode stelt de checkbox van de custom header in en roept de tekst op..
+     * @param b of de checkbox al dan niet aangevinkt is.
+     * @author Andreas Geysegoms
+     */
+    public void setCustomHeader(boolean b, String customHeader) {
+        this.headerCustom.setSelected(b);
+        this.inputHeader.setText(customHeader);
+        this.inputHeader.setVisible(b);
     }
 }

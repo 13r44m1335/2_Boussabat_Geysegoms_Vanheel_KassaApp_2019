@@ -145,10 +145,10 @@ public class KlantController extends Observer {
         ArrayList<Pair<Artikel, Integer>> res = new ArrayList<>();
         for (Artikel a : artikels) {
             Pair<Artikel, Integer> oldPair = getPairWithList(a, res);
-            if (artikels.indexOf(oldPair) == -1) {
+            if (oldPair == null) {
                 res.add(new Pair<>(a,1));
             }  else {
-                int i = artikels.indexOf(oldPair);
+                int i = res.indexOf(oldPair);
                 res.remove(oldPair);
                 res.add(i,new Pair<>(a,oldPair.getValue()+1));
             }
