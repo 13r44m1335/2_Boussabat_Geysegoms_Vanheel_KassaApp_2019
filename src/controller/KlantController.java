@@ -74,6 +74,8 @@ public class KlantController extends Observer {
     @Override
     public void update(ArrayList<Artikel> artikels, Enum soort) {
         double totaalS = 0;
+        double tebetalen = 0;
+        double totaleKorting = 0;
         ArrayList<Artikel> beepboop = null;
         if (soort.equals(ARTIKELINSCANNEN)) {
             try {
@@ -90,7 +92,11 @@ public class KlantController extends Observer {
                 }
 
                 totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
+                tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
+                totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;
                 this.view.setTotaal(totaalS);
+                this.view.setTeBetalenBedrag(tebetalen);
+                this.view.setTotaleKorting(totaleKorting);
             } catch (NullPointerException ignored) {
                 
             }

@@ -75,7 +75,6 @@ public class KassaController extends Observer {
         return current.getTotaal();
     }
 
-
     /**
      * Deze methode scant een item in in de winkel.
      *
@@ -101,6 +100,8 @@ public class KassaController extends Observer {
                 throw new NullPointerException("Dit artikel bestaat niet.");
             }
             double totaalS = 0;
+            double totaleKorting = 0;
+            double tebetalen = 0;
 
             if (soort.equals(ARTIKELINSCANNEN)) {
                 totaalS = this.berekenTotaal(artikels);
@@ -113,12 +114,20 @@ public class KassaController extends Observer {
 
             }
             this.setTotaal(totaalS);
+
             if (this.getKorting() != null) {
-                double korting = this.getKorting().berekenKorting(this.getAll());
-                totaalS = totaalS - korting;
+                totaleKorting = this.getKorting().berekenKorting(this.getAll());
+
+                tebetalen = totaalS-totaleKorting;
+
+                totaalS = totaalS;
             }
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
+            tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
+            totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;
             this.view.setTotaal(totaalS);
+            this.view.setTeBetalenBedrag(tebetalen);
+            this.view.setTotaleKorting(totaleKorting);
         } catch (NullPointerException e) {
             this.view.getError().setText(e.getMessage());
             this.view.getError().setVisible(true);
@@ -197,9 +206,10 @@ public class KassaController extends Observer {
     }
 
     /**
-     * Thomas
+     * Deze methode verwijderd het artikel ahv huidig artikel
      *
-     * @param code
+     * @param code het huidige artikel
+     * @author Thomas Vanheel
      */
     public void verwijderArtikel(Artikel code) {
         current.deleteArtikel(code);

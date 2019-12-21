@@ -60,6 +60,12 @@ public class Winkelwagen {
         return artikels;
     }
 
+    /**
+     * Deze methode verwijdert een artikel uit de winkelwagen.
+     * @param code het te verwijderen artikel.
+     * @author Thomas Vanheel
+     */
+
     public void deleteArtikel(Artikel code) {
         try{
             if (artikels.contains(code)) {
@@ -105,4 +111,6 @@ public class Winkelwagen {
         }
         throw new IllegalArgumentException("Dit artikel is nog niet toegevoegd.");
     }
+
+
 }
