@@ -56,6 +56,7 @@ public class LogPane extends GridPane {
         korting.setMinWidth(125);
         teBetalen.setMinWidth(125);
 
+        tableView.setId("my-table");
 
         datum.setCellValueFactory(cell -> new SimpleStringProperty((String)cell.getValue()[3]));
         tijdstip.setCellValueFactory(cell -> new SimpleStringProperty((String) cell.getValue()[4]));

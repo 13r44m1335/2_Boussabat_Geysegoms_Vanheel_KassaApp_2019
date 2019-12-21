@@ -48,6 +48,7 @@ public class KassaPane extends GridPane {
         artikelCodeField = new TextField();
         this.add(artikelCodeField, 1, 1, 1, 1);
         table = new TableView<>();
+        table.setId("my-table");
         //table.setPrefWidth(REMAINING);
         this.add(error, 0, 0, 1, 1);
         error.setVisible(false);

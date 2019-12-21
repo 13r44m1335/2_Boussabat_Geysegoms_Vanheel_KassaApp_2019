@@ -88,6 +88,8 @@ public class KlantView extends GridPane {
         aantal.setPrefWidth(500/3-5);
         prijsCol.setPrefWidth(500/3-5);
         totaal = new Label();
+
+        table.setId("my-table");
     }
 
 

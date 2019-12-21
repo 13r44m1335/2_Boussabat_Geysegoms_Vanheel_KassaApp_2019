@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1910efed-4c09-4bc7-a8b1-ddff23fcbb51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/instellingen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/instellingen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/artikel.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestanden/artikel.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bestanden/instellingen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestanden/instellingen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/InstellingenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/InstellingenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/KlantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KlantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Winkel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Winkel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/panels/InstellingenPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/InstellingenPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/KassaPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/KassaPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/LogPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/LogPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,26 +31,30 @@
           <entry key="SoortKorting" value="1" />
           <entry key="SoortOplslag" value="1" />
           <entry key="VerkoopState" value="1" />
-          <entry key="java" value="86" />
+          <entry key="css" value="2" />
+          <entry key="java" value="89" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="86" />
+          <entry key="CSS" value="2" />
+          <entry key="JAVA" value="89" />
           <entry key="UML" value="6" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3529" />
+          <entry key="css" value="1" />
+          <entry key="java" value="3570" />
           <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3529" />
+          <entry key="CSS" value="1" />
+          <entry key="JAVA" value="3570" />
           <entry key="XML" value="17" />
         </counts>
       </usages-collector>
@@ -113,11 +117,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Winkel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="178">
               <caret line="267" column="8" selection-start-line="267" selection-start-column="8" selection-end-line="267" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/application.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/instellingen.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/panels/LogPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/panels/InstellingenPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,18 +195,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/KlantController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="145" column="36" selection-start-line="145" selection-start-column="36" selection-end-line="145" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/KassaController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="118">
@@ -173,8 +209,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/panels/KassaPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
+            <state relative-caret-position="82">
+              <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -227,8 +263,6 @@
         <option value="$PROJECT_DIR$/src/model/DrempelKorting.java" />
         <option value="$PROJECT_DIR$/src/model/KortingFactory.java" />
         <option value="$PROJECT_DIR$/src/model/SoortKorting.java" />
-        <option value="$PROJECT_DIR$/src/application/instellingen.css" />
-        <option value="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" />
         <option value="$PROJECT_DIR$/src/application/Main.java" />
         <option value="$PROJECT_DIR$/src/view/KassaView.java" />
         <option value="$PROJECT_DIR$/src/view/panels/KlantPane.java" />
@@ -250,14 +284,16 @@
         <option value="$PROJECT_DIR$/src/model/OnHoldState.java" />
         <option value="$PROJECT_DIR$/src/view/KlantView.java" />
         <option value="$PROJECT_DIR$/src/controller/LogController.java" />
-        <option value="$PROJECT_DIR$/src/view/panels/LogPane.java" />
-        <option value="$PROJECT_DIR$/src/view/panels/KassaPane.java" />
         <option value="$PROJECT_DIR$/src/controller/KassaController.java" />
         <option value="$PROJECT_DIR$/src/bestanden/instellingen.xml" />
         <option value="$PROJECT_DIR$/src/controller/InstellingenController.java" />
         <option value="$PROJECT_DIR$/src/view/panels/InstellingenPane.java" />
         <option value="$PROJECT_DIR$/src/controller/KlantController.java" />
         <option value="$PROJECT_DIR$/src/model/Winkel.java" />
+        <option value="$PROJECT_DIR$/src/view/panels/KassaPane.java" />
+        <option value="$PROJECT_DIR$/src/application/instellingen.css" />
+        <option value="$PROJECT_DIR$/src/view/panels/LogPane.java" />
+        <option value="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" />
       </list>
     </option>
   </component>
@@ -464,13 +500,13 @@
       <workItem from="1576927284195" duration="236000" />
       <workItem from="1576943122181" duration="2082000" />
       <workItem from="1576947149066" duration="353000" />
-      <workItem from="1576947560753" duration="1201000" />
+      <workItem from="1576947560753" duration="2321000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87638000" />
+    <option name="totallyTimeSpent" value="88758000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -485,7 +521,7 @@
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19433199" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19433199" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -495,8 +531,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39303482" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.41293532" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39303482" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41293532" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3283582" />
@@ -621,12 +657,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/Winkel.java</url>
-          <line>264</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/KassaController.java</url>
           <line>257</line>
           <properties />
@@ -636,20 +666,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/Korting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Verkoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SoortObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -803,13 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/panels/LogPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="60" column="96" selection-start-line="60" selection-start-column="96" selection-end-line="60" selection-end-column="96" />
         </state>
       </provider>
     </entry>
@@ -1057,16 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/panels/InstellingenPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/RekeningAbstract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1119,16 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Winkel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="265" selection-start-line="265" selection-end-line="265" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/KassaController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -1136,13 +1125,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/panels/KassaPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>
@@ -1160,13 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.base/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.graphics/javafx/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
@@ -1175,6 +1150,64 @@
             <element signature="e#70522#70523#0" expanded="true" />
             <element signature="e#70568#70569#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.base/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Winkel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="267" column="8" selection-start-line="267" selection-start-column="8" selection-end-line="267" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/application.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/panels/InstellingenPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/panels/KassaPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/instellingen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/panels/LogPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
         </state>
       </provider>
     </entry>

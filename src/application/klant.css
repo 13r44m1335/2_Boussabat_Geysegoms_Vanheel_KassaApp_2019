@@ -4,3 +4,7 @@
 .table-view {
     -fx-font: 16px "Serif";
 }
+
+#my-table .table-column {
+    -fx-alignment: CENTER;
+}
