@@ -37,6 +37,7 @@ public class KassaController extends Observer {
         winkel.registerObserver(this, SoortObserver.ARTIKELINSCANNEN);
         winkel.registerObserver(this, DELETEARTIKEL);
         winkel.registerObserver(this, STOCK);
+        verkoop = new Verkoop(winkel);
     }
 
     /**
@@ -207,7 +208,6 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void resume() {
-        verkoop.setToActive();
         this.winkel.resume();
         view.resume(winkel.getCurrent().getAll());
         double totaal = winkel.getCurrent().getTotaal();
@@ -238,10 +238,13 @@ public class KassaController extends Observer {
 
 
     /**
-     * Deze functie moet de verkoop annuleren en het beeld resetten
-     * @author Reda Boussabat
+     * Deze functie annuleert de huidige verkoop en reset het beeld.
+     * @author Andreas Geysegoms
      */
     public void cancel(){
+        winkel.cancel();
+        winkel.notifyObservers(ANNULEER, new ArrayList<>(0));
+        this.view.resetVerkoop();
     }
 
     /**
@@ -249,12 +252,15 @@ public class KassaController extends Observer {
      * @author Reda Boussabat
      */
     public void sell(){
+        ArrayList<Artikel> res = winkel.getCurrent().getAll();
         verkoop.sold();
         winkel.printRekening();
-        this.winkel.sell();
-        view.reset();
         winkel.pasStockAan();
+        this.winkel.sell();
+        view.resetVerkoop();
         winkel.notifyObservers(STOCK, winkel.getCurrent().getAll());
+        winkel.notifyObservers(ANNULEER, new ArrayList<>(0));
+        winkel.notifyObservers(LOG, res);
     }
 
     /**

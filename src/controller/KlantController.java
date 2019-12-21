@@ -33,7 +33,7 @@ public class KlantController extends Observer {
         winkel.registerObserver(this, DELETEARTIKEL);
         winkel.registerObserver(this, HOLD);
         winkel.registerObserver(this, RESUME);
-
+        winkel.registerObserver(this, ANNULEER);
     }
 
     public void setWinkel(Winkel winkel) {
@@ -69,6 +69,7 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode updatet de view van kassa.
+     *
      * @param artikels de artikels die doorgegeven worden.
      * @author Andreas Geysegoms
      */
@@ -95,8 +96,7 @@ public class KlantController extends Observer {
             } catch (NullPointerException ignored) {
 
             }
-        }
-        else if (soort.equals(DELETEARTIKEL)) {
+        } else if (soort.equals(DELETEARTIKEL)) {
             ArrayList<Pair<Artikel, Integer>> artikelsKlantPairs = view.getArtikelsKlant();
             ArrayList<Artikel> artikelsKlant = toArrayList(artikelsKlantPairs);
             Artikel a = artikels.get(0);
@@ -112,12 +112,10 @@ public class KlantController extends Observer {
 
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
             this.view.setTotaal(totaalS);
-        }
-        else if (soort.equals(HOLD)) {
+        } else if (soort.equals(HOLD)) {
             view.reset();
             view.setTotaal(0);
-        }
-        else if (soort.equals(RESUME)) {
+        } else if (soort.equals(RESUME)) {
             ArrayList<Pair<Artikel, Integer>> pairs = artikelsToPair(artikels);
             totaalS = this.berekenTotaal(artikels);
             this.setTotaal(totaalS);
@@ -131,13 +129,14 @@ public class KlantController extends Observer {
             this.view.setTotaal(totaalS);
 
             view.resume(pairs);
-        } else if(soort.equals(ANNULEER)){
+        } else if (soort.equals(ANNULEER)) {
             view.reset();
         }
     }
 
     /**
      * Deze methode zet een lijst van artikels om naar een lijst van paren.
+     *
      * @param artikels een lijst van artikels.
      * @return een lijst van paren.
      * @author Andreas Geysegoms
@@ -147,10 +146,10 @@ public class KlantController extends Observer {
         for (Artikel a : artikels) {
             Pair<Artikel, Integer> oldPair = getPairWithList(a, res);
             if (oldPair == null) {
-                res.add(new Pair<>(a,1));
-            }  else {
+                res.add(new Pair<>(a, 1));
+            } else {
                 res.remove(oldPair);
-                res.add(new Pair<>(a,oldPair.getValue()+1));
+                res.add(new Pair<>(a, oldPair.getValue() + 1));
             }
         }
         return res;
@@ -158,7 +157,8 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode haalt een pair op van een lijst van paren uit een gegeven list ahv een artikel.
-     * @param a een artikel.
+     *
+     * @param a   een artikel.
      * @param res een lijst
      * @return een paar.
      * @author Andreas Geysegoms
@@ -174,6 +174,7 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode zet een lijst van paren om naar een lijst van artikels.
+     *
      * @param artikelsKlantPairs een lijst van paren.
      * @return een lijst van artikels.
      * @author Andreas Geysegoms
@@ -190,6 +191,7 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode berekent het totaal ahv de lijst van artikels.
+     *
      * @param artikels de lijst van artikels.
      * @return de totale prijs
      */
@@ -244,6 +246,7 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode haalt een pair op ahv een artikel.
+     *
      * @param artikel het artikel van het pair.
      * @return het pair.
      * @author Andreas Geysegoms
@@ -260,6 +263,7 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode haalt het aantal artikels x van de huidige klant op.
+     *
      * @param artikel het artikel x
      * @return het aantal artikels x.
      * @author Andreas Geysegoms
@@ -276,6 +280,7 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode voegt een artikel toe aan de artikellijst van de klant.
+     *
      * @param artikel het artikel toe te voegen aan de lijst van de klant.
      * @author Andreas Geysegoms
      */
@@ -293,6 +298,7 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode verwijdert een artikel uit de view.
+     *
      * @param artikel het artikel dat verwijdert dient te worden.
      * @author Andreas Geysegoms
      */
@@ -311,7 +317,8 @@ public class KlantController extends Observer {
 
     /**
      * Deze methode haalt een pair uit de view ahv het artikel.
-     * @param artikel het artikel
+     *
+     * @param artikel       het artikel
      * @param artikelsKlant de artikels uit de view.
      * @author Andreas Geysegoms
      */

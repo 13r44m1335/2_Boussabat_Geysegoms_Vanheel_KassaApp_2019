@@ -11,8 +11,11 @@ public class OnHoldState extends VerkoopState {
 
     @Override
     public void setToActive() {
-        System.out.println("Terug op ctief gezet");
         verkoop.setCurrent(verkoop.getActiveState());
     }
 
+    @Override
+    public void sold() {
+        verkoop.setCurrent(verkoop.getActiveState());
+    }
 }

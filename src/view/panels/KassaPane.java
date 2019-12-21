@@ -188,6 +188,15 @@ public class KassaPane extends GridPane {
     }
 
     /**
+     * Deze methode reset de view na betaald te zijn.
+     * @author Andreas Geysegoms
+     */
+    public void resetVerkoop() {
+        artikels = FXCollections.observableArrayList();
+        this.table.setItems(artikels);
+    }
+
+    /**
      * Deze methode handelt het visuele van herstellen van de on hold aankoop.
      * @param artikelArrayList de artikels uit de winkelwagen die op hold staat.
      * @author Andreas Geysegoms
