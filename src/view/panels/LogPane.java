@@ -28,8 +28,8 @@ import java.util.ArrayList;
 
 public class LogPane extends GridPane {
 
-    private TableView<Double[]> tableView = new TableView<>();
-    private ObservableList<Double[]> logs = FXCollections.observableArrayList();
+    private TableView<Object[]> tableView = new TableView<>();
+    private ObservableList<Object[]> logs = FXCollections.observableArrayList();
 
 
     /**
@@ -44,11 +44,11 @@ public class LogPane extends GridPane {
         this.setVgap(5);
         this.setHgap(5);
 
-        TableColumn<Double[], String> datum = new TableColumn<>("Datum verkoop");
-        TableColumn<Double[], String> tijdstip = new TableColumn<>("Tijdstip verkoop");
-        TableColumn<Double[], String> totaalbedrag = new TableColumn<>("Totaal Bedrag");
-        TableColumn<Double[], String> korting = new TableColumn<>("Korting");
-        TableColumn<Double[], String> teBetalen = new TableColumn<>("Te betalen");
+        TableColumn<Object[], String> datum = new TableColumn<>("Datum verkoop");
+        TableColumn<Object[], String> tijdstip = new TableColumn<>("Tijdstip verkoop");
+        TableColumn<Object[], String> totaalbedrag = new TableColumn<>("Totaal Bedrag");
+        TableColumn<Object[], String> korting = new TableColumn<>("Korting");
+        TableColumn<Object[], String> teBetalen = new TableColumn<>("Te betalen");
 
         datum.setMinWidth(125);
         tijdstip.setMinWidth(125);
@@ -57,8 +57,8 @@ public class LogPane extends GridPane {
         teBetalen.setMinWidth(125);
 
 
-        datum.setCellValueFactory(cell -> new SimpleStringProperty(LocalDate.now().toString()));
-        tijdstip.setCellValueFactory(cell -> new SimpleStringProperty(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"))));
+        datum.setCellValueFactory(cell -> new SimpleStringProperty((String)cell.getValue()[3]));
+        tijdstip.setCellValueFactory(cell -> new SimpleStringProperty((String) cell.getValue()[4]));
         totaalbedrag.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f" ,(cell.getValue()[0]))));
         korting.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f" ,(cell.getValue()[1]))));
         teBetalen.setCellValueFactory(cell -> new SimpleStringProperty(String.format("€ %.2f" ,(cell.getValue()[2]))));
@@ -77,7 +77,7 @@ public class LogPane extends GridPane {
      * @param artikels zijn de informatie over voor de verkopen
      * @author Boussabat Reda
      */
-    public void updateLog(Double[] artikels) {
+    public void updateLog(Object[] artikels) {
         this.logs.addAll(artikels);
     }
 }

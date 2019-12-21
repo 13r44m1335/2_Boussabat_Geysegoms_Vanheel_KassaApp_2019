@@ -7,6 +7,9 @@ import model.SoortObserver;
 import model.Winkel;
 import view.panels.LogPane;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -44,14 +47,16 @@ public class LogController extends Observer {
      */
     @Override
     public void update(ArrayList<Artikel> logs, Enum soort) {
-        Double[] res = new Double[3];
+        Object[] res = new Object[5];
         res[0] = berekenTotaal(logs);
         try {
             res[1] = winkel.getKorting().berekenKorting(logs);
         } catch (NullPointerException e) {
             res[1] = 0.0;
         }
-        res[2] = res[0] - res[1];
+        res[2] = (Double) res[0] - (Double) res[1];
+        res[3] = LocalDate.now().toString();
+        res[4] = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
         view.updateLog(res);
     }
 

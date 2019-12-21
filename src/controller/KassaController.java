@@ -261,6 +261,8 @@ public class KassaController extends Observer {
         winkel.notifyObservers(STOCK, winkel.getCurrent().getAll());
         winkel.notifyObservers(ANNULEER, new ArrayList<>(0));
         winkel.notifyObservers(LOG, res);
+        this.setTotaal(0);
+        this.view.setTotaal(0);
     }
 
     /**

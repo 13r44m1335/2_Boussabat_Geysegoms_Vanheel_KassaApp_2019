@@ -185,6 +185,7 @@ public class KassaPane extends GridPane {
         btnHold.setDisable(true);
         btnResume.setDisable(false);
         this.table.setItems(artikels);
+        this.setTotaal(0);
     }
 
     /**
@@ -194,6 +195,7 @@ public class KassaPane extends GridPane {
     public void resetVerkoop() {
         artikels = FXCollections.observableArrayList();
         this.table.setItems(artikels);
+        this.setTotaal(0);
     }
 
     /**
