@@ -5,12 +5,13 @@
       <change beforePath="$PROJECT_DIR$/src/application/instellingen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/instellingen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bestanden/artikel.xls" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestanden/artikel.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bestanden/instellingen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestanden/instellingen.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/view/panels/KassaPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/KassaPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/LogPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/LogPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +22,7 @@
       <FILTER>application.*</FILTER>
     </SUITE>
   </component>
+<<<<<<< Updated upstream
   <component name="FUSProjectUsageTrigger">
     <session id="1306121773">
       <usages-collector id="statistics.file.extensions.open">
@@ -217,6 +219,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -257,6 +261,7 @@
       </map>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -379,6 +384,10 @@
       </pane>
     </panes>
   </component>
+=======
+  <component name="ProjectId" id="1V56EIcNy8msPYP4fwUvuSUpoy2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -401,7 +410,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -413,18 +422,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/model" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -498,16 +495,25 @@
       <workItem from="1576240506619" duration="178000" />
       <workItem from="1576655214707" duration="726000" />
       <workItem from="1576927284195" duration="236000" />
+<<<<<<< Updated upstream
       <workItem from="1576943122181" duration="2082000" />
       <workItem from="1576947149066" duration="353000" />
       <workItem from="1576947560753" duration="2321000" />
+=======
+      <workItem from="1576943122181" duration="1296000" />
+      <workItem from="1576945234525" duration="84000" />
+      <workItem from="1576963116785" duration="300000" />
+>>>>>>> Stashed changes
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+<<<<<<< Updated upstream
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="88758000" />
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -517,6 +523,7 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+<<<<<<< Updated upstream
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
@@ -553,11 +560,10 @@
       <window_info anchor="right" id="Maven Projects" order="9" />
     </layout>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -580,22 +586,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="991" y="298" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1576531123267" />
-    <state width="1358" height="295" key="GridCell.Tab.0.bottom" timestamp="1576703100905">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1576963447193">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1358" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
-    <state width="1358" height="295" key="GridCell.Tab.0.center" timestamp="1576703100905">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576963447193" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1576963447193">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1358" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
-    <state width="1358" height="295" key="GridCell.Tab.0.left" timestamp="1576703100905">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576963447193" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1576963447193">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1358" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
-    <state width="1358" height="295" key="GridCell.Tab.0.right" timestamp="1576703100905">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576963447193" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1576963447193">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1358" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576963447193" />
     <state width="1877" height="378" key="GridCell.Tab.1.bottom" timestamp="1576508508963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -620,10 +626,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1152" y="259" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576414771705" />
-    <state x="691" y="117" key="SettingsEditor" timestamp="1576692304262">
+    <state x="691" y="117" key="SettingsEditor" timestamp="1576963630068">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="691" y="117" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576692304262" />
+    <state x="691" y="117" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576963630068" />
     <state x="1032" y="276" key="Vcs.Push.Dialog.v2" timestamp="1576414663727">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -653,6 +659,7 @@
     </state>
     <state x="874" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576430328748" />
   </component>
+<<<<<<< Updated upstream
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -1212,4 +1219,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> Stashed changes
 </project>
