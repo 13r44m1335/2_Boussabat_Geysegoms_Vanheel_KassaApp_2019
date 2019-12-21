@@ -105,4 +105,5 @@ public class Winkelwagen {
         }
         throw new IllegalArgumentException("Dit artikel is nog niet toegevoegd.");
     }
+
 }

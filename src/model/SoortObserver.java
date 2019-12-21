@@ -11,5 +11,8 @@ public enum SoortObserver {
     HOLD,
     RESUME,
     DELETEARTIKEL,
-    KORTING;
+    KORTING,
+    ANNULEER,
+    VERKOOP,
+    LOG;
 }

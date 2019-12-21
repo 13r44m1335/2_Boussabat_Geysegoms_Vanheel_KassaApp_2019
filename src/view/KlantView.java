@@ -132,6 +132,7 @@ public class KlantView extends GridPane {
     public void reset() {
         artikelsKlant = FXCollections.observableArrayList();
         this.table.setItems(artikelsKlant);
+        this.setTotaal(0);
     }
 
     /**

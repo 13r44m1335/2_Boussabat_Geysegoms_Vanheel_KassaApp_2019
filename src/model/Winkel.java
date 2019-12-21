@@ -96,6 +96,8 @@ public class Winkel implements Subject {
         observers.put(DELETEARTIKEL,new ArrayList<>());
         observers.put(RESUME,new ArrayList<>());
         observers.put(HOLD, new ArrayList<>());
+        observers.put(ANNULEER, new ArrayList<>());
+        observers.put(LOG, new ArrayList<>());
         rekeningFactory.setWinkel(this);
         current = new Winkelwagen(this);
         hold = new Winkelwagen(this);
@@ -197,7 +199,7 @@ public class Winkel implements Subject {
      */
     public void printRekening() {
         RekeningAbstract r = RekeningFactory.getInstance().create(properties);
-        System.out.println(r.getDescription());
+        System.out.println("\n\n\n\n*************************************\n"+r.getDescription()+"\n*************************************");
     }
 
     /**
@@ -218,6 +220,24 @@ public class Winkel implements Subject {
      */
     public void resume() {
         this.current = hold;
+        this.hold = new Winkelwagen(this);
+    }
+
+    /**
+     * Deze methode regelt de verkoop in de winkel (winkelwagens).
+     * @author Andreas Geysegoms
+     */
+    public void sell(){
+        if (getOpHold()) resume();
+        else this.current = new Winkelwagen(this);
+    }
+
+    /**
+     * Deze methode cancelt de verkoop.
+     * @author Andreas Geysegoms
+     */
+    public void cancel(){
+        this.current = new Winkelwagen(this);
     }
 
     public Winkelwagen getCurrent() {
@@ -230,5 +250,59 @@ public class Winkel implements Subject {
 
     public void setHold(Winkelwagen winkelwagen) {
         this.hold = winkelwagen;
+    }
+
+    public void pasStockAan(){
+        ArrayList<Artikel> weg = new ArrayList<>(current.getAll());
+        ArrayList<Artikel> current = this.getDb().load();
+        for (Artikel a: weg) {
+            downStock(a, current);
+        }
+        db.save(current);
+    }
+
+    /**
+     * Deze methode verlaagt de stock van het huidige artikel met 1.
+     * @param a het huidige artikel.
+     * @param current alle meegegeven artikels.
+     * @throws IllegalArgumentException wanneer er geen artikel meer in stock is.
+     * @author Andreas Geysegoms
+     */
+    private void downStock(Artikel a, ArrayList<Artikel> current) throws IllegalArgumentException {
+        if (current.contains(a)) {
+            try {
+                int i = findIndex(current,a);
+                if (current.get(i).getActueleVoorraad() <= 0) throw new IllegalArgumentException("Artikel is niet meer in stock");
+                current.get(i).setActueleVoorraad(current.get(i).getActueleVoorraad()-1);
+            } catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("Artikel is niet meer in stock");
+            }
+        } else throw new IllegalArgumentException("Artikel is niet meer in stock");
+    }
+
+    /**
+     * Deze methode zoekt de index van een artikel. Rewrite omdat deze niet werkt ahv indexOf().
+     * @param current alle meegegevens artikels.
+     * @param a het gezochte artikel.
+     * @return de index van het artikel.
+     * @throws IllegalArgumentException wanneer het artikel niet gevonden is.
+     */
+    private int findIndex(ArrayList<Artikel> current, Artikel a) throws IllegalArgumentException {
+        for (int i = 0; i < current.size(); i++) {
+            if (current.get(i).equals(a)) return i;
+        } throw new IllegalArgumentException("Niet gevonden.");
+    }
+
+    public void toonLogs(){
+
+    }
+
+    /**
+     * Deze methode geeft weer of er een verkoop op hold staat
+     * @author Andreas Geysegoms
+     * @return al dan niet een verkoop op hold staat.
+     */
+    public boolean getOpHold() {
+        return hold.getAll().size() == 0;
     }
 }
