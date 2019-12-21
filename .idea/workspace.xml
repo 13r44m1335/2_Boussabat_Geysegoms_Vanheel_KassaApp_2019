@@ -2,19 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1910efed-4c09-4bc7-a8b1-ddff23fcbb51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/ActiveState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/CancelledState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/OnHoldState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/SoldState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Verkoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/VerkoopState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/LogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/ModelException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/panels/LogPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestanden/instellingen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestanden/instellingen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/KassaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KassaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/KlantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KlantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ActiveState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ActiveState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CancelledState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CancelledState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OnHoldState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OnHoldState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SoldState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SoldState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/SoortObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SoortObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Verkoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Verkoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/VerkoopState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/VerkoopState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Winkel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Winkel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Winkelwagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Winkelwagen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/panels/KassaPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/KassaPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/panels/ProductOverviewPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,29 +42,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>loadSave</find>
-      <find>load</find>
-      <find>factory</find>
-      <find>scen</find>
-      <find>hbox</find>
-      <find>scene</find>
-      <find>getError</find>
-      <find>error</find>
-      <find>search</find>
-      <find>NUllPointer</find>
-      <find>stock</find>
-      <find>berekenKorting</find>
-      <find>bereken</find>
-      <find>berekenKo</find>
-      <find>reset</find>
-      <find>putIfAbsent</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>setProperty</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -65,7 +49,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="ProjectId" id="1V56EIcNy8msPYP4fwUvuSUpoy2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -77,21 +63,22 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="init&#9;PSI&#9;JAVA://controller.InstellingenController#initKassaBonSettings&#10;properties&#9;PSI&#9;JAVA://model.Winkel#setProperties&#10;STOCK&#9;FILE&#9;file://C:/Users/andre/Documents/Hogeschool/Bach.2/Semester 1/OO Ontwerpen/Project/src/controller/StockController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576149554536" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../OO-Opdrachten/Lab-3-State" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -169,8 +156,19 @@
       <workItem from="1576001817067" duration="22649000" />
       <workItem from="1576102523995" duration="10439000" />
       <workItem from="1576161491940" duration="781000" />
-      <workItem from="1576414606393" duration="6184000" />
+      <workItem from="1576414606393" duration="20553000" />
+      <workItem from="1576530501665" duration="2063000" />
+      <workItem from="1576690753345" duration="2119000" />
+      <workItem from="1576692889886" duration="7778000" />
     </task>
+    <task id="LOCAL-00001" summary="Story 9: Annuleer werkt bij Kassa view, maar nog niet bij Klant">
+      <created>1576420907691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576420907691</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -190,44 +188,54 @@
       <path value="$PROJECT_DIR$/../.." />
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="Story 9: Annuleer werkt bij Kassa view, maar nog niet bij Klant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Story 9: Annuleer werkt bij Kassa view, maar nog niet bij Klant" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1245" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1576416535513">
+    <state x="1245" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1576695209830">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1245" y="259" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1576416535513" />
-    <state width="1372" height="215" key="GridCell.Tab.0.bottom" timestamp="1576420842709">
+    <state x="1245" y="259" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1576695209830" />
+    <state x="599" y="136" key="CommitChangelistDialog2" timestamp="1576420906229">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576420842709" />
-    <state width="1372" height="215" key="GridCell.Tab.0.center" timestamp="1576420842709">
+    <state x="599" y="136" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1576420906229" />
+    <state x="991" y="298" key="FileChooserDialogImpl" timestamp="1576531123267">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="215" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576420842709" />
-    <state width="1372" height="215" key="GridCell.Tab.0.left" timestamp="1576420842709">
+    <state x="991" y="298" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1576531123267" />
+    <state width="1358" height="295" key="GridCell.Tab.0.bottom" timestamp="1576703100905">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="215" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576420842709" />
-    <state width="1372" height="215" key="GridCell.Tab.0.right" timestamp="1576420842709">
+    <state width="1358" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
+    <state width="1358" height="295" key="GridCell.Tab.0.center" timestamp="1576703100905">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="215" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576420842709" />
-    <state width="1372" height="378" key="GridCell.Tab.1.bottom" timestamp="1576420598417">
+    <state width="1358" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
+    <state width="1358" height="295" key="GridCell.Tab.0.left" timestamp="1576703100905">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="378" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576420598417" />
-    <state width="1372" height="378" key="GridCell.Tab.1.center" timestamp="1576420598417">
+    <state width="1358" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
+    <state width="1358" height="295" key="GridCell.Tab.0.right" timestamp="1576703100905">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="378" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576420598417" />
-    <state width="1372" height="378" key="GridCell.Tab.1.left" timestamp="1576420598417">
+    <state width="1358" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576703100905" />
+    <state width="1877" height="378" key="GridCell.Tab.1.bottom" timestamp="1576508508963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="378" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576420598417" />
-    <state width="1372" height="378" key="GridCell.Tab.1.right" timestamp="1576420598417">
+    <state width="1877" height="378" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576508508963" />
+    <state width="1877" height="378" key="GridCell.Tab.1.center" timestamp="1576508508963">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1372" height="378" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576420598417" />
+    <state width="1877" height="378" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576508508963" />
+    <state width="1877" height="378" key="GridCell.Tab.1.left" timestamp="1576508508963">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="378" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576508508963" />
+    <state width="1877" height="378" key="GridCell.Tab.1.right" timestamp="1576508508963">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="378" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576508508963" />
     <state x="368" y="93" key="MergeDialog" timestamp="1576414770362">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -236,92 +244,48 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1152" y="259" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576414771705" />
+    <state x="691" y="117" key="SettingsEditor" timestamp="1576692304262">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="691" y="117" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576692304262" />
     <state x="1032" y="276" key="Vcs.Push.Dialog.v2" timestamp="1576414663727">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1032" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1576414663727" />
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576696431413">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1576696431413" />
+    <state x="898" y="177" width="737" height="596" key="find.popup" timestamp="1576693864428">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="898" y="177" width="737" height="596" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576693864428" />
     <state x="989" y="256" key="git4idea.branch.GitSmartOperationDialog" timestamp="1576414752703">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="989" y="256" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576414752703" />
-    <state x="874" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1576419862025">
+    <state x="666" y="168" key="refactoring.ChangeSignatureDialog" timestamp="1576691133414">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="874" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576419862025" />
+    <state x="666" y="168" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576691133414" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1576431634371">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576431634371" />
+    <state x="874" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1576430328748">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="874" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1576430328748" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>10</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Project</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>ExcelPlugin</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/view/KassaMainPane.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

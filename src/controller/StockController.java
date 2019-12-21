@@ -1,3 +1,5 @@
+
+
 package controller;
 
 import model.Artikel;
@@ -5,13 +7,16 @@ import model.ComparatorByOmschrijving;
 import model.Observer;
 import model.Winkel;
 import view.panels.ProductOverviewPane;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 import static model.SoortObserver.STOCK;
 
 /**
  * Deze klasse fungeert als controller tussen tab2 van de kassa (Stock) en de winkel.
+ *
  * @author Andreas Geysegoms
  * @version 1.0
  */
@@ -23,6 +28,7 @@ public class StockController extends Observer {
 
     /**
      * Deze methode maakt een instantie van deze klasse aan ahv een winkel.
+     *
      * @param winkel de winkel
      * @author Andreas Geysegoms
      */
@@ -34,6 +40,7 @@ public class StockController extends Observer {
 
     /**
      * Deze methode stelt een winkel in.
+     *
      * @param subject de winkel.
      * @author Andreas Geysegoms
      */
@@ -43,6 +50,7 @@ public class StockController extends Observer {
 
     /**
      * Deze methode stelt de stock in.
+     *
      * @param stock de stock
      * @author Andreas Geysegoms
      */
@@ -52,6 +60,7 @@ public class StockController extends Observer {
 
     /**
      * Deze methode updatet de stock bij de view. Deze artikelen zijn gesorteerd op beschrijving.
+     *
      * @author Andreas Geysegoms
      */
     @Override
@@ -64,7 +73,18 @@ public class StockController extends Observer {
     /**
      * Deze methode toont de artikelen van de stock.
      */
-    public void toonArtikelen(){
+    public void toonArtikelen() {
         subject.toonStock();
+    }
+
+    public void pasStockAan(){
+        ArrayList<Artikel> test = subject.getCurrent().getAll();
+        for(Artikel a : test){
+            for (Artikel b : artikels){
+                if (a.getCode().equalsIgnoreCase(b.getCode())) {
+                    b.setActueleVoorraad(b.getActueleVoorraad()-1);
+                }
+            }
+        }
     }
 }

@@ -221,11 +221,12 @@ public class Winkel implements Subject {
     }
 
     public void sell(){
-
+        this.current = new Winkelwagen(this);
+        this.hold = new Winkelwagen(this);
     }
 
     public void cancel(){
-        this.current = new Winkelwagen(this);
+
     }
 
     public Winkelwagen getCurrent() {
@@ -239,4 +240,13 @@ public class Winkel implements Subject {
     public void setHold(Winkelwagen winkelwagen) {
         this.hold = winkelwagen;
     }
+
+    public void pasStockAan(){
+
+    }
+
+    public void toonLogs(){
+
+    }
+
 }

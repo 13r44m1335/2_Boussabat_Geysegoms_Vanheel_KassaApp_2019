@@ -2,6 +2,8 @@ package controller;
 
 import model.*;
 import view.panels.KassaPane;
+import view.panels.LogPane;
+import view.panels.ProductOverviewPane;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,8 +19,11 @@ import static model.SoortObserver.*;
  */
 public class KassaController extends Observer {
 
+    private Verkoop verkoop;
     private Winkel winkel;
     private KassaPane view;
+    private ProductOverviewPane productOverviewPane;
+    private LogPane logPaneview;
 
     /**
      * Deze methode maakt een isntantie aan van een kassaController.
@@ -31,6 +36,7 @@ public class KassaController extends Observer {
         setWinkel(winkel);
         winkel.registerObserver(this, SoortObserver.ARTIKELINSCANNEN);
         winkel.registerObserver(this, DELETEARTIKEL);
+        winkel.registerObserver(this, STOCK);
     }
 
     /**
@@ -188,6 +194,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void putOnHold() {
+        verkoop.setToOnHold();
         this.winkel.putOnHold();
         view.reset();
         view.setTotaal(winkel.getCurrent().getTotaal());
@@ -200,6 +207,7 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void resume() {
+        verkoop.setToActive();
         this.winkel.resume();
         view.resume(winkel.getCurrent().getAll());
         double totaal = winkel.getCurrent().getTotaal();
@@ -229,17 +237,24 @@ public class KassaController extends Observer {
     }
 
 
+    /**
+     * Deze functie moet de verkoop annuleren en het beeld resetten
+     * @author Reda Boussabat
+     */
     public void cancel(){
-      /*  this.winkel.putOnHold();
-        view.reset();
-        view.setTotaal(winkel.getCurrent().getTotaal());
-        winkel.notifyObservers(HOLD,new ArrayList<>(0));*/
-      this.winkel.cancel();
-      view.reset();
     }
 
+    /**
+     * Deze functie moet de verkoop eindigen en de rekening uitprinten
+     * @author Reda Boussabat
+     */
     public void sell(){
-
+        verkoop.sold();
+        winkel.printRekening();
+        this.winkel.sell();
+        view.reset();
+        winkel.pasStockAan();
+        winkel.notifyObservers(STOCK, winkel.getCurrent().getAll());
     }
 
     /**
@@ -268,11 +283,4 @@ public class KassaController extends Observer {
         }
     }
 
-    /**
-     * Deze methode geeft door aan de winkel om de rekening te printen.
-     * @author Andreas Geysegoms
-     */
-    public void print() {
-        winkel.printRekening();
-    }
 }

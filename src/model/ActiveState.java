@@ -1,16 +1,12 @@
 package model;
 
-public class ActiveState implements VerkoopState{
+public class ActiveState extends VerkoopState{
 
     private Verkoop verkoop;
 
     public ActiveState(Verkoop verkoop) {
+        super(verkoop);
         this.verkoop = verkoop;
-    }
-
-    @Override
-    public void setToActive() {
-        System.out.println("staat al op actief");
     }
 
     @Override

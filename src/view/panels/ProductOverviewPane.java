@@ -70,4 +70,9 @@ public class ProductOverviewPane extends GridPane {
         this.artikels.addAll(artikels);
     }
 
+    public void sell(ArrayList artikelArrayList){
+		artikels = FXCollections.observableArrayList(artikelArrayList);
+		this.table.setItems(artikels);
+	}
+
 }

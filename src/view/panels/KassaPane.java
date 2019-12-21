@@ -53,7 +53,7 @@ public class KassaPane extends GridPane {
         error.setVisible(false);
         btnHold = new Button("Zet een verkoop op hold");
         btnResume = new Button("Resume hold");
-        btnSell = new Button("Verkoop afronden");
+        btnSell = new Button("BETAALD");
         btnCancel = new Button("Verkoop annuleren");
         btnResume.setDisable(true);
 
@@ -123,11 +123,10 @@ public class KassaPane extends GridPane {
         totaal = new Label();
         totaal.setText("Totale bedrag: € 0,00");
         this.add(totaal, 0,11);
-        Button print = new Button("Print rekening(deze moet automatisch na afsluiten en betalen van aankoop)");
-        print.setOnAction(event -> {
-            controller.print();
+        btnSell.setOnAction(event -> {
+            controller.sell();
         });
-        this.add(print,3,11);
+
     }
 
     /**

@@ -33,6 +33,7 @@ public class KlantController extends Observer {
         winkel.registerObserver(this, DELETEARTIKEL);
         winkel.registerObserver(this, HOLD);
         winkel.registerObserver(this, RESUME);
+
     }
 
     public void setWinkel(Winkel winkel) {
@@ -92,10 +93,8 @@ public class KlantController extends Observer {
                 totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
                 this.view.setTotaal(totaalS);
             } catch (NullPointerException ignored) {
-                
-            }
-        } else if (soort.equals(ANNULEER)){
 
+            }
         }
         else if (soort.equals(DELETEARTIKEL)) {
             ArrayList<Pair<Artikel, Integer>> artikelsKlantPairs = view.getArtikelsKlant();
@@ -132,6 +131,8 @@ public class KlantController extends Observer {
             this.view.setTotaal(totaalS);
 
             view.resume(pairs);
+        } else if(soort.equals(ANNULEER)){
+            view.reset();
         }
     }
 

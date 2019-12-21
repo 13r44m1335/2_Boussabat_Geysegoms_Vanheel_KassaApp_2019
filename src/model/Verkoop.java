@@ -1,9 +1,13 @@
 package model;
 
+import controller.KassaController;
+import view.panels.KassaPane;
+
+import javax.swing.*;
+
 public class Verkoop {
 
-    private Winkelwagen winkelwagen;
-
+    private Winkel winkel;
     VerkoopState onHoldState;
     VerkoopState soldState;
     VerkoopState cancelledState;
@@ -11,14 +15,14 @@ public class Verkoop {
 
     VerkoopState current;
 
-    public Verkoop(Winkelwagen winkelwagen) {
+    public Verkoop(Winkel winkel) {
         onHoldState = new OnHoldState(this);
         soldState = new SoldState(this);
         cancelledState = new CancelledState(this);
         activeState = new ActiveState(this);
         current = activeState;
 
-        this.winkelwagen = winkelwagen;
+        this.winkel = winkel;
     }
 
     public VerkoopState getOnHoldState() {
