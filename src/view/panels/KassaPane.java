@@ -1,6 +1,5 @@
 package view.panels;
 
-import com.sun.jdi.Value;
 import controller.KassaController;
 import controller.StockController;
 import javafx.beans.property.SimpleStringProperty;
@@ -59,7 +58,7 @@ public class KassaPane extends GridPane {
         btnSell = new Button("BETAALD");
         btnCancel = new Button("Verkoop annuleren");
         btnResume.setDisable(true);
-        btnafsluit = new Button("Shut Down!");
+        btnafsluit = new Button("Sluit af!");
 
         totaleKorting = new Label("Totale korting");
         totaleKorting.setVisible(false);
@@ -111,7 +110,7 @@ public class KassaPane extends GridPane {
         this.add(btnHold,1,11);
         this.add(btnResume,2,11);
 
-        this.add(btnafsluit,6,0);
+        this.add(btnafsluit,1,12);
 
         btnafsluit.setOnAction(event ->{
             sluitAf();
@@ -119,7 +118,7 @@ public class KassaPane extends GridPane {
 
 
         });
-        this.add(btnSell,1,12);
+        this.add(btnSell,2,12);
         this.add(btnCancel,3,12);
 
         btnResume.setOnAction(event ->  {
