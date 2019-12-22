@@ -124,6 +124,7 @@ public class KlantView extends GridPane {
         teBetalenBedrag.setText(String.format("Te betalen bedrag: € %.2f", tbb));
     }
 
+
     /**
      * Deze methode haalt de artikelen van de klant op.
      * @return de artikelen.
@@ -167,5 +168,18 @@ public class KlantView extends GridPane {
     public void resume(ArrayList<Pair<Artikel, Integer>> artikels) {
         artikelsKlant = FXCollections.observableArrayList(artikels);
         this.table.setItems(artikelsKlant);
+    }
+
+    
+
+    public void sluitAf() {
+        if(this.teBetalenBedrag.isVisible()){
+            this.teBetalenBedrag.setVisible(false);
+            this.totaleKorting.setVisible(false);
+        }
+        else{
+            this.teBetalenBedrag.setVisible(true);
+            this.totaleKorting.setVisible(true);
+        }
     }
 }

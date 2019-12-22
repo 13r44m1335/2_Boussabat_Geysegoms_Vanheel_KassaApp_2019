@@ -17,6 +17,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import model.Artikel;
+import view.KlantView;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,7 @@ public class KassaPane extends GridPane {
     private TextField artikelCodeField;
     private Label error = new Label("Niet bestaande code"), totaal, totaleKorting, teBetalenBedrag;
     private KassaController controller;
+    private KlantView klantView;
     private ObservableList<Artikel> artikels = FXCollections.observableArrayList();
 
     public KassaPane(KassaController controller) {
@@ -102,7 +104,9 @@ public class KassaPane extends GridPane {
         this.add(btnResume,2,11);
         this.add(btnafsluit,6,0);
 
-        btnafsluit.setOnAction(event ->{ sluitAf();
+        btnafsluit.setOnAction(event ->{
+            sluitAf();
+
 
 
         });
@@ -177,7 +181,7 @@ public class KassaPane extends GridPane {
             totaleKorting.setVisible(true);
         }
 
-
+        //klantView.sluitAf();
     }
 
     /**
