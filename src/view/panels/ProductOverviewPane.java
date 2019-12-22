@@ -39,11 +39,13 @@ public class ProductOverviewPane extends GridPane {
 		TableColumn prijs = new TableColumn("Eenheidsprijs");
 		TableColumn voorraad = new TableColumn("Actuele voorraad");
 
-		code.setMinWidth(100);
-		beschrijving.setMinWidth(100);
-		groep.setMinWidth(100);
-		prijs.setMinWidth(50);
-		voorraad.setMinWidth(50);
+		code.setMinWidth(150);
+		beschrijving.setMinWidth(150);
+		groep.setMinWidth(125);
+		prijs.setMinWidth(125);
+		voorraad.setMinWidth(125);
+
+		table.setId("my-table");
 
 		code.setCellValueFactory(new PropertyValueFactory<>("code"));
 		beschrijving.setCellValueFactory(new PropertyValueFactory<>("omschrijving"));
@@ -69,5 +71,10 @@ public class ProductOverviewPane extends GridPane {
 	    this.artikels.clear();
         this.artikels.addAll(artikels);
     }
+
+    public void sell(ArrayList artikelArrayList){
+		artikels = FXCollections.observableArrayList(artikelArrayList);
+		this.table.setItems(artikels);
+	}
 
 }

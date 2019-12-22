@@ -13,4 +13,6 @@
 .label {
     -fx-font: 16px "Serif";
 }
-/*test*/
+#my-table .table-column {
+    -fx-alignment: CENTER;
+}

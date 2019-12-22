@@ -96,6 +96,7 @@ public class KlantView extends GridPane {
         //teBetalenBedrag.setVisible(false);
         totaleKorting = new Label();
         //totaleKorting.setVisible(false);
+        table.setId("my-table");
     }
 
 
@@ -161,6 +162,7 @@ public class KlantView extends GridPane {
     public void reset() {
         artikelsKlant = FXCollections.observableArrayList();
         this.table.setItems(artikelsKlant);
+        this.setTotaal(0);
     }
 
     /**
@@ -173,7 +175,7 @@ public class KlantView extends GridPane {
         this.table.setItems(artikelsKlant);
     }
 
-    
+
 
     public void sluitAf() {
         if(this.teBetalenBedrag.isVisible()){

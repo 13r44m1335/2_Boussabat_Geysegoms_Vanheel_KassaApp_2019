@@ -172,14 +172,14 @@ public class InstellingenController {
      */
     public void initKassaBonSettings() {
         Properties properties = winkel.getProperties();
-        //String customHeader = properties.getProperty("headerCustom");
+        String customHeader = properties.getProperty("headerCustom");
         String headerTijd = properties.getProperty("headerTijd");
         String footerBTW = properties.getProperty("footerBTW");
         String footerKorting = properties.getProperty("footerKorting");
         String footerAfsluilijn = properties.getProperty("footerAfsluitlijn");
-        /*if (!customHeader.equals("")) {
+        if (!customHeader.equals("")) {
             view.setCustomHeader(true,customHeader);
-        }*/ if (!headerTijd.equals("")) {
+        } if (!headerTijd.equals("")) {
             view.setHeaderTijd(true);
         } if (!footerBTW.equals("")) {
             view.setFooterBTW(true);

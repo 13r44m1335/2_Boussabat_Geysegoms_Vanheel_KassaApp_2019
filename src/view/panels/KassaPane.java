@@ -27,7 +27,7 @@ import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
 
 public class KassaPane extends GridPane {
     private TableView table;
-    private Button btnHold, btnResume, btnafsluit;
+    private Button btnHold, btnResume, btnCancel, btnSell;
     private TextField artikelCodeField;
     private Label error = new Label("Niet bestaande code"), totaal, totaleKorting, teBetalenBedrag;
     private KassaController controller;
@@ -50,11 +50,14 @@ public class KassaPane extends GridPane {
         artikelCodeField = new TextField();
         this.add(artikelCodeField, 1, 1, 1, 1);
         table = new TableView<>();
+        table.setId("my-table");
         //table.setPrefWidth(REMAINING);
         this.add(error, 0, 0, 1, 1);
         error.setVisible(false);
         btnHold = new Button("Zet een verkoop op hold");
         btnResume = new Button("Resume hold");
+        btnSell = new Button("BETAALD");
+        btnCancel = new Button("Verkoop annuleren");
         btnResume.setDisable(true);
         btnafsluit = new Button("Shut Down!");
 
@@ -102,6 +105,7 @@ public class KassaPane extends GridPane {
         this.add(table, 0, 4, 5, 6);
         this.add(btnHold,1,11);
         this.add(btnResume,2,11);
+
         this.add(btnafsluit,6,0);
 
         btnafsluit.setOnAction(event ->{
@@ -110,6 +114,8 @@ public class KassaPane extends GridPane {
 
 
         });
+        this.add(btnSell,1,12);
+        this.add(btnCancel,3,12);
 
         btnResume.setOnAction(event ->  {
             controller.resume();
@@ -119,15 +125,22 @@ public class KassaPane extends GridPane {
             controller.putOnHold();
         });
 
+        btnSell.setOnAction(event -> {
+            controller.sell();
+        });
+
+        btnCancel.setOnAction(event -> {
+            controller.cancel();
+        });
+
         table.setItems(artikels);
         totaal = new Label();
         totaal.setText("Totale bedrag: € 0,00");
         this.add(totaal, 0,11);
-        Button print = new Button("Print rekening(deze moet automatisch na afsluiten en betalen van aankoop)");
-        print.setOnAction(event -> {
-            controller.print();
+        btnSell.setOnAction(event -> {
+            controller.sell();
         });
-        this.add(print,3,11);
+
     }
 
     /**
@@ -224,6 +237,17 @@ public class KassaPane extends GridPane {
         btnHold.setDisable(true);
         btnResume.setDisable(false);
         this.table.setItems(artikels);
+        this.setTotaal(0);
+    }
+
+    /**
+     * Deze methode reset de view na betaald te zijn.
+     * @author Andreas Geysegoms
+     */
+    public void resetVerkoop() {
+        artikels = FXCollections.observableArrayList();
+        this.table.setItems(artikels);
+        this.setTotaal(0);
     }
 
     /**
