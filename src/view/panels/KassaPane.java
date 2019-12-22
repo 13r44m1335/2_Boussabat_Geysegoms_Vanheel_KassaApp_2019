@@ -27,7 +27,7 @@ import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
 
 public class KassaPane extends GridPane {
     private TableView table;
-    private Button btnHold, btnResume, btnCancel, btnSell;
+    private Button btnHold, btnResume, btnCancel, btnSell, btnafsluit;
     private TextField artikelCodeField;
     private Label error = new Label("Niet bestaande code"), totaal, totaleKorting, teBetalenBedrag;
     private KassaController controller;
@@ -60,6 +60,11 @@ public class KassaPane extends GridPane {
         btnCancel = new Button("Verkoop annuleren");
         btnResume.setDisable(true);
         btnafsluit = new Button("Shut Down!");
+
+        totaleKorting = new Label("Totale korting");
+        totaleKorting.setVisible(false);
+        teBetalenBedrag = new Label("Te betalen bedrag");
+        teBetalenBedrag.setVisible(false);
 
 
         artikelCodeField.setOnKeyReleased(event -> {
@@ -137,6 +142,8 @@ public class KassaPane extends GridPane {
         totaal = new Label();
         totaal.setText("Totale bedrag: € 0,00");
         this.add(totaal, 0,11);
+        this.add(totaleKorting,0,12);
+        this.add(teBetalenBedrag,0,13);
         btnSell.setOnAction(event -> {
             controller.sell();
         });
