@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
+<comment/>
 <entry key="input">xls</entry>
 <entry key="footerAfsluitlijn">Dank u voor uw aankopen bij ons.</entry>
 <entry key="headerTijd">Toon de tijd van de aankoop</entry>

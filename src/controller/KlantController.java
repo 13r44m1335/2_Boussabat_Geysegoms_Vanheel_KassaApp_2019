@@ -74,6 +74,8 @@ public class KlantController extends Observer {
     @Override
     public void update(ArrayList<Artikel> artikels, Enum soort) {
         double totaalS = 0;
+        double tebetalen = 0;
+        double totaleKorting = 0;
         ArrayList<Artikel> beepboop = null;
         if (soort.equals(ARTIKELINSCANNEN)) {
             try {
@@ -85,12 +87,16 @@ public class KlantController extends Observer {
                 addArtikel(artikels.get(artikels.size() - 1));
                 beepboop = artikels;
                 if (this.getKorting() != null) {
-                    double korting = winkel.getKorting().berekenKorting(beepboop);
-                    totaalS = totaalS - korting;
+                    totaleKorting = winkel.getKorting().berekenKorting(beepboop);
+                    tebetalen = totaalS-totaleKorting;
                 }
 
                 totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
+                tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
+                totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;
                 this.view.setTotaal(totaalS);
+                this.view.setTeBetalenBedrag(tebetalen);
+                this.view.setTotaleKorting(totaleKorting);
             } catch (NullPointerException ignored) {
                 
             }
@@ -105,12 +111,16 @@ public class KlantController extends Observer {
             this.setTotaal(totaalS);
             beepboop = artikelsKlant;
             if (this.getKorting() != null) {
-                double korting = winkel.getKorting().berekenKorting(beepboop);
-                totaalS = totaalS - korting;
+                totaleKorting = winkel.getKorting().berekenKorting(beepboop);
+                tebetalen = totaalS-totaleKorting;
             }
 
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
+            tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
+            totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;
             this.view.setTotaal(totaalS);
+            this.view.setTeBetalenBedrag(tebetalen);
+            this.view.setTotaleKorting(totaleKorting);
         }
         else if (soort.equals(HOLD)) {
             view.reset();
@@ -122,12 +132,16 @@ public class KlantController extends Observer {
             this.setTotaal(totaalS);
             beepboop = artikels;
             if (this.getKorting() != null) {
-                double korting = winkel.getKorting().berekenKorting(beepboop);
-                totaalS = totaalS - korting;
+                totaleKorting = winkel.getKorting().berekenKorting(beepboop);
+                tebetalen = totaalS-totaleKorting;
             }
 
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
+            tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
+            totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;
             this.view.setTotaal(totaalS);
+            this.view.setTeBetalenBedrag(tebetalen);
+            this.view.setTotaleKorting(totaleKorting);
 
             view.resume(pairs);
         }

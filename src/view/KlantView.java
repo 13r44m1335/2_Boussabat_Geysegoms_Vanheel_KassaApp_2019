@@ -30,7 +30,7 @@ public class KlantView extends GridPane {
     private Stage stage = new Stage();
 
     private TableView table;
-    private Label totaal;
+    private Label totaal,totaleKorting,teBetalenBedrag;
     private ObservableList<Pair<Artikel, Integer>> artikelsKlant = observableArrayList();
 
     /**
@@ -51,8 +51,12 @@ public class KlantView extends GridPane {
         setTable();
         this.add(table, 0, 0);
         this.add(totaal, 0, 1);
+        this.add(totaleKorting,0,2);
+        this.add(teBetalenBedrag,0,3);
         root.getChildren().add(this);
         setTotaal(0);
+        setTeBetalenBedrag(0);
+        setTotaleKorting(0);
         stage.setScene(scene);
         stage.sizeToScene();
         stage.show();
@@ -88,6 +92,10 @@ public class KlantView extends GridPane {
         aantal.setPrefWidth(500/3-5);
         prijsCol.setPrefWidth(500/3-5);
         totaal = new Label();
+        teBetalenBedrag = new Label();
+        //teBetalenBedrag.setVisible(false);
+        totaleKorting = new Label();
+        //totaleKorting.setVisible(false);
     }
 
 
@@ -98,6 +106,27 @@ public class KlantView extends GridPane {
     public void setTotaal(double totaalS) {
         totaal.setText(String.format("Totale bedrag: € %.2f",totaalS));
     }
+
+
+    /**
+     * Deze methode stelt de label van de totale korting in.
+     * @param tk de totale korting.
+     * @author Thomas Vanheel
+     */
+    public void setTotaleKorting(double tk){
+
+        totaleKorting.setText(String.format("Totale korting: € %.2f", tk));
+    }
+
+    /**
+     * Deze methode stelt de label van de totale korting in.
+     * @param tbb de totale korting.
+     * @author Thomas Vanheel
+     */
+    public void setTeBetalenBedrag(double tbb){
+        teBetalenBedrag.setText(String.format("Te betalen bedrag: € %.2f", tbb));
+    }
+
 
     /**
      * Deze methode haalt de artikelen van de klant op.
@@ -142,5 +171,18 @@ public class KlantView extends GridPane {
     public void resume(ArrayList<Pair<Artikel, Integer>> artikels) {
         artikelsKlant = FXCollections.observableArrayList(artikels);
         this.table.setItems(artikelsKlant);
+    }
+
+    
+
+    public void sluitAf() {
+        if(this.teBetalenBedrag.isVisible()){
+            this.teBetalenBedrag.setVisible(false);
+            this.totaleKorting.setVisible(false);
+        }
+        else{
+            this.teBetalenBedrag.setVisible(true);
+            this.totaleKorting.setVisible(true);
+        }
     }
 }

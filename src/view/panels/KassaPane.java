@@ -17,6 +17,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import model.Artikel;
+import view.KlantView;
 
 import java.util.ArrayList;
 
@@ -26,10 +27,11 @@ import static javafx.scene.input.MouseEvent.MOUSE_CLICKED;
 
 public class KassaPane extends GridPane {
     private TableView table;
-    private Button btnHold, btnResume;
+    private Button btnHold, btnResume, btnafsluit;
     private TextField artikelCodeField;
-    private Label error = new Label("Niet bestaande code"), totaal;
+    private Label error = new Label("Niet bestaande code"), totaal, totaleKorting, teBetalenBedrag;
     private KassaController controller;
+    private KlantView klantView;
     private ObservableList<Artikel> artikels = FXCollections.observableArrayList();
 
     public KassaPane(KassaController controller) {
@@ -54,6 +56,8 @@ public class KassaPane extends GridPane {
         btnHold = new Button("Zet een verkoop op hold");
         btnResume = new Button("Resume hold");
         btnResume.setDisable(true);
+        btnafsluit = new Button("Shut Down!");
+
 
         artikelCodeField.setOnKeyReleased(event -> {
             if (event.getCode() == KeyCode.ENTER){
@@ -98,6 +102,14 @@ public class KassaPane extends GridPane {
         this.add(table, 0, 4, 5, 6);
         this.add(btnHold,1,11);
         this.add(btnResume,2,11);
+        this.add(btnafsluit,6,0);
+
+        btnafsluit.setOnAction(event ->{
+            sluitAf();
+
+
+
+        });
 
         btnResume.setOnAction(event ->  {
             controller.resume();
@@ -125,6 +137,44 @@ public class KassaPane extends GridPane {
      */
     public void setTotaal(double totaalS) {
         totaal.setText(String.format("Totale bedrag: € %.2f",totaalS));
+    }
+
+
+    /**
+     * Deze methode stelt de label van de totale korting in.
+     * @param tk de totale korting.
+     * @author Thomas Vanheel
+     */
+    public void setTotaleKorting(double tk){
+    totaleKorting.setText(String.format("Totale korting: € %.2f", tk));
+    }
+
+    /**
+     * Deze methode stelt de label van de totale korting in.
+     * @param tbb de totale korting.
+     * @author Thomas Vanheel
+     */
+    public void setTeBetalenBedrag(double tbb){
+        teBetalenBedrag.setText(String.format("Te betalen bedrag: € %.2f", tbb));
+    }
+
+    /**
+     * Deze methode maakt de labels tebetalenbedrag en totalekorting zichtbaar met de bijhorende bedragen.
+     * @author Thomas Vanheel
+     */
+
+    public void sluitAf(){
+        error.setVisible(false);
+        if(teBetalenBedrag.isVisible()){
+            teBetalenBedrag.setVisible(false);
+            totaleKorting.setVisible(false);
+        }
+        else{
+            teBetalenBedrag.setVisible(true);
+            totaleKorting.setVisible(true);
+        }
+
+        //klantView.sluitAf();
     }
 
     /**

@@ -73,7 +73,6 @@ public class KassaController extends Observer {
         return winkel.getCurrent().getTotaal();
     }
 
-
     /**
      * Deze methode scant een item in in de winkel.
      *
@@ -99,6 +98,8 @@ public class KassaController extends Observer {
                 throw new NullPointerException("Dit artikel bestaat niet.");
             }
             double totaalS = 0;
+            double totaleKorting = 0;
+            double tebetalen = 0;
 
             if (soort.equals(ARTIKELINSCANNEN)) {
                 totaalS = this.berekenTotaal(artikels);
@@ -112,26 +113,20 @@ public class KassaController extends Observer {
             }
             Properties properties = winkel.getProperties();
             this.setTotaal(totaalS);
+
             if (this.getKorting() != null) {
-                double korting = this.getKorting().berekenKorting(this.getAll());
-                totaalS = totaalS - korting;
-                properties.setProperty("footerKorting",String.valueOf(korting));
+                totaleKorting = this.getKorting().berekenKorting(this.getAll());
+
+                tebetalen = totaalS-totaleKorting;
+
+                totaalS = totaalS;
             }
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
+            tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
+            totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;
             this.view.setTotaal(totaalS);
-            properties.setProperty("totaal",String.valueOf(this.berekenTotaal(winkel.getCurrent().getAll())));
-            FileOutputStream os = null;
-            try {
-                File prop = new File("src/bestanden/instellingen.xml");
-                os = new FileOutputStream(prop);
-                properties.storeToXML(os, "");
-                os.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            winkel.setProperties(properties);
+            this.view.setTeBetalenBedrag(tebetalen);
+            this.view.setTotaleKorting(totaleKorting);
         } catch (NullPointerException e) {
             this.view.getError().setText(e.getMessage());
             this.view.getError().setVisible(true);
@@ -229,9 +224,10 @@ public class KassaController extends Observer {
     }
 
     /**
-     * Thomas
+     * Deze methode verwijderd het artikel ahv huidig artikel
      *
-     * @param code
+     * @param code het huidige artikel
+     * @author Thomas Vanheel
      */
     public void verwijderArtikel(Artikel code) {
         winkel.getCurrent().deleteArtikel(code);
