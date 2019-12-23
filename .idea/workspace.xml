@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd2845bb-77d1-44ef-8ec7-869705196f6b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/controller/KlantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/KlantController.java" afterDir="false" />
-    </list>
+    <list default="true" id="bd2845bb-77d1-44ef-8ec7-869705196f6b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +203,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577110354401" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577110644415" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -262,12 +260,12 @@
       <workItem from="1576947149066" duration="353000" />
       <workItem from="1576947560753" duration="2321000" />
       <workItem from="1577007660301" duration="1523000" />
-      <workItem from="1577091070977" duration="1687000" />
+      <workItem from="1577091070977" duration="1982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="773000" />
+    <option name="totallyTimeSpent" value="1068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1454" height="1417" extended-state="0" />
