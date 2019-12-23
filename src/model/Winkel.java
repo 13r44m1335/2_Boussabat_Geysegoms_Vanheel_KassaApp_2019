@@ -165,11 +165,9 @@ public class Winkel implements Subject {
     @Override
     public void notifyObservers(SoortObserver type, ArrayList<Artikel> artikels) {
         List<Observer> obs = observers.get(type);
-
         if (obs == null)  {
             throw new IllegalArgumentException("Ongeldig type observer");
         }
-
         for (Observer observer : obs) {
             observer.update(artikels, type);
         }
