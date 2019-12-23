@@ -194,6 +194,8 @@ public class KassaController extends Observer {
         this.winkel.putOnHold();
         view.reset();
         view.setTotaal(winkel.getCurrent().getTotaal());
+        view.setTotaleKorting(0);
+        view.setTeBetalenBedrag(0);
         winkel.notifyObservers(HOLD,new ArrayList<>(0));
     }
 
@@ -203,18 +205,26 @@ public class KassaController extends Observer {
      * @author Andreas Geysegoms
      */
     public void resume() {
+        double totaleKorting = 0;
+        double tebetalen = 0;
         this.winkel.resume();
         view.resume(winkel.getCurrent().getAll());
         double totaal = winkel.getCurrent().getTotaal();
         Properties properties = winkel.getProperties();
         if (this.getKorting() != null) {
-            double korting = this.getKorting().berekenKorting(this.getAll());
-            totaal = totaal - korting;
-            properties.setProperty("footerKorting",String.valueOf(korting));
+            double totalekorting = this.getKorting().berekenKorting(this.getAll());
+            tebetalen = totaal - totaleKorting;
+            properties.setProperty("footerKorting",String.valueOf(totaleKorting));
         }
         totaal = (double) Math.round(totaal * 100.0) / 100.0;
-        winkel.setHold(new Winkelwagen(winkel));
+
+        tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
+        totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;
         this.view.setTotaal(totaal);
+
+        this.view.setTeBetalenBedrag(tebetalen);
+        this.view.setTotaleKorting(totaleKorting);
+        winkel.setHold(new Winkelwagen(winkel));
         winkel.notifyObservers(RESUME, winkel.getCurrent().getAll());
         properties.setProperty("totaal",String.valueOf(this.berekenTotaal(winkel.getCurrent().getAll())));
         FileOutputStream os = null;
