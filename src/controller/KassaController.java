@@ -212,7 +212,7 @@ public class KassaController extends Observer {
         double totaal = winkel.getCurrent().getTotaal();
         Properties properties = winkel.getProperties();
         if (this.getKorting() != null) {
-            double totalekorting = this.getKorting().berekenKorting(this.getAll());
+            totaleKorting = this.getKorting().berekenKorting(this.getAll());
             tebetalen = totaal - totaleKorting;
             properties.setProperty("footerKorting",String.valueOf(totaleKorting));
         }

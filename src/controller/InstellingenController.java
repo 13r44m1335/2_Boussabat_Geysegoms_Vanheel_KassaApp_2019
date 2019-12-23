@@ -188,8 +188,6 @@ public class InstellingenController {
         } if (!footerAfsluilijn.equals("")) {
             view.setFooterAfsluitlijn(true);
         }
-        properties.setProperty("footerKorting","");
-        properties.setProperty("totaal","");
         FileOutputStream os = null;
         try {
             File prop = new File("src/bestanden/instellingen.xml");

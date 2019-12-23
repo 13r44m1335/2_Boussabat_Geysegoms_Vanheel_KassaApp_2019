@@ -53,14 +53,14 @@ public class RekeningFactory {
             if (!properties.get("headerTijd").equals("")) {
                 rekening = new HeaderTijd(rekening);
             }
-            if (!properties.get("footerKorting").equals("")) {
-                rekening = new FooterZonderKorting(rekening, Double.parseDouble((String) properties.get("footerKorting")), Double.parseDouble((String) properties.get("totaal")));
+            if (!properties.get("footerKorting").equals("") && this.winkel.getKorting() != null) {
+                rekening = new FooterZonderKorting(rekening, winkel.getKorting().berekenKorting(winkel.getCurrent().getAll()), winkel.getCurrent().getTotaal());
             }
             if (!properties.get("footerBTW").equals("") && winkel.getKorting() != null) {
-                double totaal = Double.parseDouble((String) properties.get("totaal")) - Double.parseDouble((String) properties.get("footerKorting"));
+                double totaal = winkel.getCurrent().getTotaal() - winkel.getKorting().berekenKorting(winkel.getCurrent().getAll());
                 rekening = new FooterZonderBTW(rekening, totaal);
             } else if (!properties.get("footerBTW").equals("")) {
-                rekening = new FooterZonderBTW(rekening, Double.parseDouble((String) properties.get("totaal")));
+                rekening = new FooterZonderBTW(rekening, winkel.getCurrent().getTotaal());
             }
             if (!properties.get("footerAfsluitlijn").equals("")) {
                 rekening = new FooterBericht(rekening);

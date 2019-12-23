@@ -46,11 +46,11 @@ public class Rekening extends RekeningAbstract {
             this.description += res;
         }
         this.description += "*************************************\n";
-        if (!winkel.getProperties().get("footerKorting").equals("")) {
-            korting = Double.parseDouble((String) winkel.getProperties().get("footerKorting"));
+        if (!winkel.getProperties().get("footerKorting").equals("") && this.winkel.getKorting() != null) {
+            korting = winkel.getKorting().berekenKorting(winkel.getCurrent().getAll());
         }
         try {
-            this.description += String.format("Betaald (inclusief korting): € %.2f ", Double.parseDouble((String) winkel.getProperties().get("totaal")) - korting);
+            this.description += String.format("Betaald (inclusief korting): € %.2f ", winkel.getCurrent().getTotaal() - korting);
         } catch (NumberFormatException ignored) {
 
         }
