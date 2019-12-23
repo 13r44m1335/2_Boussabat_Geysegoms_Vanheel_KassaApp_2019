@@ -2,9 +2,10 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment/>
-<entry key="totaal">180.0</entry>
+<entry key="totaal">62.4</entry>
 <entry key="footerAfsluitlijn">Dank u voor uw aankopen bij ons.</entry>
 <entry key="input">xls</entry>
+<entry key="footerKorting">2.2399999999999998</entry>
 <entry key="footerBTW">Print de prijs zonder BTW af.</entry>
 <entry key="footerKorting"/>
 <entry key="headerCustom">Vrolijke feesten gewenst!</entry>

@@ -132,7 +132,9 @@ public class KlantController extends Observer {
         }
         else if (soort.equals(HOLD)) {
             view.reset();
-            view.setTotaal(0);
+            this.view.setTotaal(0);
+            this.view.setTeBetalenBedrag(0);
+            this.view.setTotaleKorting(0);
         } else if (soort.equals(RESUME)) {
             ArrayList<Pair<Artikel, Integer>> pairs = artikelsToPair(artikels);
             totaalS = this.berekenTotaal(artikels);
