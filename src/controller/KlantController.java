@@ -92,6 +92,9 @@ public class KlantController extends Observer {
                     totaleKorting = winkel.getKorting().berekenKorting(beepboop);
                     tebetalen = totaalS-totaleKorting;
                 }
+                else{
+                    tebetalen = totaalS;
+                }
 
                 totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
                 tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
@@ -115,6 +118,9 @@ public class KlantController extends Observer {
                 totaleKorting = winkel.getKorting().berekenKorting(beepboop);
                 tebetalen = totaalS-totaleKorting;
             }
+            else{
+                tebetalen = totaalS;
+            }
 
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
             tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
@@ -136,6 +142,9 @@ public class KlantController extends Observer {
                 totaleKorting = winkel.getKorting().berekenKorting(beepboop);
                 tebetalen = totaalS-totaleKorting;
             }
+            else{
+                tebetalen = totaalS;
+            }
 
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
             tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
@@ -147,6 +156,12 @@ public class KlantController extends Observer {
             view.resume(pairs);
         } else if (soort.equals(ANNULEER)) {
             view.reset();
+            totaalS = 0;
+            tebetalen = 0;
+            totaleKorting = 0;
+            this.view.setTotaal(totaalS);
+            this.view.setTeBetalenBedrag(tebetalen);
+            this.view.setTotaleKorting(totaleKorting);
         }
     }
 
