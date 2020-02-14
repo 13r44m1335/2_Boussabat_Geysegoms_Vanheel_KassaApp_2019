@@ -124,10 +124,11 @@ public class KassaController extends Observer {
             if (this.getKorting() != null) {
                 totaleKorting = this.getKorting().berekenKorting(this.getAll());
 
-                tebetalen = totaalS-totaleKorting;
+
 
                 totaalS = totaalS;
             }
+            tebetalen = totaalS-totaleKorting;
             totaalS = (double) Math.round(totaalS * 100.0) / 100.0;
             tebetalen = (double) Math.round(tebetalen * 100.0) / 100.0;
             totaleKorting = (double) Math.round(totaleKorting * 100.0) / 100.0;

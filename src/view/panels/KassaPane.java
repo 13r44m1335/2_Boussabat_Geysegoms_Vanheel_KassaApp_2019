@@ -56,6 +56,7 @@ public class KassaPane extends GridPane {
         btnHold = new Button("Zet een verkoop op hold");
         btnResume = new Button("Resume hold");
         btnSell = new Button("BETAALD");
+        btnSell.setDisable(true);
         btnCancel = new Button("Verkoop annuleren");
         btnResume.setDisable(true);
         btnafsluit = new Button("Sluit af!");
@@ -114,7 +115,8 @@ public class KassaPane extends GridPane {
 
         btnafsluit.setOnAction(event ->{
             sluitAf();
-
+            btnafsluit.setDisable(true);
+            btnSell.setDisable(false);
 
 
         });
@@ -131,10 +133,17 @@ public class KassaPane extends GridPane {
 
         btnSell.setOnAction(event -> {
             controller.sell();
+            sluitAf();
+            btnafsluit.setDisable(false);
+            btnSell.setDisable(true);
         });
 
         btnCancel.setOnAction(event -> {
             controller.cancel();
+            btnafsluit.setDisable(false);
+            btnSell.setDisable(true);
+            teBetalenBedrag.setVisible(false);
+            totaleKorting.setVisible(false);
         });
 
         table.setItems(artikels);
